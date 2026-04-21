@@ -1,0 +1,8 @@
+title: AI in EdTech Weekly
+description: A weekly briefing on AI in educational technology
+theme: minima
+plugins:
+  - jekyll-relative-links
+relative_links:
+  enabled: true
+  collections: true
