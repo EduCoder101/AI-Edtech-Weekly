@@ -7,6 +7,6 @@ title: Home
 
 A weekly briefing on AI developments in educational technology, with a focus on Australian K-12 education.
 
-## Recent Briefings
+## Briefings
 
-Check the [briefings folder](./briefings/) for all past editions.
+- [21 April 2026](./briefings/2026-04-21.html)
