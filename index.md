@@ -9,4 +9,5 @@ A weekly briefing on AI developments in educational technology, with a focus on 
 
 ## Briefings
 
+- [26 April 2026](./briefings/2026-04-26.html)
 - [21 April 2026](./briefings/2026-04-21.html)
