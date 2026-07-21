@@ -16,6 +16,7 @@ A weekly briefing on AI developments in educational technology, with a focus on 
 - [21 June 2026](./briefings/2026-06-21.html)
 - [14 June 2026](./briefings/2026-06-14.html)
 - [7 June 2026](./briefings/2026-06-07.html)
+- [31 May 2026](./briefings/2026-05-31.html)
 - [24 May 2026](./briefings/2026-05-24.html)
 - [17 May 2026](./briefings/2026-05-17.html)
 - [10 May 2026](./briefings/2026-05-10.html)
