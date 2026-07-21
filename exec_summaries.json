@@ -1,4 +1,20 @@
 {
+  "2026-07-19": {
+    "headline": "Canberra moves to legislate AI standards, education ministers target deepfakes, and the classroom platform race accelerates",
+    "overview": "The Prime Minister announced an Office of AI and legislated national standards that explicitly cover education and training, with a draft framework going to National Cabinet in August. On the same day, education ministers met in Parramatta, where Jason Clare called for national standards against AI-generated intimate images of students. Meanwhile, Turnitin data shows more than half of Australian university submissions now contain AI content, and Anthropic's Claude for Teachers joins an increasingly crowded race for teachers' habitual use.",
+    "signals": [
+      "Australia will establish an Office of Artificial Intelligence within the Department of Prime Minister and Cabinet, with legislated national AI standards covering education to be presented at National Cabinet in August and legislation intended for early 2027.",
+      "Education Minister Jason Clare called for national standards to combat AI-generated non-consensual intimate images of students, describing deepfakes as 'the latest frontier of bullying'. Female students, and increasingly female teachers, are the main targets.",
+      "Turnitin data shows 53.6% of Australian tertiary submissions from October 2025 to April 2026 contained AI-generated content; Curtin University has disabled Turnitin's AI detection feature over reliability concerns.",
+      "Anthropic launched Claude for Teachers, free for verified US educators, with pre-built connectors including Canva Education and MagicSchool, both already common in Australian schools.",
+      "Day of AI Australia's UNSW partnership secured Google.org accelerator backing to build free, curriculum-aligned AI literacy experiences for Australian classrooms."
+    ],
+    "actions": [
+      "Review the school's AI policy and platform data agreements ahead of August's National Cabinet meeting, on the working assumption that today's voluntary framework becomes binding standards in 2027.",
+      "Ensure the school's safeguarding response covers deepfake incidents targeting both students and staff, using the eSafety Commissioner's educator resources as the practical starting point.",
+      "Check whether the AI policy addresses platform-specific data agreements, since teachers often adopt tools informally through connector ecosystems before procurement processes catch up."
+    ]
+  },
   "2026-07-12": {
     "headline": "Questions over the national evidence base, a safeguarding escalation, and fresh proof that AI output is not the same as learning",
     "overview": "A governance dispute over AERO's suppressed performance review raises questions about how much weight schools should place on national evidence bodies, while the eSafety Commissioner reports deepfake incidents involving under-18s have more than doubled. The OECD's flagship 2026 report and EDUtech keynotes converge on one message: what matters is not whether students use AI, but the pedagogical conditions under which they use it.",
@@ -63,6 +79,22 @@
       "Ask edtech vendors what Children's Online Privacy Code compliance work is under way ahead of December."
     ]
   },
+  "2026-06-14": {
+    "headline": "Queensland puts a state-built AI in students' hands, free national teacher training arrives, and the metacognitive risk evidence hardens",
+    "overview": "Queensland's government-built Corella platform is now in every state high school and open to Years 7 to 10 students with parental consent, the most explicit government endorsement of student-facing AI in Australian schooling so far. Microsoft's free Elevate for Educators programme offers a nationally aligned AI credential for teachers, while new RAND survey data and a peer-reviewed scoping review sharpen the evidence that AI use can improve task output while weakening the thinking behind it.",
+    "signals": [
+      "Queensland's Corella, a government-owned AI platform hosted on state infrastructure, has rolled out to all state high schools, with Year 7 to 10 student access available under parental consent.",
+      "Microsoft's Elevate for Educators gives all Australian teachers free AI training and a credential formally aligned with the national AI framework and the professional standards for teachers.",
+      "Iceland's national AI pilot concluded: teachers saved meaningful planning time, but the union-side review flagged dependency, data sovereignty and language-culture risks for other governments.",
+      "RAND: 63% of US high schoolers now use AI for homework, up 14 points in seven months, and 67% believe it harms their critical thinking; only one in three reports a school-wide rule.",
+      "A peer-reviewed scoping review finds offloading tasks to AI fosters 'metacognitive passivity' even where task performance improves, converging with OECD and Stanford findings."
+    ],
+    "actions": [
+      "Audit the data governance arrangements of the commercial AI tools in use at the school against the benchmark Queensland has set with a government-hosted platform.",
+      "Evaluate Microsoft's free AI Literacy for Educators credential as a shared baseline for staff professional learning, while weighing its vendor perspective.",
+      "Treat metacognitive passivity as a working assumption in task design: any AI-assisted activity should preserve the cognitive effort that produces the learning."
+    ]
+  },
   "2026-06-07": {
     "headline": "Australia's biggest edtech event puts assessment redesign at the centre, as NSW data shows policy and student behaviour have parted ways",
     "overview": "EDUtech Australia drew over 10,000 attendees with 'keeping humans in the loop' as the dominant theme. A Learning First survey of more than 4,000 NSW teachers found three-quarters of secondary teachers whose students use AI say it is being used to complete assessments despite restrictions, and half do not know how to prevent it. Stanford and the OECD both published sobering evidence on the gap between AI-assisted output and durable learning.",
@@ -77,6 +109,22 @@
       "Start an explicit audit of which assessments genuinely test student learning rather than AI capability.",
       "Distribute the eSafety Toolkit for Schools to pastoral care and wellbeing teams.",
       "Treat 'output quality' and 'learning' as separate outcomes in any evaluation of classroom AI use."
+    ]
+  },
+  "2026-05-31": {
+    "headline": "Half of NSW secondary teachers cannot prevent AI cheating, a children's privacy code nears, and teacher unions enter the debate",
+    "overview": "The largest Australian survey of educator attitudes to student AI use finds restrictions widely in place and widely ignored, and recommends restricting student access until durable learning benefits are demonstrated. The OAIC's Children's Online Privacy Code closes for consultation this week, with material consequences for how schools procure edtech, while America's largest teaching union calls for an end to student-facing AI in elementary schools and a levy on AI companies to fund teacher training.",
+    "signals": [
+      "Learning First's survey of more than 4,000 NSW educators: around three-quarters of teachers whose students use AI report use in assessment tasks, despite over 80% saying their school has restrictions; about half say they cannot prevent AI-related plagiarism.",
+      "The report's central recommendation is the most restrictive position yet from a credible Australian body: restrict student AI access for schoolwork until research shows durable learning gains.",
+      "The OAIC Children's Online Privacy Code consultation closes 5 June; the final code, due by December, would tighten consent obligations for AI and edtech tools used with younger students.",
+      "The American Federation of Teachers' 10-point plan calls for no student-facing AI in elementary schools, no AI companions for under-16s, and a levy on AI companies to fund teacher training.",
+      "The EU Council adopted conclusions positioning teachers as designers and evaluators of classroom AI rather than passive users, a framing Australian policy has historically followed."
+    ],
+    "actions": [
+      "Audit the gap between the school's written AI policy and actual student practice rather than assuming restrictions are being observed.",
+      "Confirm whether AISNSW is making a submission on the Children's Online Privacy Code, and review consent processes for AI-enabled tools used with younger students.",
+      "Prepare an evidence-based position on the restrict-versus-teach debate that the school can defend to parents on both sides of it."
     ]
   },
   "2026-05-24": {
