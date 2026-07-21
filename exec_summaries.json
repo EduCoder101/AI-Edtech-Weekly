@@ -1,0 +1,162 @@
+{
+  "2026-07-12": {
+    "headline": "Questions over the national evidence base, a safeguarding escalation, and fresh proof that AI output is not the same as learning",
+    "overview": "A governance dispute over AERO's suppressed performance review raises questions about how much weight schools should place on national evidence bodies, while the eSafety Commissioner reports deepfake incidents involving under-18s have more than doubled. The OECD's flagship 2026 report and EDUtech keynotes converge on one message: what matters is not whether students use AI, but the pedagogical conditions under which they use it.",
+    "signals": [
+      "The federal government has refused an FOI request for a KPMG evaluation of AERO, with AERO itself objecting to release. School leaders should weigh AERO resources alongside other peer-reviewed sources for now.",
+      "eSafety reports of digitally altered images of under-18s have more than doubled in 18 months; four in five involve female students. Enforcement against 'nudify' platforms is under way.",
+      "The OECD Digital Education Outlook 2026 finds GenAI improves task performance without necessarily building knowledge, coining the term 'metacognitive disengagement'.",
+      "Professor Rose Luckin at EDUtech: catching students using AI is the wrong question; designing assessment where AI cannot substitute for thinking is the right one.",
+      "Microsoft's global survey: 92% of students have used AI for schoolwork, yet 77% have had no formal training."
+    ],
+    "actions": [
+      "Confirm the school has a clear staff protocol for reporting deepfake incidents to eSafety, and brief pastoral care teams.",
+      "Frame any AI assessment policy around pedagogical conditions for productive use, not detection and enforcement.",
+      "Use the adoption-versus-training gap data to support the case for structured staff AI professional learning."
+    ]
+  },
+  "2026-07-05": {
+    "headline": "The strongest evidence yet that unstructured AI use erodes learning, and a five-month regulatory countdown for school AI tools",
+    "overview": "A landmark study of 3.2 million learning interactions documents 'cognitive surrender': high school students studying 31% less on AI-susceptible tasks with a 25% decline in retention, though notably no effect at the Year 5 level. Meanwhile the final Children's Online Privacy Code lands on 10 December, giving schools roughly five months to review every AI tool students touch.",
+    "signals": [
+      "The 'Faster Completion, Less Learning' study shows retention losses concentrate in secondary years; primary students show no detectable effect yet, making the primary years the window to build AI-resistant learning habits.",
+      "The World Economic Forum argues the real divide is AI literacy, not access: 1 in 3 teachers uses AI while 3 in 4 feel unprepared to teach with it.",
+      "The OAIC's Children's Online Privacy Code is due 10 December 2026 and its 'likely accessed by children' scope will capture many general-purpose AI tools used in classrooms.",
+      "NSWEduChat's state-wide rollout offers a reference model: data kept in Australia, curriculum alignment, and guardrails that prompt reasoning rather than answers.",
+      "The Brookings Global Task Force, spanning 50 countries, concludes that under current conditions the risks of AI for students outweigh the benefits, while stopping short of recommending bans."
+    ],
+    "actions": [
+      "Commission a review of all approved student-facing AI tools against the draft privacy code before the December deadline.",
+      "Benchmark any student AI tool against NSWEduChat's three design tests: data sovereignty, curriculum alignment, pedagogical guardrails.",
+      "Audit AI governance against Brookings' three pillars: Prosper, Prepare, Protect. Most schools over-invest in Protect."
+    ]
+  },
+  "2026-06-28": {
+    "headline": "National agencies move towards a single commission, while adoption data shows AI use has outrun training everywhere",
+    "overview": "The design proposal for a Teaching and Learning Commission merging ACARA, AITSL, AERO and ESA went to ministers this month, concentrating national AI-in-education policy in one future body. Microsoft's six-country survey, which includes Australia, finds 92% of students using AI while 77% have never been formally trained, and both Microsoft and Google announced AI features that will arrive inside platforms schools already run.",
+    "signals": [
+      "The Teaching and Learning Commission would become the single national locus for curriculum, teacher standards, research and digital resources, and therefore for AI policy.",
+      "Microsoft's AI in Education Report: 92% of students and leaders use AI; 77% of students and 53% of educators report no formal training; most want regular training provided.",
+      "Google is embedding Gemini directly into Classroom, and Microsoft is adding free AI tools to 365 Education. AI will arrive via feature updates, not procurement decisions.",
+      "Stanford's SCALE review of 800+ studies finds only 20 causal ones; performance gains tend to fade when the AI is removed, except in tools with pedagogical guardrails.",
+      "52 AI-in-education bills are active across 25 US states, signalling where regulation in the English-speaking world is heading: mandatory school AI policies and limits on AI replacing teachers."
+    ],
+    "actions": [
+      "Ensure AI governance covers feature updates to existing platforms (Google Workspace, Microsoft 365), not only new tool approvals.",
+      "Use the Microsoft training-gap data to justify structured AI professional learning in the next planning cycle.",
+      "Adopt a procurement question backed by the Stanford review: is this tool designed to support the learning process or just to produce output?"
+    ]
+  },
+  "2026-06-21": {
+    "headline": "Free national teacher training matures, UK legislates on AI and children, and evidence emerges of bias in AI writing feedback",
+    "overview": "ESA and Microsoft released the second module of their free, nationally aligned AI professional learning series, moving from awareness to classroom implementation. A Stanford study found AI writing feedback tools systematically give less substantive critique to students identified as belonging to marginalised groups, and the UK passed the most direct AI-and-child-safety legislation in the English-speaking world.",
+    "signals": [
+      "ESA Module 2 (AI Implementation) is free, aligned to the teacher standards and national framework, and counts towards professional development evidence.",
+      "Stanford's 'Marked Pedagogies' study: AI feedback tools praised more and critiqued less when essays were labelled as written by Black, Hispanic, Asian, female or learning-disabled students.",
+      "The UK's Children's Safety Act and AI Chatbot Powers Act give regulators explicit powers over AI chatbots that engage children, a model likely to influence Australian reform.",
+      "The OAIC's consultation drew 337 responses including 161 from primary-aged children, who clearly articulated wanting control and trust over their data.",
+      "eSafety hosted a free educator webinar on AI chatbots, deepfakes and AI-facilitated cyberbullying; the Children's Online Privacy Code consultation has now closed ahead of the December deadline."
+    ],
+    "actions": [
+      "Offer the free ESA modules as the baseline layer of the staff AI professional learning programme.",
+      "Require an equity impact check before adopting any AI feedback or marking tool, with monitoring of outcomes by student cohort.",
+      "Ask edtech vendors what Children's Online Privacy Code compliance work is under way ahead of December."
+    ]
+  },
+  "2026-06-07": {
+    "headline": "Australia's biggest edtech event puts assessment redesign at the centre, as NSW data shows policy and student behaviour have parted ways",
+    "overview": "EDUtech Australia drew over 10,000 attendees with 'keeping humans in the loop' as the dominant theme. A Learning First survey of more than 4,000 NSW teachers found three-quarters of secondary teachers whose students use AI say it is being used to complete assessments despite restrictions, and half do not know how to prevent it. Stanford and the OECD both published sobering evidence on the gap between AI-assisted output and durable learning.",
+    "signals": [
+      "EDUtech consensus: AI detection tools cannot reliably identify AI-generated work, shifting the integrity burden from surveillance to assessment design.",
+      "Learning First NSW survey: students are using AI to complete assessments even where restrictions formally apply. That is a design problem, not just a compliance problem.",
+      "Stanford's review of 1,100+ studies found only 20 meeting causal standards; gains during AI use are inconsistent once the AI is removed.",
+      "The OECD documents 'metacognitive laziness': students producing better outputs while doing less of the thinking the task was meant to develop.",
+      "eSafety has written to education ministers about mandatory reporting of deepfake incidents and released an updated Toolkit for Schools."
+    ],
+    "actions": [
+      "Start an explicit audit of which assessments genuinely test student learning rather than AI capability.",
+      "Distribute the eSafety Toolkit for Schools to pastoral care and wellbeing teams.",
+      "Treat 'output quality' and 'learning' as separate outcomes in any evaluation of classroom AI use."
+    ]
+  },
+  "2026-05-24": {
+    "headline": "The rules of the profession are being rewritten: teacher standards, a new national commission, and a mandatory AI integrity course",
+    "overview": "AITSL opened the first review of the Australian Professional Standards for Teachers in 15 years, the Teaching and Learning Commission received budget funding, and Queensland made an AI-aware academic integrity course a formal requirement of the QCE. At the same time, data suggests Australian teachers' world-leading AI adoption is driven more by workload relief than pedagogy.",
+    "signals": [
+      "The AITSL review (consultation to February 2027) is the formal mechanism through which AI capability could enter teacher accreditation requirements.",
+      "Queensland now requires an academic integrity course covering AI use as a condition of the QCE, the most concrete state assessment authority response so far.",
+      "Australian teachers rank among the highest AI users in the OECD, but the driver appears to be unsustainable marking loads rather than deliberate integration.",
+      "The Teaching and Learning Commission was funded in the May budget; design proposals are with ministers.",
+      "New research on students using AI chatbots for mental health support highlights accessibility benefits but serious safeguarding limits."
+    ],
+    "actions": [
+      "Consider a school or staff submission to the AITSL standards review while the consultation window is open.",
+      "Diagnose what staff AI use actually looks like in practice before designing the next round of professional learning.",
+      "Set a clear school position on AI-powered wellbeing tools: useful for lowering barriers, never a substitute for clinical judgement."
+    ]
+  },
+  "2026-05-17": {
+    "headline": "Governments fund teacher-facing AI, a privacy code redraws the rules for school edtech, and AI detection lands in court",
+    "overview": "Western Australia committed $4.6 million to expand its ClassmAIte lesson-planning tool, while the federal budget channelled AI investment through commercial R&D rather than schools. The OAIC's draft Children's Online Privacy Code would require parental rather than school consent for many edtech tools used by under-15s, and a Californian family filed the first civil rights suit over an AI-detection false accusation.",
+    "signals": [
+      "WA's ClassmAIte expansion is the first state programme with an independent schools association as a formal implementation partner, and it is teacher-facing by design.",
+      "The federal budget confirmed schools will largely self-fund AI adoption and professional learning; no national edtech quality assurance framework emerged.",
+      "The draft Children's Online Privacy Code would stop schools consenting to platforms on behalf of under-15s; consultation closes 5 June.",
+      "Research shows AI detectors flag non-native English writers at up to five times the rate of native speakers; the Palo Alto lawsuit shows the legal exposure that follows.",
+      "Parent communities are beginning to contest school AI decisions publicly, as seen in New York's demand for a moratorium."
+    ],
+    "actions": [
+      "Audit the school's edtech stack against the draft privacy code, especially tools deployed year-group-wide on school-granted consent.",
+      "Review the academic integrity policy so that AI detection output can open a conversation but never close a case.",
+      "Prepare a transparent account of how the school makes and governs AI tool decisions, ready for parent questions."
+    ]
+  },
+  "2026-05-10": {
+    "headline": "A pillar of the pro-AI evidence base collapses, and the quiet normalisation of AI marking demands a policy answer",
+    "overview": "Nature's publisher retracted the most-cited study claiming ChatGPT produces large learning gains, a paper referenced in policy documents and vendor pitches worldwide. Meanwhile AI-assisted marking is becoming an unspoken norm among overloaded Australian teachers, and the IEU warned that poorly deployed AI risks students' cognitive development.",
+    "signals": [
+      "The retracted meta-analysis (504 citations, ~500,000 readers) no longer supports any claim built on it; vendor-cited research now deserves heightened scrutiny.",
+      "Stanford SCALE's complementary finding: no high-quality causal studies of AI learning outcomes exist in K-12 classrooms.",
+      "Australian teachers on 52-hour weeks are using AI to mark and draft feedback, often without any policy framework around them.",
+      "The IEU argues AI tools that short-circuit effortful practice undermine the capabilities schools exist to build.",
+      "University of Washington research: teacher resistance to AI is often a values question about professional identity, not a skills gap."
+    ],
+    "actions": [
+      "Check whether any school strategy documents or vendor pitches cite the retracted study, directly or via secondary sources.",
+      "Establish an explicit position on AI-assisted marking and feedback, with transparency to students and parents.",
+      "Design staff professional learning to engage values and identity tensions, not just tool skills."
+    ]
+  },
+  "2026-05-03": {
+    "headline": "Deepfake incidents double as regulators act, and the sharpest AI literacy gap turns out to be in primary school",
+    "overview": "The eSafety Commissioner urged schools to report AI-generated deepfake incidents after reports more than doubled in 18 months, releasing an updated Toolkit for Schools. New survey data shows primary teachers report the biggest gap in students' ability to recognise AI-generated content, just as AI tools reach primary classrooms. New York City published hard-limit AI guidance for 1.1 million students, and US students will co-write a model AI policy.",
+    "signals": [
+      "eSafety deepfake reports involving under-18s more than doubled in 18 months; three 'nudify' platforms have been removed from the Australian market and criminal offences now apply in some states.",
+      "61% of primary teachers say students struggle badly to distinguish AI-generated content, a far higher share than secondary. Capability is arriving before literacy.",
+      "NYC's guidance draws hard lines: no AI grading, no AI disciplinary decisions, no biometric collection without strict oversight. A template for enforceable policy.",
+      "AASA, MIT and Day of AI will have students co-draft a model AI policy, formalising student voice in governance.",
+      "ISNSW's ICT leadership conference put AI strategy at the top of the independent sector's agenda."
+    ],
+    "actions": [
+      "Establish a deepfake incident protocol distinct from general cyberbullying policy, using the eSafety toolkit.",
+      "Prioritise concrete AI-content literacy in the primary years rather than scaled-down secondary ethics content.",
+      "Consider structured student input into the school's next AI policy revision."
+    ]
+  },
+  "2026-04-21": {
+    "headline": "Adoption is outrunning evidence: covert AI marking, thin research foundations, and a call to start with graduate capabilities",
+    "overview": "The inaugural briefing lands on a consistent picture: Australian teachers under workload pressure are adopting AI faster than policy or evidence can follow, with some using it covertly to mark. Stanford's review found only 20 rigorous causal studies among more than 800, and the leading advice from the CoSN conference was to anchor AI strategy in what graduates should be able to do, not in tools.",
+    "signals": [
+      "Teachers averaging 52-hour weeks are using AI to manage marking, sometimes in secret, because school policies are silent on staff use.",
+      "Stanford SCALE: of 800+ studies on AI in K-12, only 20 support causal claims; tools with pedagogical guardrails outperform answer-generators.",
+      "NC State research: AI tutoring does not automatically redistribute teacher attention; help patterns stay 'sticky' without deliberate strategy.",
+      "The US has made AI literacy a formal federal grant priority, including detecting AI-generated disinformation.",
+      "CoSN 2026: define graduate capabilities first, then work backwards to activities and tools."
+    ],
+    "actions": [
+      "Make sure the school AI policy explicitly addresses teacher use for assessment, not just student use.",
+      "Ask vendors for causal evidence, not correlational claims, in any procurement conversation.",
+      "Anchor the AI strategy to graduate capabilities rather than platforms."
+    ]
+  }
+}

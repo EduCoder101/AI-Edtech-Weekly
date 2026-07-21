@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="en-AU">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>AI in EdTech Weekly · 17 May 2026</title>
+<meta name="description" content="Governments fund teacher-facing AI, a privacy code redraws the rules for school edtech, and AI detection lands in court">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,600;9..144,700&family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+<style>
+:root{
+  --paper:#f7f5f0; --card:#ffffff; --ink:#181f30; --ink2:#3c4557;
+  --muted:#6f7787; --line:#e4dfd4; --navy:#1b2a4a; --navy2:#223458;
+  --accent:#0e7c66; --accent-soft:#e6f1ed; --amber:#a96f24; --amber-soft:#f7eeddd9;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{background:var(--paper);color:var(--ink);
+  font-family:'Inter',-apple-system,'Segoe UI',sans-serif;
+  font-size:17px;line-height:1.65;-webkit-font-smoothing:antialiased}
+a{color:var(--accent);text-decoration:none}
+a:hover{text-decoration:underline}
+.wrap{max-width:820px;margin:0 auto;padding:0 24px}
+/* top bar */
+.topbar{position:sticky;top:0;z-index:50;background:rgba(247,245,240,.92);
+  backdrop-filter:blur(8px);border-bottom:1px solid var(--line)}
+.topbar .wrap{display:flex;align-items:center;justify-content:space-between;height:58px}
+.brand{font-family:'Fraunces',serif;font-weight:700;font-size:1.05rem;color:var(--ink);letter-spacing:.01em}
+.brand:hover{text-decoration:none}
+.brand span{color:var(--accent)}
+.topnav{display:flex;gap:22px;font-size:.85rem;font-weight:600}
+.topnav a{color:var(--ink2)}
+/* issue head */
+.issuehead{padding:56px 0 36px}
+.kicker{font-size:.74rem;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:var(--accent);margin-bottom:14px}
+h1.issue{font-family:'Fraunces',serif;font-weight:600;font-size:clamp(1.9rem,4.5vw,2.7rem);line-height:1.15;letter-spacing:-.01em;max-width:17em}
+.issuemeta{margin-top:16px;color:var(--muted);font-size:.9rem}
+/* glance band */
+.glance{background:var(--navy);color:#eef1f7;padding:44px 0 40px}
+.glance h2{font-family:'Fraunces',serif;font-weight:600;font-size:1.35rem;color:#fff;margin-bottom:14px}
+.glance .overview{font-size:1.02rem;line-height:1.7;color:#d9dfec;max-width:44em}
+.glance h3{font-size:.74rem;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:#8fa8d8;margin:28px 0 12px}
+.signals{list-style:none}
+.signals li{position:relative;padding:10px 0 10px 26px;border-top:1px solid var(--navy2);font-size:.95rem;line-height:1.6;color:#e7ebf4}
+.signals li:before{content:"";position:absolute;left:2px;top:19px;width:8px;height:8px;border-radius:50%;background:var(--accent)}
+.actions{list-style:none;display:grid;gap:10px}
+.actions li{background:var(--navy2);border-left:3px solid var(--accent);border-radius:0 8px 8px 0;
+  padding:12px 16px;font-size:.92rem;line-height:1.55;color:#e7ebf4}
+.glance a{color:#9fd4c6}
+/* sections */
+section.block{padding:52px 0 8px}
+.sectionhead{display:flex;align-items:baseline;gap:14px;margin-bottom:8px}
+.sectionhead h2{font-family:'Fraunces',serif;font-weight:600;font-size:1.5rem}
+.sectionhead .sub{color:var(--muted);font-size:.88rem}
+/* stories */
+.story{padding:34px 0;border-bottom:1px solid var(--line)}
+.story:last-child{border-bottom:none}
+.storytop{display:flex;gap:16px;align-items:flex-start}
+.snum{font-family:'Fraunces',serif;font-weight:600;font-size:1.5rem;color:var(--accent);line-height:1.2;min-width:1.2em}
+.story h3{font-family:'Fraunces',serif;font-weight:600;font-size:1.25rem;line-height:1.3}
+.smeta{margin:8px 0 14px;font-size:.78rem;font-weight:600;letter-spacing:.06em;text-transform:uppercase;color:var(--muted)}
+.story p{margin-bottom:14px;color:var(--ink2)}
+.why{background:var(--accent-soft);border-left:3px solid var(--accent);border-radius:0 10px 10px 0;
+  padding:14px 18px;margin:18px 0 14px;font-size:.95rem;line-height:1.6}
+.why b.tag{display:block;font-size:.72rem;font-weight:700;letter-spacing:.13em;text-transform:uppercase;color:var(--accent);margin-bottom:6px}
+.srcline{font-size:.82rem;color:var(--muted);line-height:1.55}
+.srcline a{color:var(--muted);text-decoration:underline;text-decoration-color:var(--line);text-underline-offset:3px}
+.srcline a:hover{color:var(--accent)}
+/* signal cards */
+.cards{display:grid;gap:16px;margin-top:20px}
+.card{background:var(--card);border:1px solid var(--line);border-radius:14px;padding:22px 24px;box-shadow:0 1px 2px rgba(24,31,48,.04)}
+.card h3{font-family:'Fraunces',serif;font-weight:600;font-size:1.06rem;line-height:1.4;margin-bottom:10px}
+.card p{font-size:.93rem;line-height:1.6;color:var(--ink2)}
+.card .srcs{margin-top:12px;font-size:.8rem;color:var(--muted);line-height:1.6}
+.card .srcs a{color:var(--muted);text-decoration:underline;text-decoration-color:var(--line);text-underline-offset:3px}
+.card .srcs a:hover{color:var(--accent)}
+.card.agree{border-top:3px solid var(--accent)}
+.card.disagree{border-top:3px solid var(--amber)}
+.pos{display:grid;gap:10px;margin:10px 0}
+.pos>div{border-radius:10px;padding:12px 15px;font-size:.9rem;line-height:1.6}
+.pos .a{background:var(--accent-soft)}
+.pos .b{background:var(--amber-soft)}
+.pos b.tag{display:block;font-size:.7rem;font-weight:700;letter-spacing:.12em;text-transform:uppercase;margin-bottom:4px}
+.pos .a b.tag{color:var(--accent)}
+.pos .b b.tag{color:var(--amber)}
+.tension{font-size:.9rem;color:var(--ink2);line-height:1.6;padding-top:8px;border-top:1px dashed var(--line)}
+.tension b.tag{font-size:.7rem;font-weight:700;letter-spacing:.12em;text-transform:uppercase;color:var(--muted);display:block;margin-bottom:4px}
+/* watching */
+.watch{background:var(--card);border:1px solid var(--line);border-radius:14px;padding:22px 24px;margin-top:16px}
+.watch h3{font-family:'Fraunces',serif;font-weight:600;font-size:1.06rem;margin-bottom:10px}
+.watch p{font-size:.93rem;line-height:1.65;color:var(--ink2);margin-bottom:10px}
+/* sources details */
+details.allsources{margin:44px 0 0;border-top:1px solid var(--line);padding-top:20px}
+details.allsources summary{cursor:pointer;font-weight:600;font-size:.95rem;color:var(--ink2)}
+details.allsources ol{margin:16px 0 0 20px;font-size:.85rem;color:var(--muted);line-height:1.7}
+details.allsources li{margin-bottom:6px}
+/* pager + footer */
+.pager{display:flex;justify-content:space-between;gap:16px;margin:48px 0 0;padding-top:24px;border-top:1px solid var(--line);font-size:.9rem;font-weight:600}
+footer{margin-top:56px;padding:32px 0 48px;border-top:1px solid var(--line);color:var(--muted);font-size:.82rem;line-height:1.7}
+/* index */
+.hero{padding:72px 0 40px}
+.hero h1{font-family:'Fraunces',serif;font-weight:600;font-size:clamp(2.2rem,6vw,3.4rem);line-height:1.1;letter-spacing:-.015em}
+.hero p.tag{margin-top:18px;font-size:1.05rem;color:var(--ink2);max-width:36em;line-height:1.7}
+.latest{background:var(--navy);color:#eef1f7;border-radius:18px;padding:34px 36px;margin:8px 0 12px}
+.latest .kicker{color:#9fd4c6}
+.latest h2{font-family:'Fraunces',serif;font-weight:600;font-size:1.5rem;line-height:1.3;color:#fff;margin-bottom:12px}
+.latest p{color:#d9dfec;font-size:.98rem;line-height:1.7;margin-bottom:20px}
+.btn{display:inline-block;background:var(--accent);color:#fff;font-weight:600;font-size:.9rem;
+  padding:11px 22px;border-radius:999px}
+.btn:hover{text-decoration:none;filter:brightness(1.08)}
+.archive{padding:44px 0}
+.archive h2{font-family:'Fraunces',serif;font-weight:600;font-size:1.5rem;margin-bottom:6px}
+.issuelist{list-style:none;margin-top:14px}
+.issuelist li{border-bottom:1px solid var(--line)}
+.issuelist a{display:flex;gap:24px;align-items:baseline;padding:18px 4px;color:var(--ink)}
+.issuelist a:hover{background:#f1ede4;text-decoration:none}
+.issuelist .d{min-width:130px;font-size:.85rem;font-weight:700;color:var(--accent);letter-spacing:.02em}
+.issuelist .h{font-size:.97rem;line-height:1.5;color:var(--ink2)}
+.aboutwrap{padding:20px 0 30px}
+.about{max-width:44em}
+.about h2{font-family:'Fraunces',serif;font-weight:600;font-size:1.5rem;margin-bottom:12px}
+.about p{color:var(--ink2);margin-bottom:12px;font-size:.97rem}
+@media(max-width:640px){
+  .issuelist a{flex-direction:column;gap:4px}
+  .latest{padding:26px 22px}
+}
+@media print{
+  .topbar,.pager{display:none}
+  body{background:#fff}
+  .glance{background:#fff;color:#000;border:1px solid #ccc}
+}
+</style>
+</head>
+<body>
+<header class="topbar"><div class="wrap">
+  <a class="brand" href="../index.html">AI in EdTech <span>Weekly</span></a>
+  <nav class="topnav"><a href="#">Latest briefing</a><a href="../index.html#archive">Archive</a><a href="../index.html#about">About</a></nav>
+</div></header>
+
+<div class="wrap issuehead">
+  <div class="kicker">Weekly briefing · 10 May – 17 May 2026</div>
+  <h1 class="issue">Governments fund teacher-facing AI, a privacy code redraws the rules for school edtech, and AI detection lands in court</h1>
+  <div class="issuemeta">Issue of 17 May 2026</div>
+</div>
+<section class="glance"><div class="wrap">
+  <h2>At a glance</h2>
+  <p class="overview">Western Australia committed $4.6 million to expand its ClassmAIte lesson-planning tool, while the federal budget channelled AI investment through commercial R&amp;D rather than schools. The OAIC's draft Children's Online Privacy Code would require parental rather than school consent for many edtech tools used by under-15s, and a Californian family filed the first civil rights suit over an AI-detection false accusation.</p>
+  <h3>Key signals</h3><ul class="signals"><li>WA's ClassmAIte expansion is the first state programme with an independent schools association as a formal implementation partner, and it is teacher-facing by design.</li><li>The federal budget confirmed schools will largely self-fund AI adoption and professional learning; no national edtech quality assurance framework emerged.</li><li>The draft Children's Online Privacy Code would stop schools consenting to platforms on behalf of under-15s; consultation closes 5 June.</li><li>Research shows AI detectors flag non-native English writers at up to five times the rate of native speakers; the Palo Alto lawsuit shows the legal exposure that follows.</li><li>Parent communities are beginning to contest school AI decisions publicly, as seen in New York's demand for a moratorium.</li></ul>
+  <h3>For the leadership agenda</h3><ul class="actions"><li>Audit the school's edtech stack against the draft privacy code, especially tools deployed year-group-wide on school-granted consent.</li><li>Review the academic integrity policy so that AI detection output can open a conversation but never close a case.</li><li>Prepare a transparent account of how the school makes and governs AI tool decisions, ready for parent questions.</li></ul>
+</div></section>
+<section class="block"><div class="wrap">
+  <div class="sectionhead"><h2>The stories in depth</h2><span class="sub">Full analysis with linked sources</span></div>
+  
+<article class="story">
+  <div class="storytop"><div class="snum">1</div>
+  <div><h3>WA commits $4.6 million to expand AI lesson-planning tool across more than 100 schools</h3><div class="smeta">WA State Budget / Mirage News / The Mandarin | 11 May 2026</div></div></div>
+  <p>Premier Roger Cook and Education Minister Sabine Winton announced $4.6 million in the 2026-27 Western Australian State Budget to extend the WA ClassmAIte AI lesson-planning tool through 2027. ClassmAIte, first launched in July 2024 under the Workload Reduction Fund (jointly funded by the Cook and Albanese governments), enables teachers to generate curriculum-aligned lessons, worksheets, and slides. The pilot currently runs in 60 schools and is expected to reach more than 100 by the end of 2026. The programme is cross-sectoral, led by the WA Department of Education in partnership with Catholic Education Western Australia, the Association of Independent Schools of Western Australia (AISWA), and the School Curriculum and Standards Authority (SCSA).</p><div class="why"><b class="tag">Why it matters</b>This is the most significant state government AI investment in Australian schools announced this week, and the first to include an independent schools association (AISWA) as a formal implementing partner rather than a peripheral beneficiary. Two design choices are worth noting. First, the tool is curriculum-aligned and teacher-facing – not student-facing – reflecting a growing policy consensus that teacher workload reduction is the least ethically contested and most measurable near-term use case for AI in schools. Second, the cross-sectoral structure (government + Catholic + independent + curriculum authority) offers a governance template for scaling beyond pilot. For NSW independent schools, the practical question is when AISNSW will offer comparable structured support, and what tool evaluation guidance is available in the meantime.</div><p class="srcline">Sources: Mirage News, <a href="https://www.miragenews.com/4-6m-boost-for-ai-tool-easing-teacher-workloads-1670472/" target="_blank" rel="noopener">"$4.6M Boost for AI Tool Easing Teacher Workloads"</a>, 11 May 2026; The Mandarin, <a href="https://www.themandarin.com.au/312717-wa-eyes-educational-leadership-in-ai-with-lesson-plan-tool/" target="_blank" rel="noopener">"WA eyes educational leadership in AI with lesson plan tool"</a>, May 2026; Ministers' Media Centre, <a href="https://ministers.education.gov.au/clare/ai-pilot-help-tackle-wa-teacher-workloads" target="_blank" rel="noopener">"AI pilot to help tackle WA teacher workloads"</a>, 2026.</p>
+</article>
+<article class="story">
+  <div class="storytop"><div class="snum">2</div>
+  <div><h3>Federal Budget 2026-27: $70 million AI Accelerator and the absence of direct school investment</h3><div class="smeta">SmartCompany / Education Matters Magazine / Budget Papers | 12 May 2026</div></div></div>
+  <p>The Albanese government's 2026-27 Federal Budget, handed down on 12 May, included a $70 million AI Accelerator grants program, to be delivered through the Co-operative Research Centres program to boost AI development and commercialisation. Education-specific measures included $5.9 million to extend five STEM initiatives and $113 million for First Nations student programmes. However, there was no new direct funding for school-level AI programs beyond continuation of existing generative AI pilots (including a Catholic Schools NSW chatbot trial). Education Matters Magazine noted that the budget maintains rather than expands the current school AI support framework. The $25 billion Microsoft AI infrastructure commitment to Australia, announced in April, sits alongside but separate from the budget.</p><div class="why"><b class="tag">Why it matters</b>The budget's approach – channelling AI investment through commercial R&amp;D grants rather than school programs – confirms that the federal government sees its role as setting direction and enabling infrastructure, not funding classroom implementation. For independent schools, this means AI tool adoption and staff professional learning will remain school-funded decisions. Two implications follow. First, the case for building AI professional development into school budgets (rather than treating it as an optional extra) is stronger after this budget, not weaker. Second, the absence of a national procurement or quality assurance framework for school edtech – which the Paul Ramsay Foundation has specifically called for – remains unfilled. Schools continue to evaluate AI tools in isolation, without independent comparative evidence of efficacy or safety.</div><p class="srcline">Sources: SmartCompany, <a href="https://www.smartcompany.com.au/federal-budget-2026/federal-budget-backs-ai-70-million-accelerator-major-agency-trials/" target="_blank" rel="noopener">"Federal budget backs AI with $70 million accelerator and major agency trials"</a>, 12 May 2026; Education Matters Magazine, <a href="https://educationmattersmag.com.au/federal-budget-2026-27-what-does-it-mean-for-australias-education-sector/" target="_blank" rel="noopener">"Federal Budget 2026-27 – what does it mean for Australia's education sector?"</a>, May 2026; Paul Ramsay Foundation, <a href="https://www.paulramsayfoundation.org.au/news-resources/australia-needs-quality-assurance-to-harness-benefits-of-ai-and-edtech-for-students-and-schools" target="_blank" rel="noopener">"Australia needs quality assurance to harness benefits of AI and edtech for students and schools"</a>, 2026.</p>
+</article>
+<article class="story">
+  <div class="storytop"><div class="snum">3</div>
+  <div><h3>OAIC Children's Online Privacy Code: school edtech at the centre of draft rules – consultation closes 5 June</h3><div class="smeta">Office of the Australian Information Commissioner | Exposure draft released 31 March 2026</div></div></div>
+  <p>The Office of the Australian Information Commissioner (OAIC) released the exposure draft of the Children's Online Privacy Code on 31 March 2026, with public consultation open until 5 June 2026. The Code, which must be registered by 10 December 2026, will cover online services "primarily concerned with the activities of children," explicitly including school management systems, collaborative learning tools, and generative AI chatbots. On consent, the Code requires that for children aged 15 and under, consent must come from a parent or guardian – not from a teacher or school administrator. AI companions and chatbots fall within scope and must take steps to prevent children from being exposed to age-inappropriate content. Legal analysis published in May 2026 by Baker McKenzie confirms the code's reach is broader than social media alone and will have material impact on services across the educational technology sector.</p><div class="why"><b class="tag">Why it matters</b>This is a structural change to how schools deploy digital tools, not a minor compliance update. Three issues are immediately relevant. First, if teachers cannot provide consent on behalf of parents for edtech tools used by under-15 students, many current deployment practices – where schools accept terms of service and sign up to platforms on behalf of entire year groups – may not meet the code's requirements once it is law. Schools should audit their current edtech stack for tools that fall within scope. Second, any student-facing AI tool (AI tutors, writing assistants, companion chatbots) is likely within scope and must meet new standards. Third, the consultation closes in less than three weeks. If AISNSW or CEO Sydney are making submissions, schools have a narrow window to contribute. The code's final form matters – now is the time to engage.</div><p class="srcline">Sources: OAIC, <a href="https://www.oaic.gov.au/news/media-centre/oaic-releases-exposure-draft-of-the-childrens-online-privacy-code" target="_blank" rel="noopener">"OAIC releases Exposure Draft of the Children's Online Privacy Code"</a>, March 2026; Baker McKenzie, <a href="https://www.bakermckenzie.com/en/insight/publications/2026/05/australia-childrens-online-privacy-code-exposure-draft" target="_blank" rel="noopener">"Australia: Children's Online Privacy Code Exposure Draft"</a>, May 2026; DLA Piper, <a href="https://privacymatters.dlapiper.com/2026/04/australia-exposure-draft-of-childrens-online-privacy-code-signals-tougher-standards/" target="_blank" rel="noopener">"Australia: Exposure draft of Children's Online Privacy Code signals tougher standards"</a>, April 2026; Ashurst, <a href="https://www.ashurst.com/en/insights/the-kids-are-online-what-australias-childrens-online-privacy-code-means-for-you/" target="_blank" rel="noopener">"The kids are online – what Australia's Children's Online Privacy Code means for you"</a>, 2026.</p>
+</article>
+<article class="story">
+  <div class="storytop"><div class="snum">4</div>
+  <div><h3>Palo Alto family files civil rights suit over AI cheating false accusation – a direct signal for Australian schools</h3><div class="smeta">SF Standard | 11 May 2026</div></div></div>
+  <p>A Palo Alto, California family filed a civil rights lawsuit against a school district after a high school student was accused of using AI to write an assignment, based on the output of an AI detection tool. The SF Standard, which reported the story on 11 May, notes the family argues the accusation caused serious harm to the student's educational record and wellbeing. The case is believed to be the first civil rights litigation in the United States centred on an AI detection false positive in a school setting. It follows a body of peer-reviewed research, including a February 2026 study in Educational Technology Research and Development, establishing that AI detectors mislabel essays by advanced non-native English writers at five times the rate recorded for native speakers, and that false positive rates for neurodivergent students and international learners can exceed 25%.</p><div class="why"><b class="tag">Why it matters</b>Australian independent schools – particularly those in Sydney with significant EAL/D, international, or learning-difference enrolments – face the same technological exposure as this Palo Alto school. No AI detection tool is sufficiently reliable to serve as primary evidence in an academic misconduct finding, and the equity risk is not evenly distributed. A false positive resulting in a formal misconduct finding, a mark of zero, or a note on a student's file could carry consequences that far exceed the original integrity concern, and open the school to pastoral and legal risk. Two steps follow from this story. First, any school using AI detection software as part of its academic integrity process should review its policy now, including what happens once a flag is raised and what review or appeal mechanisms are available to students. Second, staff need to understand that detection tools can open a conversation – but should not close a case.</div><p class="srcline">Sources: SF Standard, <a href="https://sfstandard.com/2026/05/11/ai-detection-cheating-palo-alto/" target="_blank" rel="noopener">"A Palo Alto high schooler was accused of AI cheating. His family filed a civil rights suit"</a>, 11 May 2026; Springer / Educational Technology Research and Development, <a href="https://link.springer.com/article/10.1007/s11423-026-10587-1" target="_blank" rel="noopener">"Cheating in the second year of generative AI chatbots: a follow-up study on high school student cheating behaviours"</a>, February 2026; Live AI Wire, <a href="https://www.liveaiwire.com/2026/05/ai-cheating-crisis-schools-universities-fighting-back.html" target="_blank" rel="noopener">"The Cheating Crisis That AI Created, and How Schools Are Fighting Back"</a>, May 2026.</p>
+</article>
+</div></section>
+<section class="block"><div class="wrap">
+  <div class="sectionhead"><h2>Where the evidence agrees</h2><span class="sub">Independent sources pointing the same way</span></div>
+  <div class="cards"><div class="card agree"><h3>AI's clearest near-term value in schools is reducing teacher workload, not direct student use</h3>
+<p>Government investment, teacher adoption data, and vendor strategy are all converging on teacher-facing AI as the least contested and most measurable near-term use case; schools that have not yet done so should separate their staff AI policy from their student AI policy and develop each on its own terms.</p><div class="srcs">Sources: <a href="https://www.miragenews.com/4-6m-boost-for-ai-tool-easing-teacher-workloads-1670472/" target="_blank" rel="noopener">WA ClassmAIte expansion</a>, <a href="https://www.rand.org/pubs/research_reports/RRA956-31.html" target="_blank" rel="noopener">RAND survey (68% of teachers use AI weekly)</a>, <a href="https://news.microsoft.com/source/asia/2026/04/23/microsoft-announces-australias-largest-ai-skilling-commitment/" target="_blank" rel="noopener">Microsoft Elevate for Educators</a></div></div><div class="card agree"><h3>AI in schools risks widening existing equity gaps without deliberate counteraction</h3>
+<p>Independent research bodies, an Australian university collaboration, and legal analysis all identify the same structural problem: AI tools amplify the advantages of students who already have knowledge, metacognitive skills, and digital access, while creating new risks for those who do not; this should be an explicit consideration in any school AI strategy, not an afterthought.</p><div class="srcs">Sources: <a href="https://www.paulramsayfoundation.org.au/news-resources/australia-needs-quality-assurance-to-harness-benefits-of-ai-and-edtech-for-students-and-schools" target="_blank" rel="noopener">Paul Ramsay Foundation / UTS on digital equity</a>, <a href="https://link.springer.com/article/10.1007/s11423-026-10587-1" target="_blank" rel="noopener">AI detection bias research (ETR&amp;D, Feb 2026)</a>, <a href="https://www.uts.edu.au/news/2026/03/experts-warn-unstructured-ai-use-in-schools-risks-cognitive-atrophy" target="_blank" rel="noopener">UTS / UQ cognitive atrophy report (March 2026)</a></div></div></div>
+</div></section>
+<section class="block"><div class="wrap">
+  <div class="sectionhead"><h2>Where experts disagree</h2><span class="sub">Live debates worth understanding before deciding</span></div>
+  <div class="cards"><div class="card disagree"><h3>Should schools use AI detection tools as part of academic integrity processes?</h3>
+<div class="pos"><div class="a"><b class="tag">One view</b>Many Australian schools are deploying AI detection software and treating a positive flag as meaningful evidence of misconduct, following guidance from bodies such as NESA and TEQSA that frame AI misuse as an integrity breach. (<a href="https://www.nsw.gov.au/education-and-training/nesa/hsc/rules-and-procedures/artificial-intelligence" target="_blank" rel="noopener">NESA AI guidance</a>, <a href="https://www.teqsa.gov.au/guides-resources/protecting-academic-integrity/academic-integrity-toolkit/risks-academic-integrity-ai" target="_blank" rel="noopener">TEQSA integrity toolkit</a>)</div>
+<div class="b"><b class="tag">The other view</b>Peer-reviewed research finds AI detectors structurally unreliable, with false positive rates exceeding 25% for non-native English speakers and neurodivergent students; the Palo Alto civil rights suit suggests real legal liability follows from acting on these errors. (<a href="https://link.springer.com/article/10.1007/s11423-026-10587-1" target="_blank" rel="noopener">ETR&amp;D, Feb 2026</a>, <a href="https://sfstandard.com/2026/05/11/ai-detection-cheating-palo-alto/" target="_blank" rel="noopener">SF Standard</a>)</div></div>
+<div class="tension"><b class="tag">The tension</b>Schools face a genuine dilemma: academic integrity frameworks require them to respond to AI misuse, but the tools available to detect it are demonstrably inequitable; the emerging answer is assessment redesign rather than detection, but most schools have not yet made that shift.</div></div><div class="card disagree"><h3>Should governments invest in AI tools for schools now, or pause for governance to catch up?</h3>
+<div class="pos"><div class="a"><b class="tag">One view</b>State and federal governments (WA $4.6M, Federal $70M AI Accelerator) are actively funding AI expansion, treating adoption as inevitable and framing governance as something that can be built in parallel. (<a href="https://www.miragenews.com/4-6m-boost-for-ai-tool-easing-teacher-workloads-1670472/" target="_blank" rel="noopener">WA Budget announcement</a>, <a href="https://www.smartcompany.com.au/federal-budget-2026/federal-budget-backs-ai-70-million-accelerator-major-agency-trials/" target="_blank" rel="noopener">SmartCompany budget coverage</a>)</div>
+<div class="b"><b class="tag">The other view</b>New York City parents demanded a moratorium on all AI deployments at a public school board meeting in May 2026, arguing governance frameworks must precede tool rollout; the OAIC privacy code signals that Australian regulators also believe the rules need to catch up with practice. (<a href="https://www.chalkbeat.org/newyork/2026/05/01/parents-demand-ai-moratorium-in-schools-during-marathon-panel-for-educational-policy-meeting/" target="_blank" rel="noopener">Chalkbeat NYC</a>, <a href="https://www.oaic.gov.au/news/media-centre/oaic-releases-exposure-draft-of-the-childrens-online-privacy-code" target="_blank" rel="noopener">OAIC exposure draft</a>)</div></div>
+<div class="tension"><b class="tag">The tension</b>Independent school leaders should expect the parent community debate that erupted in New York to reach Australian classrooms; having a transparent, principled account of how AI tool decisions are made and governed is becoming a community relations necessity, not just a policy one.</div></div></div>
+</div></section>
+<section class="block"><div class="wrap">
+  <div class="sectionhead"><h2>Worth watching</h2><span class="sub">Developments to keep an eye on</span></div>
+  <div class="watch"><h3>OAIC Children's Online Privacy Code consultation: three weeks to engage</h3><p>The consultation window for the exposure draft Children's Online Privacy Code closes 5 June 2026. While the code primarily targets commercial online services, its explicit coverage of school management systems and student-facing AI tools means its final form will directly shape how independent schools procure and deploy technology from December 2026 onward. The consent model for under-15s – which would require parental rather than school consent for many tools – is the most operationally significant provision. Any school or sector body that wants to influence this before it is law should be seeking legal advice and preparing submissions now. Consultation details and the exposure draft are available at <a href="https://www.oaic.gov.au/privacy/privacy-registers/privacy-codes/childrens-online-privacy-code" target="_blank" rel="noopener">oaic.gov.au</a>.</p></div><div class="watch"><h3>Microsoft's free AI credential for Australian teachers: worth evaluating for school PL</h3><p>On 23 April 2026, Microsoft announced a commitment to help three million Australians build AI skills by 2028, centred on its Elevate for Educators programme. The programme offers a free, self-paced AI Literacy for Educators credential, practical classroom resources, and access to a global peer educator network. This is worth monitoring not because Microsoft's platform is uniquely superior, but because a free, structured, credentialled pathway for teacher AI professional development now exists and is being actively promoted in the Australian market. For those leading AI integration building a staff PL programme, it provides a scaffold for teachers who want a self-directed starting point between facilitated school sessions – and a potential conversation starter about what "AI literate" means for your staff cohort. More detail at <a href="https://elevateforeducators.microsoft.com/" target="_blank" rel="noopener">elevateforeducators.microsoft.com</a>.</p><p class="srcline">Sources: Microsoft Source Asia, <a href="https://news.microsoft.com/source/asia/2026/04/23/microsoft-announces-australias-largest-ai-skilling-commitment/" target="_blank" rel="noopener">"Microsoft announces Australia's largest AI skilling commitment: three million people by 2028"</a>, 23 April 2026; Microsoft Source, <a href="https://news.microsoft.com/source/2026/01/15/microsoft-expands-its-commitment-to-education-with-elevate-for-educators-program-and-new-ai-powered-tools/" target="_blank" rel="noopener">"Microsoft expands its commitment to education with Elevate for Educators Program and new AI-powered tools"</a>, January 2026.</p></div>
+</div></section>
+<div class="wrap"><details class="allsources"><summary>Full source list for this issue (24 sources)</summary>
+<ol><li>Mirage News, <a href="https://www.miragenews.com/4-6m-boost-for-ai-tool-easing-teacher-workloads-1670472/" target="_blank" rel="noopener">"$4.6M Boost for AI Tool Easing Teacher Workloads"</a>, 11 May 2026.</li><li>The Mandarin, <a href="https://www.themandarin.com.au/312717-wa-eyes-educational-leadership-in-ai-with-lesson-plan-tool/" target="_blank" rel="noopener">"WA eyes educational leadership in AI with lesson plan tool"</a>, May 2026.</li><li>Ministers' Media Centre (Australian Government), <a href="https://ministers.education.gov.au/clare/ai-pilot-help-tackle-wa-teacher-workloads" target="_blank" rel="noopener">"AI pilot to help tackle WA teacher workloads"</a>, 2026.</li><li>Education Matters Magazine, <a href="https://educationmattersmag.com.au/4-6-million-boost-extends-ai-pilot-to-reduce-teacher-workload/" target="_blank" rel="noopener">"$4.6 million boost extends AI pilot to reduce teacher workload"</a>, May 2026.</li><li>SmartCompany, <a href="https://www.smartcompany.com.au/federal-budget-2026/federal-budget-backs-ai-70-million-accelerator-major-agency-trials/" target="_blank" rel="noopener">"Federal budget backs AI with $70 million accelerator and major agency trials"</a>, 12 May 2026.</li><li>Information Age / ACS, <a href="https://ia.acs.org.au/article/2026/federal-budget-2026-the-biggest-tech-announcements.html" target="_blank" rel="noopener">"Federal budget 2026: The biggest tech announcements"</a>, May 2026.</li><li>Education Matters Magazine, <a href="https://educationmattersmag.com.au/federal-budget-2026-27-what-does-it-mean-for-australias-education-sector/" target="_blank" rel="noopener">"Federal Budget 2026-27 – what does it mean for Australia's education sector?"</a>, May 2026.</li><li>Paul Ramsay Foundation, <a href="https://www.paulramsayfoundation.org.au/news-resources/australia-needs-quality-assurance-to-harness-benefits-of-ai-and-edtech-for-students-and-schools" target="_blank" rel="noopener">"Australia needs quality assurance to harness benefits of AI and edtech for students and schools"</a>, 2026.</li><li>OAIC, <a href="https://www.oaic.gov.au/news/media-centre/oaic-releases-exposure-draft-of-the-childrens-online-privacy-code" target="_blank" rel="noopener">"OAIC releases Exposure Draft of the Children's Online Privacy Code"</a>, March 2026.</li><li>OAIC, <a href="https://www.oaic.gov.au/privacy/privacy-registers/privacy-codes/childrens-online-privacy-code" target="_blank" rel="noopener">"Children's Online Privacy Code"</a>, 2026.</li><li>Baker McKenzie, <a href="https://www.bakermckenzie.com/en/insight/publications/2026/05/australia-childrens-online-privacy-code-exposure-draft" target="_blank" rel="noopener">"Australia: Children's Online Privacy Code Exposure Draft"</a>, May 2026.</li><li>DLA Piper Privacy Matters, <a href="https://privacymatters.dlapiper.com/2026/04/australia-exposure-draft-of-childrens-online-privacy-code-signals-tougher-standards/" target="_blank" rel="noopener">"Australia: Exposure draft of Children's Online Privacy Code signals tougher standards"</a>, April 2026.</li><li>Ashurst, <a href="https://www.ashurst.com/en/insights/the-kids-are-online-what-australias-childrens-online-privacy-code-means-for-you/" target="_blank" rel="noopener">"The kids are online – what Australia's Children's Online Privacy Code means for you"</a>, 2026.</li><li>SF Standard, <a href="https://sfstandard.com/2026/05/11/ai-detection-cheating-palo-alto/" target="_blank" rel="noopener">"A Palo Alto high schooler was accused of AI cheating. His family filed a civil rights suit"</a>, 11 May 2026.</li><li>Springer / Educational Technology Research and Development, <a href="https://link.springer.com/article/10.1007/s11423-026-10587-1" target="_blank" rel="noopener">"Cheating in the second year of generative AI chatbots: a follow-up study on high school student cheating behaviours"</a>, February 2026.</li><li>Live AI Wire, <a href="https://www.liveaiwire.com/2026/05/ai-cheating-crisis-schools-universities-fighting-back.html" target="_blank" rel="noopener">"The Cheating Crisis That AI Created, and How Schools Are Fighting Back"</a>, May 2026.</li><li>RAND Corporation, <a href="https://www.rand.org/pubs/research_reports/RRA956-31.html" target="_blank" rel="noopener">"More Districts Are Training Teachers on Artificial Intelligence"</a>, January 2026.</li><li>Chalkbeat, <a href="https://www.chalkbeat.org/newyork/2026/05/01/parents-demand-ai-moratorium-in-schools-during-marathon-panel-for-educational-policy-meeting/" target="_blank" rel="noopener">"NYC parents demand AI moratorium in schools during marathon panel for educational policy meeting"</a>, 1 May 2026.</li><li>Microsoft Source Asia, <a href="https://news.microsoft.com/source/asia/2026/04/23/microsoft-announces-australias-largest-ai-skilling-commitment/" target="_blank" rel="noopener">"Microsoft announces Australia's largest AI skilling commitment: three million people by 2028"</a>, 23 April 2026.</li><li>Microsoft Source, <a href="https://news.microsoft.com/source/2026/01/15/microsoft-expands-its-commitment-to-education-with-elevate-for-educators-program-and-new-ai-powered-tools/" target="_blank" rel="noopener">"Microsoft expands its commitment to education with Elevate for Educators Program and new AI-powered tools"</a>, January 2026.</li><li>UTS, <a href="https://www.uts.edu.au/news/2026/03/experts-warn-unstructured-ai-use-in-schools-risks-cognitive-atrophy" target="_blank" rel="noopener">"Experts warn unstructured AI use in schools risks 'cognitive atrophy'"</a>, March 2026.</li><li>Paul Ramsay Foundation, <a href="https://www.paulramsayfoundation.org.au/news-resources/shaping-ai-and-edtech-to-tackle-australias-learning-divide" target="_blank" rel="noopener">"Shaping AI and edtech to tackle Australia's learning divide"</a>, 2026.</li><li>NESA, <a href="https://www.nsw.gov.au/education-and-training/nesa/hsc/rules-and-procedures/artificial-intelligence" target="_blank" rel="noopener">"Use of Artificial Intelligence by students"</a>, 2026.</li><li>TEQSA, <a href="https://www.teqsa.gov.au/guides-resources/protecting-academic-integrity/academic-integrity-toolkit/risks-academic-integrity-ai" target="_blank" rel="noopener">"Risks to academic integrity from AI"</a>, 2026.</li></ol></details></div><div class="wrap"><div class="pager"><a href="2026-05-10.html">← 10 May 2026</a><a href="2026-05-24.html">24 May 2026 →</a></div></div>
+<footer><div class="wrap">
+  <p><strong>AI in EdTech Weekly</strong> is compiled from primary sources each week; every claim links to its original source.
+  Briefings are produced with AI-assisted research and human editorial review, and summarise third-party reporting and research
+  for information purposes.</p>
+</div></footer>
+</body>
+</html>

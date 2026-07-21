@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="en-AU">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>AI in EdTech Weekly · 24 May 2026</title>
+<meta name="description" content="The rules of the profession are being rewritten: teacher standards, a new national commission, and a mandatory AI integrity course">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,600;9..144,700&family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+<style>
+:root{
+  --paper:#f7f5f0; --card:#ffffff; --ink:#181f30; --ink2:#3c4557;
+  --muted:#6f7787; --line:#e4dfd4; --navy:#1b2a4a; --navy2:#223458;
+  --accent:#0e7c66; --accent-soft:#e6f1ed; --amber:#a96f24; --amber-soft:#f7eeddd9;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{background:var(--paper);color:var(--ink);
+  font-family:'Inter',-apple-system,'Segoe UI',sans-serif;
+  font-size:17px;line-height:1.65;-webkit-font-smoothing:antialiased}
+a{color:var(--accent);text-decoration:none}
+a:hover{text-decoration:underline}
+.wrap{max-width:820px;margin:0 auto;padding:0 24px}
+/* top bar */
+.topbar{position:sticky;top:0;z-index:50;background:rgba(247,245,240,.92);
+  backdrop-filter:blur(8px);border-bottom:1px solid var(--line)}
+.topbar .wrap{display:flex;align-items:center;justify-content:space-between;height:58px}
+.brand{font-family:'Fraunces',serif;font-weight:700;font-size:1.05rem;color:var(--ink);letter-spacing:.01em}
+.brand:hover{text-decoration:none}
+.brand span{color:var(--accent)}
+.topnav{display:flex;gap:22px;font-size:.85rem;font-weight:600}
+.topnav a{color:var(--ink2)}
+/* issue head */
+.issuehead{padding:56px 0 36px}
+.kicker{font-size:.74rem;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:var(--accent);margin-bottom:14px}
+h1.issue{font-family:'Fraunces',serif;font-weight:600;font-size:clamp(1.9rem,4.5vw,2.7rem);line-height:1.15;letter-spacing:-.01em;max-width:17em}
+.issuemeta{margin-top:16px;color:var(--muted);font-size:.9rem}
+/* glance band */
+.glance{background:var(--navy);color:#eef1f7;padding:44px 0 40px}
+.glance h2{font-family:'Fraunces',serif;font-weight:600;font-size:1.35rem;color:#fff;margin-bottom:14px}
+.glance .overview{font-size:1.02rem;line-height:1.7;color:#d9dfec;max-width:44em}
+.glance h3{font-size:.74rem;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:#8fa8d8;margin:28px 0 12px}
+.signals{list-style:none}
+.signals li{position:relative;padding:10px 0 10px 26px;border-top:1px solid var(--navy2);font-size:.95rem;line-height:1.6;color:#e7ebf4}
+.signals li:before{content:"";position:absolute;left:2px;top:19px;width:8px;height:8px;border-radius:50%;background:var(--accent)}
+.actions{list-style:none;display:grid;gap:10px}
+.actions li{background:var(--navy2);border-left:3px solid var(--accent);border-radius:0 8px 8px 0;
+  padding:12px 16px;font-size:.92rem;line-height:1.55;color:#e7ebf4}
+.glance a{color:#9fd4c6}
+/* sections */
+section.block{padding:52px 0 8px}
+.sectionhead{display:flex;align-items:baseline;gap:14px;margin-bottom:8px}
+.sectionhead h2{font-family:'Fraunces',serif;font-weight:600;font-size:1.5rem}
+.sectionhead .sub{color:var(--muted);font-size:.88rem}
+/* stories */
+.story{padding:34px 0;border-bottom:1px solid var(--line)}
+.story:last-child{border-bottom:none}
+.storytop{display:flex;gap:16px;align-items:flex-start}
+.snum{font-family:'Fraunces',serif;font-weight:600;font-size:1.5rem;color:var(--accent);line-height:1.2;min-width:1.2em}
+.story h3{font-family:'Fraunces',serif;font-weight:600;font-size:1.25rem;line-height:1.3}
+.smeta{margin:8px 0 14px;font-size:.78rem;font-weight:600;letter-spacing:.06em;text-transform:uppercase;color:var(--muted)}
+.story p{margin-bottom:14px;color:var(--ink2)}
+.why{background:var(--accent-soft);border-left:3px solid var(--accent);border-radius:0 10px 10px 0;
+  padding:14px 18px;margin:18px 0 14px;font-size:.95rem;line-height:1.6}
+.why b.tag{display:block;font-size:.72rem;font-weight:700;letter-spacing:.13em;text-transform:uppercase;color:var(--accent);margin-bottom:6px}
+.srcline{font-size:.82rem;color:var(--muted);line-height:1.55}
+.srcline a{color:var(--muted);text-decoration:underline;text-decoration-color:var(--line);text-underline-offset:3px}
+.srcline a:hover{color:var(--accent)}
+/* signal cards */
+.cards{display:grid;gap:16px;margin-top:20px}
+.card{background:var(--card);border:1px solid var(--line);border-radius:14px;padding:22px 24px;box-shadow:0 1px 2px rgba(24,31,48,.04)}
+.card h3{font-family:'Fraunces',serif;font-weight:600;font-size:1.06rem;line-height:1.4;margin-bottom:10px}
+.card p{font-size:.93rem;line-height:1.6;color:var(--ink2)}
+.card .srcs{margin-top:12px;font-size:.8rem;color:var(--muted);line-height:1.6}
+.card .srcs a{color:var(--muted);text-decoration:underline;text-decoration-color:var(--line);text-underline-offset:3px}
+.card .srcs a:hover{color:var(--accent)}
+.card.agree{border-top:3px solid var(--accent)}
+.card.disagree{border-top:3px solid var(--amber)}
+.pos{display:grid;gap:10px;margin:10px 0}
+.pos>div{border-radius:10px;padding:12px 15px;font-size:.9rem;line-height:1.6}
+.pos .a{background:var(--accent-soft)}
+.pos .b{background:var(--amber-soft)}
+.pos b.tag{display:block;font-size:.7rem;font-weight:700;letter-spacing:.12em;text-transform:uppercase;margin-bottom:4px}
+.pos .a b.tag{color:var(--accent)}
+.pos .b b.tag{color:var(--amber)}
+.tension{font-size:.9rem;color:var(--ink2);line-height:1.6;padding-top:8px;border-top:1px dashed var(--line)}
+.tension b.tag{font-size:.7rem;font-weight:700;letter-spacing:.12em;text-transform:uppercase;color:var(--muted);display:block;margin-bottom:4px}
+/* watching */
+.watch{background:var(--card);border:1px solid var(--line);border-radius:14px;padding:22px 24px;margin-top:16px}
+.watch h3{font-family:'Fraunces',serif;font-weight:600;font-size:1.06rem;margin-bottom:10px}
+.watch p{font-size:.93rem;line-height:1.65;color:var(--ink2);margin-bottom:10px}
+/* sources details */
+details.allsources{margin:44px 0 0;border-top:1px solid var(--line);padding-top:20px}
+details.allsources summary{cursor:pointer;font-weight:600;font-size:.95rem;color:var(--ink2)}
+details.allsources ol{margin:16px 0 0 20px;font-size:.85rem;color:var(--muted);line-height:1.7}
+details.allsources li{margin-bottom:6px}
+/* pager + footer */
+.pager{display:flex;justify-content:space-between;gap:16px;margin:48px 0 0;padding-top:24px;border-top:1px solid var(--line);font-size:.9rem;font-weight:600}
+footer{margin-top:56px;padding:32px 0 48px;border-top:1px solid var(--line);color:var(--muted);font-size:.82rem;line-height:1.7}
+/* index */
+.hero{padding:72px 0 40px}
+.hero h1{font-family:'Fraunces',serif;font-weight:600;font-size:clamp(2.2rem,6vw,3.4rem);line-height:1.1;letter-spacing:-.015em}
+.hero p.tag{margin-top:18px;font-size:1.05rem;color:var(--ink2);max-width:36em;line-height:1.7}
+.latest{background:var(--navy);color:#eef1f7;border-radius:18px;padding:34px 36px;margin:8px 0 12px}
+.latest .kicker{color:#9fd4c6}
+.latest h2{font-family:'Fraunces',serif;font-weight:600;font-size:1.5rem;line-height:1.3;color:#fff;margin-bottom:12px}
+.latest p{color:#d9dfec;font-size:.98rem;line-height:1.7;margin-bottom:20px}
+.btn{display:inline-block;background:var(--accent);color:#fff;font-weight:600;font-size:.9rem;
+  padding:11px 22px;border-radius:999px}
+.btn:hover{text-decoration:none;filter:brightness(1.08)}
+.archive{padding:44px 0}
+.archive h2{font-family:'Fraunces',serif;font-weight:600;font-size:1.5rem;margin-bottom:6px}
+.issuelist{list-style:none;margin-top:14px}
+.issuelist li{border-bottom:1px solid var(--line)}
+.issuelist a{display:flex;gap:24px;align-items:baseline;padding:18px 4px;color:var(--ink)}
+.issuelist a:hover{background:#f1ede4;text-decoration:none}
+.issuelist .d{min-width:130px;font-size:.85rem;font-weight:700;color:var(--accent);letter-spacing:.02em}
+.issuelist .h{font-size:.97rem;line-height:1.5;color:var(--ink2)}
+.aboutwrap{padding:20px 0 30px}
+.about{max-width:44em}
+.about h2{font-family:'Fraunces',serif;font-weight:600;font-size:1.5rem;margin-bottom:12px}
+.about p{color:var(--ink2);margin-bottom:12px;font-size:.97rem}
+@media(max-width:640px){
+  .issuelist a{flex-direction:column;gap:4px}
+  .latest{padding:26px 22px}
+}
+@media print{
+  .topbar,.pager{display:none}
+  body{background:#fff}
+  .glance{background:#fff;color:#000;border:1px solid #ccc}
+}
+</style>
+</head>
+<body>
+<header class="topbar"><div class="wrap">
+  <a class="brand" href="../index.html">AI in EdTech <span>Weekly</span></a>
+  <nav class="topnav"><a href="#">Latest briefing</a><a href="../index.html#archive">Archive</a><a href="../index.html#about">About</a></nav>
+</div></header>
+
+<div class="wrap issuehead">
+  <div class="kicker">Weekly briefing · 17 May – 24 May 2026</div>
+  <h1 class="issue">The rules of the profession are being rewritten: teacher standards, a new national commission, and a mandatory AI integrity course</h1>
+  <div class="issuemeta">Issue of 24 May 2026</div>
+</div>
+<section class="glance"><div class="wrap">
+  <h2>At a glance</h2>
+  <p class="overview">AITSL opened the first review of the Australian Professional Standards for Teachers in 15 years, the Teaching and Learning Commission received budget funding, and Queensland made an AI-aware academic integrity course a formal requirement of the QCE. At the same time, data suggests Australian teachers' world-leading AI adoption is driven more by workload relief than pedagogy.</p>
+  <h3>Key signals</h3><ul class="signals"><li>The AITSL review (consultation to February 2027) is the formal mechanism through which AI capability could enter teacher accreditation requirements.</li><li>Queensland now requires an academic integrity course covering AI use as a condition of the QCE, the most concrete state assessment authority response so far.</li><li>Australian teachers rank among the highest AI users in the OECD, but the driver appears to be unsustainable marking loads rather than deliberate integration.</li><li>The Teaching and Learning Commission was funded in the May budget; design proposals are with ministers.</li><li>New research on students using AI chatbots for mental health support highlights accessibility benefits but serious safeguarding limits.</li></ul>
+  <h3>For the leadership agenda</h3><ul class="actions"><li>Consider a school or staff submission to the AITSL standards review while the consultation window is open.</li><li>Diagnose what staff AI use actually looks like in practice before designing the next round of professional learning.</li><li>Set a clear school position on AI-powered wellbeing tools: useful for lowering barriers, never a substitute for clinical judgement.</li></ul>
+</div></section>
+<section class="block"><div class="wrap">
+  <div class="sectionhead"><h2>The stories in depth</h2><span class="sub">Full analysis with linked sources</span></div>
+  
+<article class="story">
+  <div class="storytop"><div class="snum">1</div>
+  <div><h3>AITSL opens public consultation on first review of Australian teacher standards in 15 years</h3><div class="smeta">AITSL / EducationHQ | May 2026</div></div></div>
+  <p>The Australian Institute for Teaching and School Leadership has launched the first formal review of the Australian Professional Standards for Teachers since they were adopted in 2011, with public consultation running from May 2026 to February 2027. A second phase covering the Principal Standard follows from September 2026 to May 2027. The review will examine whether the standards remain "relevant, evidence-informed and aligned with an understanding of effective practice." AITSL will consult directly with teachers, school leaders, unions, and other stakeholders. The review sits alongside the Teaching and Learning Commission design process (see Story 2), meaning that decisions about teacher standards and decisions about the national body that will oversee those standards are advancing in parallel.</p><div class="why"><b class="tag">Why it matters</b>AI competency – what it means for a teacher to demonstrate proficient or highly accomplished practice in a world of generative AI – is conspicuously absent from the current Standards, which predate the existence of large language models by a decade. This review is the formal mechanism through which AI capability could be embedded into what Australian schools require of their teachers for accreditation, registration, and performance development purposes. Two things follow immediately. First, any school that has invested in AI professional learning should be making a submission or encouraging its staff to do so, since the review's output will shape employment and accreditation conversations across the system for at least the next decade. Second, independent schools that want AI-capable staff will need to define for themselves what that looks like before the national review concludes – waiting for updated Standards will take at least 18 months.</div><p class="srcline">Sources: AITSL, <a href="https://www.aitsl.edu.au/standards/review-of-the-teacher-standards" target="_blank" rel="noopener">"Review of the Teacher Standards"</a>, May 2026; EducationHQ, <a href="https://educationhq.com/news/query-on-quality-australias-teacher-standards-set-for-first-update-in-15-years-201003/" target="_blank" rel="noopener">"Query on quality: Australia's teacher standards set for first update in 15 years"</a>, 2026; EduResearch Matters, <a href="https://blog.aare.edu.au/teachers-need-hard-hats-can-aitsl-lead-the-change/" target="_blank" rel="noopener">"Teachers need hard hats. Can AITSL lead the change?"</a>, 2026.</p>
+</article>
+<article class="story">
+  <div class="storytop"><div class="snum">2</div>
+  <div><h3>Teaching and Learning Commission: design proposals expected from Ministers this month as Budget funding is confirmed</h3><div class="smeta">Department of Education / The Mandarin / The Educator K-12 | May 2026</div></div></div>
+  <p>The working group tasked with designing Australia's proposed new Teaching and Learning Commission (TLC) – the merger of ACARA, AITSL, AERO, and Education Services Australia – is expected to present its initial design proposals to Education Ministers in May 2026. The Federal Government confirmed funding for the TLC in the 2026-27 Budget handed down on 12 May, and a dedicated Budget factsheet has been published. The Mandarin has reported that the Commission's purpose is to bring curriculum, assessment, teaching standards, research, and digital resources under one national roof rather than leaving them fragmented across four bodies. The AERO statutory review, due in May 2026, is also expected to inform the Commission's design. Responses from the sector remain mixed: the Australian Education Union has called for genuine consultation with the profession, while Catholic and independent school peak bodies have broadly supported the reform in principle.</p><div class="why"><b class="tag">Why it matters</b>The TLC will eventually become the single national body responsible for every major input shaping how AI is embedded in Australian schooling: the curriculum students learn, the standards teachers are assessed against, the research informing school decisions, and the digital tools made available through ESA. The Commission's governance design – its independence, its relationship with state authorities, and its responsiveness to non-government sectors – therefore matters more than most individual policy announcements. For independent schools, the key question is whether the Commission's structure preserves genuine space for sector-specific approaches or creates pressure toward a uniform national mode. AISNSW, NCEC, and ISA are the sector bodies best placed to represent independent school interests in whatever consultation follows the working group's report.</div><p class="srcline">Sources: Australian Government Department of Education, <a href="https://www.education.gov.au/about-department/resources/teaching-and-learning-commission" target="_blank" rel="noopener">"Teaching and Learning Commission"</a>, May 2026; The Mandarin, <a href="https://www.themandarin.com.au/301355-national-teaching-learning-commission-to-bring-greater-coordination/" target="_blank" rel="noopener">"National teaching, learning commission to bring greater coordination"</a>, 2026; The Educator K-12, <a href="https://www.theeducatoronline.com/k12/news/major-school-reforms-aim-to-lift-teaching-and-learning-across-australia/288318" target="_blank" rel="noopener">"Major school reforms aim to lift teaching and learning across Australia"</a>, 2026; Jason Clare MP, <a href="https://ministers.education.gov.au/clare/next-steps-school-education-reform" target="_blank" rel="noopener">"Next steps in school education reform"</a>, 2026.</p>
+</article>
+<article class="story">
+  <div class="storytop"><div class="snum">3</div>
+  <div><h3>Australian teachers among world's highest AI users – but workload, not pedagogy, may be driving uptake</h3><div class="smeta">EducationHQ / OECD TALIS | May 2026</div></div></div>
+  <p>Two overlapping EducationHQ stories this week point to a tension in how Australian teachers are using AI. One report found that secondary teachers are turning to AI as a coping strategy for unsustainable marking loads, using AI to generate marking guides, provide written feedback, and work through rubric assessments outside school hours – with "without it we can't cope" the sentiment of multiple teachers cited. A separate analysis of OECD TALIS data found Australian teachers rank among the highest globally for frequency of AI use, described as "heavy AI adopters" compared with most OECD peers. The two findings together raise a pointed question: when adoption data looks strong, it may be measuring relief-seeking rather than deliberate, pedagogically grounded integration.</p><div class="why"><b class="tag">Why it matters</b>High AI adoption rates are frequently cited as evidence that AI professional learning is working. This data complicates that reading. A teacher using AI to process a class set of essays at 9 pm on a Sunday is using AI, but in a fundamentally different mode than one who uses it to scaffold in-class formative feedback. Schools designing or reviewing AI professional learning need to be explicit about the difference, and create conditions in which teachers can exercise professional judgement about when AI adds genuine educational value, rather than simply administrative relief. For an AI integration lead this is also an internal diagnostic question: what does staff AI use at your school actually look like in practice, and is your professional learning reinforcing the patterns you want?</div><p class="srcline">Sources: EducationHQ, <a href="https://educationhq.com/news/without-it-we-cant-cope-teachers-turn-to-ai-to-mark-student-work-208295/" target="_blank" rel="noopener">"Without it we can't cope: teachers turn to AI to mark student work"</a>, May 2026; EducationHQ, <a href="https://educationhq.com/news/more-stressed-more-collegial-and-heavy-ai-adopters-aussie-teachers-versus-oecd-peers-200195/" target="_blank" rel="noopener">"More stressed, more collegial and heavy AI adopters: Aussie teachers versus OECD peers"</a>, 2026.</p>
+</article>
+<article class="story">
+  <div class="storytop"><div class="snum">4</div>
+  <div><h3>Queensland makes AI academic integrity course a mandatory requirement for the QCE from 2026</h3><div class="smeta">QCAA / IEU Queensland-NT | 2026</div></div></div>
+  <p>From the graduating cohort of 2026, completion of an academic integrity course is a mandatory eligibility requirement for the Queensland Certificate of Education. Students must complete either the QCAA's own online course (approximately one hour, self-paced, available through the Student Portal) or an approved school-delivered equivalent. The course explicitly covers AI tools: students must understand how to accurately represent AI contributions in submitted work and ensure all assessments reflect original effort. The IEU Queensland-NT has confirmed the course was developed in direct response to advances in generative AI. Completion is automatically recorded in students' learning accounts, creating an audit trail linked to the qualification itself.</p><div class="why"><b class="tag">Why it matters</b>This is the most concrete curriculum-adjacent AI policy development from any Australian state assessment authority in 2026. Queensland has moved from publishing guidance to embedding a formal accountability mechanism inside the qualification – it is now a condition of the certificate. Two things are worth watching. First, whether other states follow: NESA has published guidance on AI use in HSC assessment but has not yet mandated an equivalent standalone integrity course as a qualification requirement. Second, whether a declaratory compliance model (did you acknowledge your AI use?) proves sufficient as AI tools become more capable of producing work that is both plausible and undetectable. Queensland's approach addresses the procedural question. It does not address the deeper learning design question: does the assessment still require genuine thinking regardless of whether AI is declared?</div><p class="srcline">Sources: QCAA, <a href="https://www.qcaa.qld.edu.au/senior/certificates-and-qualifications/qce/eligibility-requirements/academic-integrity-requirement" target="_blank" rel="noopener">"Academic integrity requirement"</a>, 2026; QCAA, <a href="https://myqce.qcaa.qld.edu.au/subjects-and-courses/qcaa-academic-integrity-course" target="_blank" rel="noopener">"QCAA academic integrity course"</a>, 2026; IEU Queensland-NT, <a href="https://ieuqnt.org.au/ai-influence-leads-to-new-academic-integrity-course/" target="_blank" rel="noopener">"AI influence leads to new academic integrity course"</a>, 2026.</p>
+</article>
+<article class="story">
+  <div class="storytop"><div class="snum">5</div>
+  <div><h3>UK Parliament Education Select Committee AI and EdTech inquiry moves into oral evidence phase</h3><div class="smeta">UK Parliament / Computer Weekly | May 2026</div></div></div>
+  <p>The UK House of Commons Education Select Committee's inquiry into "The use of Artificial Intelligence and EdTech in Education," launched in February 2026 with a submissions deadline of 10 April, is now in its oral evidence phase. Chaired by Helen Hayes MP, the cross-party committee is examining how AI affects skills including critical thinking, problem-solving, and oracy; whether AI exacerbates inequalities between students; what support teachers need to use AI effectively; and how assessment methods may need to change. The scope spans early years settings through to universities, making it one of the most comprehensive parliamentary examinations of AI in education undertaken anywhere. Published evidence sessions are available on the committee's website.</p><div class="why"><b class="tag">Why it matters</b>UK Select Committee inquiries on technology and education have historically influenced Australian policy thinking, and several of this inquiry's focus areas are almost identical to debates currently active in Australian states: assessment integrity, equity of AI access, teacher readiness, and the effect of AI on deep learning. When the committee's report is published – likely later in 2026 – it will carry independent research findings, expert testimony, and specific recommendations grounded in comparative international evidence. It will be worth reading in full. In the meantime, the published oral evidence sessions (accessible via the link below) give a live window into how leading international researchers and practitioners are framing these questions for a policy audience.</div><p class="srcline">Sources: UK Parliament Education Committee, <a href="https://committees.parliament.uk/committee/203/education-committee/news/212112/ai-and-edtech-mps-launch-new-inquiry-examining-technologys-role-in-education/" target="_blank" rel="noopener">"AI and EdTech: MPs launch new inquiry examining technology's role in education"</a>, February 2026; UK Parliament, <a href="https://committees.parliament.uk/work/9642/the-use-of-artificial-intelligence-and-edtech-in-education/" target="_blank" rel="noopener">"The use of Artificial Intelligence and EdTech in Education"</a>, 2026; Computer Weekly, <a href="https://www.computerweekly.com/news/366639693/MPs-launch-inquiry-into-use-of-tech-in-education" target="_blank" rel="noopener">"MPs launch inquiry into use of tech in education"</a>, 2026.</p>
+</article>
+</div></section>
+<section class="block"><div class="wrap">
+  <div class="sectionhead"><h2>Where the evidence agrees</h2><span class="sub">Independent sources pointing the same way</span></div>
+  <div class="cards"><div class="card agree"><h3>Australia's national education architecture is being redesigned with AI as an implicit driver across all components</h3>
+<p>Standards, national bodies, and qualifications are all under active review simultaneously in 2026; schools and sector bodies that engage with these consultations now will shape the outcomes – those that wait will have outcomes handed to them.</p><div class="srcs">Sources: <a href="https://www.aitsl.edu.au/standards/review-of-the-teacher-standards" target="_blank" rel="noopener">AITSL teacher standards review</a>, <a href="https://www.education.gov.au/about-department/resources/teaching-and-learning-commission" target="_blank" rel="noopener">Teaching and Learning Commission Budget confirmation</a>, <a href="https://www.qcaa.qld.edu.au/senior/certificates-and-qualifications/qce/eligibility-requirements/academic-integrity-requirement" target="_blank" rel="noopener">QCAA mandatory AI integrity course</a></div></div><div class="card agree"><h3>High AI adoption rates in Australian schools may be masking a workload-driven rather than pedagogically-driven pattern</h3>
+<p>Multiple sources converge on the same diagnosis: frequency of AI use is an inadequate measure of integration quality; professional learning that does not distinguish between relief-seeking and intentional pedagogy risks reinforcing the wrong habits at scale.</p><div class="srcs">Sources: <a href="https://educationhq.com/news/without-it-we-cant-cope-teachers-turn-to-ai-to-mark-student-work-208295/" target="_blank" rel="noopener">EducationHQ: teachers using AI for marking</a>, <a href="https://educationhq.com/news/more-stressed-more-collegial-and-heavy-ai-adopters-aussie-teachers-versus-oecd-peers-200195/" target="_blank" rel="noopener">OECD TALIS data on Australian teacher AI frequency</a>, <a href="https://www.edweek.org/technology/more-schools-are-providing-ai-training-for-teachers-is-it-any-good/2026/05" target="_blank" rel="noopener">EdWeek: AI PD quality questioned (May 2026)</a></div></div></div>
+</div></section>
+<section class="block"><div class="wrap">
+  <div class="sectionhead"><h2>Where experts disagree</h2><span class="sub">Live debates worth understanding before deciding</span></div>
+  <div class="cards"><div class="card disagree"><h3>Should teachers use AI to mark and provide feedback on student work?</h3>
+<div class="pos"><div class="a"><b class="tag">One view</b>EducationHQ reporting indicates many Australian secondary teachers are already using AI marking tools out of workload necessity and consider it a legitimate professional aid. (<a href="https://educationhq.com/news/without-it-we-cant-cope-teachers-turn-to-ai-to-mark-student-work-208295/" target="_blank" rel="noopener">EducationHQ</a>)</div>
+<div class="b"><b class="tag">The other view</b>Researchers and educators argue that AI-generated feedback is often generic, cannot read the full context of a student's learning journey, and removes the professional judgement that makes teacher feedback educationally meaningful; the UTS/UQ cognitive atrophy report warned that reduced feedback quality carries distinct developmental risks. (<a href="https://www.uts.edu.au/news/2026/03/experts-warn-unstructured-ai-use-in-schools-risks-cognitive-atrophy" target="_blank" rel="noopener">UTS, March 2026</a>)</div></div>
+<div class="tension"><b class="tag">The tension</b>Schools risk formalising an informal practice without examination; if teachers are already using AI to mark, that process needs explicit policy, quality criteria, and transparency to students and parents – not just toleration.</div></div><div class="card disagree"><h3>Should the AITSL teacher standards prescribe specific AI competencies?</h3>
+<div class="pos"><div class="a"><b class="tag">One view</b>The AITSL review launch reflects a sector expectation that all teachers must now demonstrate baseline AI literacy, and a view that formal standards are the mechanism to ensure this becomes universal rather than patchy. (<a href="https://www.aitsl.edu.au/standards/review-of-the-teacher-standards" target="_blank" rel="noopener">AITSL</a>)</div>
+<div class="b"><b class="tag">The other view</b>Critics have argued that embedding prescriptive technology competencies in the Standards risks calcifying current-tool knowledge into permanent requirements, creating compliance burdens for teachers with legitimate reasons for different approaches. (<a href="https://blog.aare.edu.au/teachers-need-hard-hats-can-aitsl-lead-the-change/" target="_blank" rel="noopener">EduResearch Matters</a>)</div></div>
+<div class="tension"><b class="tag">The tension</b>The review is a real opportunity, but a poorly designed update could lock in 2026 AI tools as the benchmark, rather than building adaptable thinking practices that will remain relevant as the technology changes.</div></div></div>
+</div></section>
+<section class="block"><div class="wrap">
+  <div class="sectionhead"><h2>Worth watching</h2><span class="sub">Developments to keep an eye on</span></div>
+  <div class="watch"><h3>OAIC Children's Online Privacy Code: consultation closes 5 June – ten days away</h3><p>As noted in last week's briefing, the OAIC exposure draft of the Children's Online Privacy Code is open for public comment until 5 June 2026. The deadline is now ten days away. The code's likely requirement for parental consent (rather than school consent) for edtech tools used with students aged 15 and under would materially change how schools deploy student-facing AI tools. Any school or sector body wishing to influence the final code should be finalising its submission now. The exposure draft and submission portal are at <a href="https://www.oaic.gov.au/privacy/privacy-registers/privacy-codes/childrens-online-privacy-code" target="_blank" rel="noopener">oaic.gov.au</a>.</p></div><div class="watch"><h3>AI as a student mental health support tool: new peer-reviewed research raises safeguarding questions</h3><p>A study published in the <em>International Journal of Psychology</em> (Wiley, 2026) examined how secondary school students perceive generative AI as a source of mental health support, drawing on written reflections from 69 Hong Kong students. Students valued AI's accessibility, anonymity, and availability – but raised serious concerns about AI's failure to detect distress signals, respond to non-verbal cues, and escalate to human support when needed. The findings sit alongside eSafety Commissioner data showing 79% of Australian children aged 10--17 have used an AI assistant. As schools field increasing requests from students and parents about AI-powered wellbeing tools, this research provides a principled basis for a clear position: AI may lower the barrier to initial help-seeking, but cannot replace clinical judgement and carries real safeguarding risk if used as a primary response to student distress.</p><p class="srcline">Sources: Wiley / International Journal of Psychology, <a href="https://onlinelibrary.wiley.com/doi/10.1002/ijop.70207" target="_blank" rel="noopener">"Exploring Student Perceptions of Generative AI Therapists and Their Benefits and Challenges in Schools"</a>, 2026; eSafety Commissioner, <a href="https://www.esafety.gov.au/newsroom/media-releases/esafety-report-shows-ai-companions-are-putting-children-at-risk" target="_blank" rel="noopener">"eSafety report shows AI companions are putting children at risk"</a>, March 2026.</p></div>
+</div></section>
+<div class="wrap"><details class="allsources"><summary>Full source list for this issue (20 sources)</summary>
+<ol><li>AITSL, <a href="https://www.aitsl.edu.au/standards/review-of-the-teacher-standards" target="_blank" rel="noopener">"Review of the Teacher Standards"</a>, May 2026.</li><li>EducationHQ, <a href="https://educationhq.com/news/query-on-quality-australias-teacher-standards-set-for-first-update-in-15-years-201003/" target="_blank" rel="noopener">"Query on quality: Australia's teacher standards set for first update in 15 years"</a>, 2026.</li><li>EduResearch Matters, <a href="https://blog.aare.edu.au/teachers-need-hard-hats-can-aitsl-lead-the-change/" target="_blank" rel="noopener">"Teachers need hard hats. Can AITSL lead the change?"</a>, 2026.</li><li>Australian Government Department of Education, <a href="https://www.education.gov.au/about-department/resources/teaching-and-learning-commission" target="_blank" rel="noopener">"Teaching and Learning Commission"</a>, May 2026.</li><li>The Mandarin, <a href="https://www.themandarin.com.au/301355-national-teaching-learning-commission-to-bring-greater-coordination/" target="_blank" rel="noopener">"National teaching, learning commission to bring greater coordination"</a>, 2026.</li><li>The Educator K-12, <a href="https://www.theeducatoronline.com/k12/news/major-school-reforms-aim-to-lift-teaching-and-learning-across-australia/288318" target="_blank" rel="noopener">"Major school reforms aim to lift teaching and learning across Australia"</a>, 2026.</li><li>Jason Clare MP, <a href="https://ministers.education.gov.au/clare/next-steps-school-education-reform" target="_blank" rel="noopener">"Next steps in school education reform"</a>, 2026.</li><li>EducationHQ, <a href="https://educationhq.com/news/without-it-we-cant-cope-teachers-turn-to-ai-to-mark-student-work-208295/" target="_blank" rel="noopener">"Without it we can't cope: teachers turn to AI to mark student work"</a>, May 2026.</li><li>EducationHQ, <a href="https://educationhq.com/news/more-stressed-more-collegial-and-heavy-ai-adopters-aussie-teachers-versus-oecd-peers-200195/" target="_blank" rel="noopener">"More stressed, more collegial and heavy AI adopters: Aussie teachers versus OECD peers"</a>, 2026.</li><li>Education Week, <a href="https://www.edweek.org/technology/more-schools-are-providing-ai-training-for-teachers-is-it-any-good/2026/05" target="_blank" rel="noopener">"More Schools Are Providing AI Training for Teachers. Is It Any Good?"</a>, May 2026.</li><li>QCAA, <a href="https://www.qcaa.qld.edu.au/senior/certificates-and-qualifications/qce/eligibility-requirements/academic-integrity-requirement" target="_blank" rel="noopener">"Academic integrity requirement"</a>, 2026.</li><li>QCAA, <a href="https://myqce.qcaa.qld.edu.au/subjects-and-courses/qcaa-academic-integrity-course" target="_blank" rel="noopener">"QCAA academic integrity course"</a>, 2026.</li><li>IEU Queensland-NT, <a href="https://ieuqnt.org.au/ai-influence-leads-to-new-academic-integrity-course/" target="_blank" rel="noopener">"AI influence leads to new academic integrity course"</a>, 2026.</li><li>UK Parliament Education Committee, <a href="https://committees.parliament.uk/committee/203/education-committee/news/212112/ai-and-edtech-mps-launch-new-inquiry-examining-technologys-role-in-education/" target="_blank" rel="noopener">"AI and EdTech: MPs launch new inquiry examining technology's role in education"</a>, February 2026.</li><li>UK Parliament, <a href="https://committees.parliament.uk/work/9642/the-use-of-artificial-intelligence-and-edtech-in-education/" target="_blank" rel="noopener">"The use of Artificial Intelligence and EdTech in Education"</a>, 2026.</li><li>Computer Weekly, <a href="https://www.computerweekly.com/news/366639693/MPs-launch-inquiry-into-use-of-tech-in-education" target="_blank" rel="noopener">"MPs launch inquiry into use of tech in education"</a>, 2026.</li><li>Wiley / International Journal of Psychology, <a href="https://onlinelibrary.wiley.com/doi/10.1002/ijop.70207" target="_blank" rel="noopener">"Exploring Student Perceptions of Generative AI Therapists and Their Benefits and Challenges in Schools"</a>, 2026.</li><li>eSafety Commissioner, <a href="https://www.esafety.gov.au/newsroom/media-releases/esafety-report-shows-ai-companions-are-putting-children-at-risk" target="_blank" rel="noopener">"eSafety report shows AI companions are putting children at risk"</a>, March 2026.</li><li>OAIC, <a href="https://www.oaic.gov.au/privacy/privacy-registers/privacy-codes/childrens-online-privacy-code" target="_blank" rel="noopener">"Children's Online Privacy Code"</a>, 2026.</li><li>UTS, <a href="https://www.uts.edu.au/news/2026/03/experts-warn-unstructured-ai-use-in-schools-risks-cognitive-atrophy" target="_blank" rel="noopener">"Experts warn unstructured AI use in schools risks 'cognitive atrophy'"</a>, March 2026.</li></ol></details></div><div class="wrap"><div class="pager"><a href="2026-05-17.html">← 17 May 2026</a><a href="2026-06-07.html">7 June 2026 →</a></div></div>
+<footer><div class="wrap">
+  <p><strong>AI in EdTech Weekly</strong> is compiled from primary sources each week; every claim links to its original source.
+  Briefings are produced with AI-assisted research and human editorial review, and summarise third-party reporting and research
+  for information purposes.</p>
+</div></footer>
+</body>
+</html>

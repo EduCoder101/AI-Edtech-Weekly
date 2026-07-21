@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="en-AU">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>AI in EdTech Weekly · 12 July 2026</title>
+<meta name="description" content="Questions over the national evidence base, a safeguarding escalation, and fresh proof that AI output is not the same as learning">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,600;9..144,700&family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+<style>
+:root{
+  --paper:#f7f5f0; --card:#ffffff; --ink:#181f30; --ink2:#3c4557;
+  --muted:#6f7787; --line:#e4dfd4; --navy:#1b2a4a; --navy2:#223458;
+  --accent:#0e7c66; --accent-soft:#e6f1ed; --amber:#a96f24; --amber-soft:#f7eeddd9;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{background:var(--paper);color:var(--ink);
+  font-family:'Inter',-apple-system,'Segoe UI',sans-serif;
+  font-size:17px;line-height:1.65;-webkit-font-smoothing:antialiased}
+a{color:var(--accent);text-decoration:none}
+a:hover{text-decoration:underline}
+.wrap{max-width:820px;margin:0 auto;padding:0 24px}
+/* top bar */
+.topbar{position:sticky;top:0;z-index:50;background:rgba(247,245,240,.92);
+  backdrop-filter:blur(8px);border-bottom:1px solid var(--line)}
+.topbar .wrap{display:flex;align-items:center;justify-content:space-between;height:58px}
+.brand{font-family:'Fraunces',serif;font-weight:700;font-size:1.05rem;color:var(--ink);letter-spacing:.01em}
+.brand:hover{text-decoration:none}
+.brand span{color:var(--accent)}
+.topnav{display:flex;gap:22px;font-size:.85rem;font-weight:600}
+.topnav a{color:var(--ink2)}
+/* issue head */
+.issuehead{padding:56px 0 36px}
+.kicker{font-size:.74rem;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:var(--accent);margin-bottom:14px}
+h1.issue{font-family:'Fraunces',serif;font-weight:600;font-size:clamp(1.9rem,4.5vw,2.7rem);line-height:1.15;letter-spacing:-.01em;max-width:17em}
+.issuemeta{margin-top:16px;color:var(--muted);font-size:.9rem}
+/* glance band */
+.glance{background:var(--navy);color:#eef1f7;padding:44px 0 40px}
+.glance h2{font-family:'Fraunces',serif;font-weight:600;font-size:1.35rem;color:#fff;margin-bottom:14px}
+.glance .overview{font-size:1.02rem;line-height:1.7;color:#d9dfec;max-width:44em}
+.glance h3{font-size:.74rem;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:#8fa8d8;margin:28px 0 12px}
+.signals{list-style:none}
+.signals li{position:relative;padding:10px 0 10px 26px;border-top:1px solid var(--navy2);font-size:.95rem;line-height:1.6;color:#e7ebf4}
+.signals li:before{content:"";position:absolute;left:2px;top:19px;width:8px;height:8px;border-radius:50%;background:var(--accent)}
+.actions{list-style:none;display:grid;gap:10px}
+.actions li{background:var(--navy2);border-left:3px solid var(--accent);border-radius:0 8px 8px 0;
+  padding:12px 16px;font-size:.92rem;line-height:1.55;color:#e7ebf4}
+.glance a{color:#9fd4c6}
+/* sections */
+section.block{padding:52px 0 8px}
+.sectionhead{display:flex;align-items:baseline;gap:14px;margin-bottom:8px}
+.sectionhead h2{font-family:'Fraunces',serif;font-weight:600;font-size:1.5rem}
+.sectionhead .sub{color:var(--muted);font-size:.88rem}
+/* stories */
+.story{padding:34px 0;border-bottom:1px solid var(--line)}
+.story:last-child{border-bottom:none}
+.storytop{display:flex;gap:16px;align-items:flex-start}
+.snum{font-family:'Fraunces',serif;font-weight:600;font-size:1.5rem;color:var(--accent);line-height:1.2;min-width:1.2em}
+.story h3{font-family:'Fraunces',serif;font-weight:600;font-size:1.25rem;line-height:1.3}
+.smeta{margin:8px 0 14px;font-size:.78rem;font-weight:600;letter-spacing:.06em;text-transform:uppercase;color:var(--muted)}
+.story p{margin-bottom:14px;color:var(--ink2)}
+.why{background:var(--accent-soft);border-left:3px solid var(--accent);border-radius:0 10px 10px 0;
+  padding:14px 18px;margin:18px 0 14px;font-size:.95rem;line-height:1.6}
+.why b.tag{display:block;font-size:.72rem;font-weight:700;letter-spacing:.13em;text-transform:uppercase;color:var(--accent);margin-bottom:6px}
+.srcline{font-size:.82rem;color:var(--muted);line-height:1.55}
+.srcline a{color:var(--muted);text-decoration:underline;text-decoration-color:var(--line);text-underline-offset:3px}
+.srcline a:hover{color:var(--accent)}
+/* signal cards */
+.cards{display:grid;gap:16px;margin-top:20px}
+.card{background:var(--card);border:1px solid var(--line);border-radius:14px;padding:22px 24px;box-shadow:0 1px 2px rgba(24,31,48,.04)}
+.card h3{font-family:'Fraunces',serif;font-weight:600;font-size:1.06rem;line-height:1.4;margin-bottom:10px}
+.card p{font-size:.93rem;line-height:1.6;color:var(--ink2)}
+.card .srcs{margin-top:12px;font-size:.8rem;color:var(--muted);line-height:1.6}
+.card .srcs a{color:var(--muted);text-decoration:underline;text-decoration-color:var(--line);text-underline-offset:3px}
+.card .srcs a:hover{color:var(--accent)}
+.card.agree{border-top:3px solid var(--accent)}
+.card.disagree{border-top:3px solid var(--amber)}
+.pos{display:grid;gap:10px;margin:10px 0}
+.pos>div{border-radius:10px;padding:12px 15px;font-size:.9rem;line-height:1.6}
+.pos .a{background:var(--accent-soft)}
+.pos .b{background:var(--amber-soft)}
+.pos b.tag{display:block;font-size:.7rem;font-weight:700;letter-spacing:.12em;text-transform:uppercase;margin-bottom:4px}
+.pos .a b.tag{color:var(--accent)}
+.pos .b b.tag{color:var(--amber)}
+.tension{font-size:.9rem;color:var(--ink2);line-height:1.6;padding-top:8px;border-top:1px dashed var(--line)}
+.tension b.tag{font-size:.7rem;font-weight:700;letter-spacing:.12em;text-transform:uppercase;color:var(--muted);display:block;margin-bottom:4px}
+/* watching */
+.watch{background:var(--card);border:1px solid var(--line);border-radius:14px;padding:22px 24px;margin-top:16px}
+.watch h3{font-family:'Fraunces',serif;font-weight:600;font-size:1.06rem;margin-bottom:10px}
+.watch p{font-size:.93rem;line-height:1.65;color:var(--ink2);margin-bottom:10px}
+/* sources details */
+details.allsources{margin:44px 0 0;border-top:1px solid var(--line);padding-top:20px}
+details.allsources summary{cursor:pointer;font-weight:600;font-size:.95rem;color:var(--ink2)}
+details.allsources ol{margin:16px 0 0 20px;font-size:.85rem;color:var(--muted);line-height:1.7}
+details.allsources li{margin-bottom:6px}
+/* pager + footer */
+.pager{display:flex;justify-content:space-between;gap:16px;margin:48px 0 0;padding-top:24px;border-top:1px solid var(--line);font-size:.9rem;font-weight:600}
+footer{margin-top:56px;padding:32px 0 48px;border-top:1px solid var(--line);color:var(--muted);font-size:.82rem;line-height:1.7}
+/* index */
+.hero{padding:72px 0 40px}
+.hero h1{font-family:'Fraunces',serif;font-weight:600;font-size:clamp(2.2rem,6vw,3.4rem);line-height:1.1;letter-spacing:-.015em}
+.hero p.tag{margin-top:18px;font-size:1.05rem;color:var(--ink2);max-width:36em;line-height:1.7}
+.latest{background:var(--navy);color:#eef1f7;border-radius:18px;padding:34px 36px;margin:8px 0 12px}
+.latest .kicker{color:#9fd4c6}
+.latest h2{font-family:'Fraunces',serif;font-weight:600;font-size:1.5rem;line-height:1.3;color:#fff;margin-bottom:12px}
+.latest p{color:#d9dfec;font-size:.98rem;line-height:1.7;margin-bottom:20px}
+.btn{display:inline-block;background:var(--accent);color:#fff;font-weight:600;font-size:.9rem;
+  padding:11px 22px;border-radius:999px}
+.btn:hover{text-decoration:none;filter:brightness(1.08)}
+.archive{padding:44px 0}
+.archive h2{font-family:'Fraunces',serif;font-weight:600;font-size:1.5rem;margin-bottom:6px}
+.issuelist{list-style:none;margin-top:14px}
+.issuelist li{border-bottom:1px solid var(--line)}
+.issuelist a{display:flex;gap:24px;align-items:baseline;padding:18px 4px;color:var(--ink)}
+.issuelist a:hover{background:#f1ede4;text-decoration:none}
+.issuelist .d{min-width:130px;font-size:.85rem;font-weight:700;color:var(--accent);letter-spacing:.02em}
+.issuelist .h{font-size:.97rem;line-height:1.5;color:var(--ink2)}
+.aboutwrap{padding:20px 0 30px}
+.about{max-width:44em}
+.about h2{font-family:'Fraunces',serif;font-weight:600;font-size:1.5rem;margin-bottom:12px}
+.about p{color:var(--ink2);margin-bottom:12px;font-size:.97rem}
+@media(max-width:640px){
+  .issuelist a{flex-direction:column;gap:4px}
+  .latest{padding:26px 22px}
+}
+@media print{
+  .topbar,.pager{display:none}
+  body{background:#fff}
+  .glance{background:#fff;color:#000;border:1px solid #ccc}
+}
+</style>
+</head>
+<body>
+<header class="topbar"><div class="wrap">
+  <a class="brand" href="../index.html">AI in EdTech <span>Weekly</span></a>
+  <nav class="topnav"><a href="#">Latest briefing</a><a href="../index.html#archive">Archive</a><a href="../index.html#about">About</a></nav>
+</div></header>
+
+<div class="wrap issuehead">
+  <div class="kicker">Weekly briefing · 5 July – 12 July 2026</div>
+  <h1 class="issue">Questions over the national evidence base, a safeguarding escalation, and fresh proof that AI output is not the same as learning</h1>
+  <div class="issuemeta">Issue of 12 July 2026</div>
+</div>
+<section class="glance"><div class="wrap">
+  <h2>At a glance</h2>
+  <p class="overview">A governance dispute over AERO's suppressed performance review raises questions about how much weight schools should place on national evidence bodies, while the eSafety Commissioner reports deepfake incidents involving under-18s have more than doubled. The OECD's flagship 2026 report and EDUtech keynotes converge on one message: what matters is not whether students use AI, but the pedagogical conditions under which they use it.</p>
+  <h3>Key signals</h3><ul class="signals"><li>The federal government has refused an FOI request for a KPMG evaluation of AERO, with AERO itself objecting to release. School leaders should weigh AERO resources alongside other peer-reviewed sources for now.</li><li>eSafety reports of digitally altered images of under-18s have more than doubled in 18 months; four in five involve female students. Enforcement against 'nudify' platforms is under way.</li><li>The OECD Digital Education Outlook 2026 finds GenAI improves task performance without necessarily building knowledge, coining the term 'metacognitive disengagement'.</li><li>Professor Rose Luckin at EDUtech: catching students using AI is the wrong question; designing assessment where AI cannot substitute for thinking is the right one.</li><li>Microsoft's global survey: 92% of students have used AI for schoolwork, yet 77% have had no formal training.</li></ul>
+  <h3>For the leadership agenda</h3><ul class="actions"><li>Confirm the school has a clear staff protocol for reporting deepfake incidents to eSafety, and brief pastoral care teams.</li><li>Frame any AI assessment policy around pedagogical conditions for productive use, not detection and enforcement.</li><li>Use the adoption-versus-training gap data to support the case for structured staff AI professional learning.</li></ul>
+</div></section>
+<section class="block"><div class="wrap">
+  <div class="sectionhead"><h2>The stories in depth</h2><span class="sub">Full analysis with linked sources</span></div>
+  
+<article class="story">
+  <div class="storytop"><div class="snum">1</div>
+  <div><h3>Government blocks release of AERO performance review, citing three FOI exemptions</h3><div class="smeta">Education Review | EduResearch Matters | July 2026</div></div></div>
+  <p>Australia's national education evidence body, AERO, is at the centre of a transparency dispute that has emerged this week as the most significant governance story in Australian education. In April 2026 a Freedom of Information request was submitted to the Department of Education seeking a KPMG-authored performance evaluation of AERO. In July 2026 the Department refused the request, citing three legal exemptions: Commonwealth-State relations, deliberative processes, and business information. AERO itself objected to the release, arguing that if the honest, independent evaluation were made public, confidence in the quality of its resources would be lost and educators would stop using them. Critics, including researchers writing in EduResearch Matters, say AERO objecting to its own evaluation on the grounds that it might undermine trust is precisely the kind of argument that undermines trust.</p><div class="why"><b class="tag">Why it matters</b>Your school's evidence-based practice rests partly on AERO resources. If there are credible questions about the rigour or independence of that evidence base – and the fact that AERO is actively resisting scrutiny suggests there may be – school leaders need to weigh those resources alongside other peer-reviewed sources rather than treating AERO materials as a gold standard. The story also connects to the government's announcement of a new Teaching and Learning Commission that will integrate AERO, ACARA, AITSL and Education Services Australia into a closer structure; the suppressed evaluation was intended to inform how that commission should operate.</div><p class="srcline">Sources: <a href="https://www.educationreview.com.au/2026/07/government-should-release-aero-report/" target="_blank" rel="noopener">Government should release AERO report</a> – Education Review, July 2026; <a href="https://www.educationreview.com.au/2026/07/aero-review-could-undermine-trust-in-resources/" target="_blank" rel="noopener">AERO review could 'undermine trust' in resources</a> – Education Review, July 2026; <a href="https://blog.aare.edu.au/aero-shock-why-wont-the-government-reveal-its-secret-report/" target="_blank" rel="noopener">AERO shock: Why won't the government reveal its secret report?</a> – EduResearch Matters, July 2026.</p>
+</article>
+<article class="story">
+  <div class="storytop"><div class="snum">2</div>
+  <div><h3>eSafety urges schools to report deepfakes as incident numbers double</h3><div class="smeta">eSafety Commissioner | 2026</div></div></div>
+  <p>The eSafety Commissioner has issued a direct appeal to schools to report deepfake incidents, revealing that reports involving digitally altered images of people under 18 have more than doubled over the past 18 months – more than the total received in the previous seven years combined. Four out of five reports involve the targeting of female students. The Commissioner is taking enforcement action against major "nudify" platforms under the Age-Restricted Material Codes, which commenced in March 2026, with at least one platform issued a formal Direction to Comply after attracting nearly 40,000 Australian visits per month. A separate eSafety blog describes the range of harms in school communities in detail.</p><div class="why"><b class="tag">Why it matters</b>This is a whole-school safeguarding issue, not a technology issue. Any student with a publicly available photo – including a school photo or social media image – can be targeted without ever having shared explicit material. Independent schools need clear staff reporting protocols, student education components (likely via PDHPE), and parent communication. The enforcement actions under the ARM Codes show that Australian regulatory levers now exist; schools should be aware they can and should refer cases to eSafety. The eSafety website provides an educator information sheet specifically on AI companions and deepfakes.</div><p class="srcline">Sources: <a href="https://www.esafety.gov.au/newsroom/media-releases/esafety-urges-schools-to-report-deepfakes-as-numbers-double" target="_blank" rel="noopener">eSafety urges schools to report deepfakes as numbers double</a> – eSafety Commissioner; <a href="https://www.esafety.gov.au/newsroom/blogs/deepfake-damage-in-schools-how-ai-generated-abuse-is-disrupting-students-families-and-school-communities" target="_blank" rel="noopener">Deepfake damage in schools: How AI-generated abuse is disrupting students, families and school communities</a> – eSafety Commissioner; <a href="https://www.esafety.gov.au/newsroom/media-releases/esafety-takes-action-against-another-major-nudify-service-for-failing-to-protect-australian-children" target="_blank" rel="noopener">eSafety takes action against another major 'nudify' service</a> – eSafety Commissioner.</p>
+</article>
+<article class="story">
+  <div class="storytop"><div class="snum">3</div>
+  <div><h3>OECD Digital Education Outlook 2026: GenAI helps performance but not always learning</h3><div class="smeta">OECD | January 2026</div></div></div>
+  <p>The OECD's flagship Digital Education Outlook 2026 is the most comprehensive international synthesis of AI-in-education evidence released this cycle. The central finding is a careful distinction: GenAI can support genuine learning, but only when guided by clear pedagogical principles. Without that guidance, students improve their task performance without building underlying knowledge or skill. The report coins the phrase "metacognitive disengagement" to describe the pattern where students offload reflective cognitive work to AI tools. The data point that contextualises scale: in 2024, 37% of lower secondary teachers reported using AI in their work (TALIS survey data). The Outlook also examines teacher augmentation, arguing that effective teachers do not accept AI outputs at face value but critically revise and recontextualise them against their instructional goals.</p><div class="why"><b class="tag">Why it matters</b>This report is the clearest articulation yet of why the question "should students use AI?" is less useful than "what pedagogical conditions make AI use productive?" For a Year 5 teacher, the implication is that the design of the task and the quality of teacher facilitation determine whether AI use builds capability or bypasses it. The Outlook is also useful evidence for school AI policy work: its human-centred framing and distinction between performance and learning gives policy-writers a principled basis for setting conditions on AI use in assessment.</div><p class="srcline">Sources: <a href="https://www.oecd.org/en/publications/oecd-digital-education-outlook-2026_062a7394-en.html" target="_blank" rel="noopener">OECD Digital Education Outlook 2026</a> – OECD, January 2026; <a href="https://digital-skills-jobs.europa.eu/en/latest/news/oecd-digital-education-outlook-2026-how-generative-ai-can-support-learning-when-used" target="_blank" rel="noopener">Summary: how generative AI can support learning when used with purpose</a> – EU Digital Skills and Jobs Platform.</p>
+</article>
+<article class="story">
+  <div class="storytop"><div class="snum">4</div>
+  <div><h3>EDUtech 2026: Professor Rose Luckin says the detection question is the wrong question</h3><div class="smeta">Teacher Magazine (ACER) | July 2026</div></div></div>
+  <p>Teacher magazine's coverage of EDUtech 2026 in Sydney this week captures the most direct practitioner-facing argument to emerge from the conference circuit: schools are investing time and energy in the wrong question. Professor Rose Luckin (UCL) argued that the dominant "enforcement" framing – centred on catching students using AI – diverts attention from the real problem of designing assessments where AI use does not undermine learning. Luckin's second key argument is relational: "The AI does not care about you," she said. The distinctively human dimension of teaching – the relationship, the genuine interest in a student's growth – is what AI cannot replicate and what schools should be investing in.</p><div class="why"><b class="tag">Why it matters</b>This maps directly onto what school leaders should be discussing in curriculum review cycles. The conference coverage also flagged that AI-assisted assessment workflows (pre-scoring, flagging uncertainty, routing edge cases) are promising, but credibility requires blueprint alignment, difficulty control, and mandatory human oversight at decision points. For a Year 5 teacher, the relational dimension is both the strongest argument for maintained face-to-face instruction and a powerful framing for how to explain AI's limits to students themselves.</div><p class="srcline">Sources: <a href="https://www.teachermagazine.com/au_en/articles/edutech-2026-ai-assessment-and-keeping-humans-in-the-loop" target="_blank" rel="noopener">EDUtech 2026: AI, assessment, and keeping humans in the loop</a> – Teacher Magazine (ACER), July 2026.</p>
+</article>
+<article class="story">
+  <div class="storytop"><div class="snum">5</div>
+  <div><h3>Microsoft AI in Education 2026 report: 92% adoption, 77% of students with no formal training</h3><div class="smeta">Microsoft | 24 June 2026</div></div></div>
+  <p>Microsoft's third annual AI in Education report, released ahead of ISTELive 26, provides the largest self-report dataset on AI adoption in schools. Headline figures: 92% of students and education leaders have used AI for school-related purposes; 77% of students and 53% of educators have received no formal AI training. The gap is not passive – 66% of educators and 52% of students said they want their institution to provide AI training monthly or quarterly. The report also covers Microsoft's own product releases for schools (Copilot integrations in Microsoft 365 Education at no additional cost).</p><div class="why"><b class="tag">Why it matters</b>The training gap findings are directly usable in your school's professional learning planning. If national-level surveys show that over half of educators have received no formal AI training despite high levels of use, that is a risk management argument as much as a professional development argument: untrained use in schools produces ad hoc outcomes that may not align with the school's values or policy. Treat the Microsoft product announcements as context rather than evidence; the adoption and training-gap data are more useful for making the case internally.</div><p class="srcline">Sources: <a href="https://news.microsoft.com/source/2026/06/24/microsofts-new-ai-in-education-report-highlights-widespread-adoption-and-increasing-demand-for-support/" target="_blank" rel="noopener">Microsoft's New AI in Education Report highlights widespread adoption and increasing demand for support</a> – Microsoft, 24 June 2026; <a href="https://opendatascience.com/microsofts-2026-ai-in-education-report-shows-schools-need-more-ai-training/" target="_blank" rel="noopener">Microsoft's 2026 AI in Education Report Shows Schools Need More AI Training</a> – Open Data Science.</p>
+</article>
+</div></section>
+<section class="block"><div class="wrap">
+  <div class="sectionhead"><h2>Where the evidence agrees</h2><span class="sub">Independent sources pointing the same way</span></div>
+  <div class="cards"><div class="card agree"><h3>Task performance is not the same as learning</h3>
+<p>The most consistent finding across current research and expert commentary is that AI can improve what students produce without improving what they know; this should be the core framing for any school AI policy on assessment</p><div class="srcs">Sources: <a href="https://www.oecd.org/en/publications/oecd-digital-education-outlook-2026_062a7394-en.html" target="_blank" rel="noopener">OECD Digital Education Outlook 2026</a>, <a href="https://arxiv.org/abs/2605.21629" target="_blank" rel="noopener">arXiv "Cognitive Surrender" study</a> (cited in 5 July briefing), <a href="https://www.teachermagazine.com/au_en/articles/edutech-2026-ai-assessment-and-keeping-humans-in-the-loop" target="_blank" rel="noopener">EDUtech 2026 coverage</a></div></div><div class="card agree"><h3>Widespread adoption without formal training is a systemic risk</h3>
+<p>Governments and major platforms are all now identifying the same gap: high adoption, low training; schools that have not yet built structured teacher AI capability programs are now operating behind the evidence base</p><div class="srcs">Sources: <a href="https://news.microsoft.com/source/2026/06/24/microsofts-new-ai-in-education-report-highlights-widespread-adoption-and-increasing-demand-for-support/" target="_blank" rel="noopener">Microsoft AI in Education 2026</a>, <a href="https://www.oecd.org/en/publications/oecd-digital-education-outlook-2026_062a7394-en.html" target="_blank" rel="noopener">OECD Outlook 2026</a>, <a href="https://www.nsf.gov/news/nsf-invests-11m-expand-ai-professional-development-k-12" target="_blank" rel="noopener">NSF $11M AI PD investment (US)</a></div></div><div class="card agree"><h3>AI platform harms to children require regulatory rather than school-only responses</h3>
+<p>Individual school policies alone cannot address the harms arising from consumer AI apps; the emerging model is school-level reporting feeding into national regulatory action under enforceable codes</p><div class="srcs">Sources: <a href="https://www.esafety.gov.au/newsroom/media-releases/esafety-urges-schools-to-report-deepfakes-as-numbers-double" target="_blank" rel="noopener">eSafety deepfakes/nudify action</a>, <a href="https://www.esafety.gov.au/newsroom/media-releases/esafety-report-shows-ai-companions-are-putting-children-at-risk" target="_blank" rel="noopener">eSafety AI companions report</a>, <a href="https://www.digitalresistance.org.uk/integrating-ai-into-the-uk-school-curriculum/" target="_blank" rel="noopener">UK 100% AI policy mandate for schools, Q4 2026</a></div></div></div>
+</div></section>
+<section class="block"><div class="wrap">
+  <div class="sectionhead"><h2>Where experts disagree</h2><span class="sub">Live debates worth understanding before deciding</span></div>
+  <div class="cards"><div class="card disagree"><h3>Transparency of publicly funded education research</h3>
+<div class="pos"><div class="a"><b class="tag">One view</b><a href="https://www.educationreview.com.au/2026/07/government-should-release-aero-report/" target="_blank" rel="noopener">Education Review</a> and <a href="https://blog.aare.edu.au/aero-shock-why-wont-the-government-reveal-its-secret-report/" target="_blank" rel="noopener">EduResearch Matters</a>: taxpayers and educators are entitled to see an evaluation of a publicly funded evidence body</div>
+<div class="b"><b class="tag">The other view</b><a href="https://www.educationreview.com.au/2026/07/aero-review-could-undermine-trust-in-resources/" target="_blank" rel="noopener">Department of Education FOI refusal</a> and AERO: releasing the report would undermine trust in resources and damage AERO's reputation</div></div>
+<div class="tension"><b class="tag">The tension</b>Whether a publicly funded evidence body can legitimately suppress independent evaluations of its own performance is unresolved; the argument that transparency would damage trust is exactly the argument transparency advocates say proves their point</div></div><div class="card disagree"><h3>AI detection as an academic integrity response</h3>
+<div class="pos"><div class="a"><b class="tag">One view</b>Turnitin and many schools: AI detection tools provide actionable signals about misuse and deter students from submitting AI-generated work</div>
+<div class="b"><b class="tag">The other view</b><a href="https://www.structural-learning.com/post/ai-academic-integrity" target="_blank" rel="noopener">Multiple US universities (UCLA, UC San Diego, Vanderbilt)</a>: false positive rates (6-9% for non-native English speakers vs 1-4% for native speakers) create unacceptable equity risk and detection tools have been deactivated</div></div>
+<div class="tension"><b class="tag">The tension</b>The debate is not settled, but the equity dimension – that detection tools disproportionately flag students who write differently from standard academic English – is a serious argument for any school with linguistically diverse students</div></div><div class="card disagree"><h3>Whether AI companions pose acceptable risk for older teenagers</h3>
+<div class="pos"><div class="a"><b class="tag">One view</b>Platforms (Character.AI, following eSafety pressure): age assurance and content filtering are now in place and the product is safe for over-18s</div>
+<div class="b"><b class="tag">The other view</b><a href="https://www.esafety.gov.au/newsroom/media-releases/esafety-report-shows-ai-companions-are-putting-children-at-risk" target="_blank" rel="noopener">eSafety Commissioner</a>: measures remain inadequate, self-declaration of age at signup is not age assurance, and risks persist</div></div>
+<div class="tension"><b class="tag">The tension</b>No agreed standard for what constitutes adequate child protection in AI companion products; eSafety is now using binding compliance notices rather than waiting for consensus</div></div></div>
+</div></section>
+<section class="block"><div class="wrap">
+  <div class="sectionhead"><h2>Worth watching</h2><span class="sub">Developments to keep an eye on</span></div>
+  <div class="watch"><h3>UK mandate for designated AI safety leads in all schools by end of 2026</h3><p>The United Kingdom's phased AI curriculum integration roadmap requires 100% of schools to have ratified an AI use policy and appointed a designated AI safety lead teacher by Q4 2026. This is the first national mandate of its kind from a comparable anglophone jurisdiction. If it takes hold and generates measurable outcomes, it is the model most likely to influence Australian state and federal policy discussions in 2027. Keep an eye on whether Ofsted begins inspecting against AI policy compliance.</p><p class="srcline">Sources: <a href="https://www.digitalresistance.org.uk/integrating-ai-into-the-uk-school-curriculum/" target="_blank" rel="noopener">Integrating AI into the UK School Curriculum</a> – Digital Resistance.</p></div><div class="watch"><h3>Australia's national AI literacy program: Term 1 rollout status unclear</h3><p>The AWS/Code for Schools national AI literacy program was announced in late 2025 with a Term 1 2026 rollout target reaching public, independent, and Catholic schools via a centralised LMS. It is now mid-Term 3. There is no public progress update confirming the rollout has begun or reporting uptake numbers. Given the program targets independent schools and aims to reach one million students, the absence of visible reporting is worth tracking. If the program is operational, your school may want to evaluate whether the modules meet your own AI literacy goals; if it has stalled, that is worth knowing for sector planning conversations.</p><p class="srcline">Sources: <a href="https://educationmattersmag.com.au/nationwide-ai-literacy-program-to-launch-in-2026/" target="_blank" rel="noopener">Nationwide AI literacy program to launch in 2026</a> – Education Matters Magazine; <a href="https://fixtheaigap.com/research/policies/2026-03-17-australia-national-ai-literacy-program/" target="_blank" rel="noopener">Australia National AI Literacy Program</a> – Fix the AI Gap.</p></div>
+</div></section>
+<div class="wrap"><details class="allsources"><summary>Full source list for this issue (22 sources)</summary>
+<ol><li><a href="https://www.educationreview.com.au/2026/07/government-should-release-aero-report/" target="_blank" rel="noopener">Government should release AERO report</a> – Education Review, July 2026</li><li><a href="https://www.educationreview.com.au/2026/07/aero-review-could-undermine-trust-in-resources/" target="_blank" rel="noopener">AERO review could 'undermine trust' in resources</a> – Education Review, July 2026</li><li><a href="https://blog.aare.edu.au/aero-shock-why-wont-the-government-reveal-its-secret-report/" target="_blank" rel="noopener">AERO shock: Why won't the government reveal its secret report?</a> – EduResearch Matters, July 2026</li><li><a href="https://www.esafety.gov.au/newsroom/media-releases/esafety-urges-schools-to-report-deepfakes-as-numbers-double" target="_blank" rel="noopener">eSafety urges schools to report deepfakes as numbers double</a> – eSafety Commissioner, 2026</li><li><a href="https://www.esafety.gov.au/newsroom/blogs/deepfake-damage-in-schools-how-ai-generated-abuse-is-disrupting-students-families-and-school-communities" target="_blank" rel="noopener">Deepfake damage in schools: How AI-generated abuse is disrupting students, families and school communities</a> – eSafety Commissioner, 2026</li><li><a href="https://www.esafety.gov.au/newsroom/media-releases/esafety-takes-action-against-another-major-nudify-service-for-failing-to-protect-australian-children" target="_blank" rel="noopener">eSafety takes action against another major 'nudify' service</a> – eSafety Commissioner, 2026</li><li><a href="https://www.esafety.gov.au/newsroom/media-releases/esafety-report-shows-ai-companions-are-putting-children-at-risk" target="_blank" rel="noopener">eSafety report shows AI companions are putting children at risk</a> – eSafety Commissioner, March 2026</li><li><a href="https://www.oecd.org/en/publications/oecd-digital-education-outlook-2026_062a7394-en.html" target="_blank" rel="noopener">OECD Digital Education Outlook 2026</a> – OECD, January 2026</li><li><a href="https://digital-skills-jobs.europa.eu/en/latest/news/oecd-digital-education-outlook-2026-how-generative-ai-can-support-learning-when-used" target="_blank" rel="noopener">OECD Digital Education Outlook 2026: how generative AI can support learning when used with purpose</a> – EU Digital Skills and Jobs Platform</li><li><a href="https://www.teachermagazine.com/au_en/articles/edutech-2026-ai-assessment-and-keeping-humans-in-the-loop" target="_blank" rel="noopener">EDUtech 2026: AI, assessment, and keeping humans in the loop</a> – Teacher Magazine (ACER), July 2026</li><li><a href="https://news.microsoft.com/source/2026/06/24/microsofts-new-ai-in-education-report-highlights-widespread-adoption-and-increasing-demand-for-support/" target="_blank" rel="noopener">Microsoft's New AI in Education Report highlights widespread adoption and increasing demand for support</a> – Microsoft, 24 June 2026</li><li><a href="https://opendatascience.com/microsofts-2026-ai-in-education-report-shows-schools-need-more-ai-training/" target="_blank" rel="noopener">Microsoft's 2026 AI in Education Report Shows Schools Need More AI Training</a> – Open Data Science</li><li><a href="https://www.isnsw.edu.au/newsroom/2026-a-pivotal-year-for-ai-in-schools" target="_blank" rel="noopener">2026: a pivotal year for AI in schools</a> – Independent Schools NSW, 2026</li><li><a href="https://www.isnsw.edu.au/resources/ai-framework-for-schools-tool" target="_blank" rel="noopener">AI implementation for schools framework</a> – Independent Schools NSW</li><li><a href="https://www.structural-learning.com/post/ai-academic-integrity" target="_blank" rel="noopener">AI and Academic Integrity: Why Detection Fails (2026)</a> – Structural Learning</li><li><a href="https://windowsforum.com/threads/ai-in-education-by-2026-assessment-panic-cheating-doubts-and-better-integrity-rules.428624/" target="_blank" rel="noopener">AI in Education by 2026: Assessment Panic, Cheating Doubts, and Better Integrity Rules</a> – Windows Forum</li><li><a href="https://www.nsf.gov/news/nsf-invests-11m-expand-ai-professional-development-k-12" target="_blank" rel="noopener">NSF invests $11M to expand AI professional development for K-12 teachers nationwide</a> – US National Science Foundation</li><li><a href="https://educationmattersmag.com.au/nationwide-ai-literacy-program-to-launch-in-2026/" target="_blank" rel="noopener">Nationwide AI literacy program to launch in 2026</a> – Education Matters Magazine</li><li><a href="https://fixtheaigap.com/research/policies/2026-03-17-australia-national-ai-literacy-program/" target="_blank" rel="noopener">Australia National AI Literacy Program (Schools Rollout 2026)</a> – Fix the AI Gap, March 2026</li><li><a href="https://www.digitalresistance.org.uk/integrating-ai-into-the-uk-school-curriculum/" target="_blank" rel="noopener">Integrating AI into the UK School Curriculum</a> – Digital Resistance</li><li><a href="https://education.nsw.gov.au/news/latest-news/roll-out-of-purpose-built-ai-education-tool-to-all-public-school" target="_blank" rel="noopener">NSWEduChat student rollout</a> – NSW Department of Education</li><li><a href="https://www.edresearch.edu.au/other/agency-publications/research-agenda-2026" target="_blank" rel="noopener">Research Agenda 2026</a> – Australian Education Research Organisation (AERO)</li></ol></details></div><div class="wrap"><div class="pager"><a href="2026-07-05.html">← 5 July 2026</a><a href="../index.html">All briefings →</a></div></div>
+<footer><div class="wrap">
+  <p><strong>AI in EdTech Weekly</strong> is compiled from primary sources each week; every claim links to its original source.
+  Briefings are produced with AI-assisted research and human editorial review, and summarise third-party reporting and research
+  for information purposes.</p>
+</div></footer>
+</body>
+</html>
