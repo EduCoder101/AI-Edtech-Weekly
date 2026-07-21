@@ -204,9 +204,12 @@ section.block{padding:52px 0 8px}
 .snum{font-family:'Fraunces',serif;font-weight:600;font-size:1.5rem;color:var(--accent);line-height:1.2;min-width:1.2em}
 .story h3{font-family:'Fraunces',serif;font-weight:600;font-size:1.25rem;line-height:1.3}
 .smeta{margin:8px 0 14px;font-size:.78rem;font-weight:600;letter-spacing:.06em;text-transform:uppercase;color:var(--muted)}
-.story p{margin-bottom:14px;color:var(--ink2);max-width:46em}
+.story p{margin-bottom:14px;color:var(--ink2)}
+.storygrid{display:grid;grid-template-columns:minmax(0,1fr) 300px;gap:36px;align-items:start;margin-top:4px}
+.storygrid.nowhy{grid-template-columns:1fr}
 .why{background:var(--accent-soft);border-left:3px solid var(--accent);border-radius:0 10px 10px 0;
-  padding:14px 18px;margin:18px 0 14px;font-size:.95rem;line-height:1.6;max-width:48em}
+  padding:16px 18px;font-size:.92rem;line-height:1.6;position:sticky;top:78px}
+@media(max-width:820px){.storygrid{grid-template-columns:1fr}.why{position:static;margin-top:4px}}
 .why b.tag{display:block;font-size:.72rem;font-weight:700;letter-spacing:.13em;text-transform:uppercase;color:var(--accent);margin-bottom:6px}
 .srcline{font-size:.82rem;color:var(--muted);line-height:1.55}
 .srcline a{color:var(--muted);text-decoration:underline;text-decoration-color:var(--line);text-underline-offset:3px}
@@ -337,14 +340,17 @@ def render_briefing(b, prev_b, next_b):
     story_html = ""
     for st in b["stories"]:
         paras = "".join(f"<p>{inline(p)}</p>" for p in st["paras"])
-        why = (f'<div class="why"><b class="tag">Why it matters</b>{inline(st["why"])}</div>'
+        why = (f'<aside class="why"><b class="tag">Why it matters</b>{inline(st["why"])}</aside>'
                if st["why"] else "")
         src = f'<p class="srcline">Sources: {inline(st["sources"])}</p>' if st["sources"] else ""
         story_html += f"""
 <article class="story">
   <div class="storytop"><div class="snum">{st['num']}</div>
   <div><h3>{inline(st['title'])}</h3><div class="smeta">{esc(st['meta'])}</div></div></div>
-  {paras}{why}{src}
+  <div class="storygrid{' nowhy' if not why else ''}">
+    <div class="storybody">{paras}{src}</div>
+    {why}
+  </div>
 </article>"""
     parts.append(f"""
 <section class="block"><div class="wrap">
