@@ -178,7 +178,7 @@ a:hover{text-decoration:underline}
 /* issue head */
 .issuehead{padding:56px 0 36px}
 .kicker{font-size:.74rem;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:var(--accent);margin-bottom:14px}
-h1.issue{font-family:'Fraunces',serif;font-weight:600;font-size:clamp(1.9rem,4.5vw,2.7rem);line-height:1.15;letter-spacing:-.01em;max-width:17em}
+h1.issue{font-family:'Fraunces',serif;font-weight:600;font-size:clamp(1.6rem,3.6vw,2.1rem);line-height:1.25;letter-spacing:-.01em}
 .issuemeta{margin-top:16px;color:var(--muted);font-size:.9rem}
 /* glance band */
 .glance{background:var(--navy);color:#eef1f7;padding:44px 0 40px}
@@ -243,9 +243,9 @@ details.allsources li{margin-bottom:6px}
 .pager{display:flex;justify-content:space-between;gap:16px;margin:48px 0 0;padding-top:24px;border-top:1px solid var(--line);font-size:.9rem;font-weight:600}
 footer{margin-top:56px;padding:32px 0 48px;border-top:1px solid var(--line);color:var(--muted);font-size:.82rem;line-height:1.7}
 /* index */
-.hero{padding:72px 0 40px}
-.hero h1{font-family:'Fraunces',serif;font-weight:600;font-size:clamp(2.4rem,7vw,4.4rem);line-height:1.08;letter-spacing:-.015em}
-.hero p.tag{margin-top:20px;font-size:1.15rem;color:var(--ink2);max-width:40em;line-height:1.7}
+.hero{padding:72px 24px 40px}
+.hero h1{font-family:'Fraunces',serif;font-weight:600;font-size:clamp(1.5rem,6.2vw,3.95rem);line-height:1.08;letter-spacing:-.015em;white-space:nowrap}
+.hero p.tag{margin-top:20px;font-size:clamp(.85rem,1.85vw,1.15rem);color:var(--ink2);line-height:1.7;white-space:nowrap}
 .latest{background:var(--navy);color:#eef1f7;border-radius:18px;padding:34px 36px;margin:8px 0 12px}
 .latest .kicker{color:#9fd4c6}
 .latest h2{font-family:'Fraunces',serif;font-weight:600;font-size:1.5rem;line-height:1.3;color:#fff;margin-bottom:12px}
@@ -424,7 +424,7 @@ def render_index(briefings):
 
     parts.append(f"""
 <div class="wrap hero">
-  <h1>AI in education,<br>explained weekly.</h1>
+  <h1>AI in education, explained weekly.</h1>
   <p class="tag">{TAGLINE}</p>
 </div>
 <div class="wrap"><div class="latest">
