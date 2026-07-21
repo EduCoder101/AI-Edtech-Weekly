@@ -19,7 +19,7 @@ BRIEFINGS = ROOT / "briefings"
 SUMMARIES = json.loads((ROOT / "exec_summaries.json").read_text())
 
 SITE_NAME = "AI in EdTech Weekly"
-TAGLINE = "A weekly intelligence briefing on artificial intelligence in education, prepared for school leaders and teaching staff."
+TAGLINE = "A weekly intelligence briefing on AI in education, for school leaders and teaching staff."
 
 # ---------------------------------------------------------------- utilities
 
@@ -165,7 +165,7 @@ body{background:var(--paper);color:var(--ink);
   font-size:17px;line-height:1.65;-webkit-font-smoothing:antialiased}
 a{color:var(--accent);text-decoration:none}
 a:hover{text-decoration:underline}
-.wrap{max-width:820px;margin:0 auto;padding:0 24px}
+.wrap{max-width:980px;margin:0 auto;padding:0 24px}
 /* top bar */
 .topbar{position:sticky;top:0;z-index:50;background:rgba(247,245,240,.92);
   backdrop-filter:blur(8px);border-bottom:1px solid var(--line)}
@@ -204,9 +204,9 @@ section.block{padding:52px 0 8px}
 .snum{font-family:'Fraunces',serif;font-weight:600;font-size:1.5rem;color:var(--accent);line-height:1.2;min-width:1.2em}
 .story h3{font-family:'Fraunces',serif;font-weight:600;font-size:1.25rem;line-height:1.3}
 .smeta{margin:8px 0 14px;font-size:.78rem;font-weight:600;letter-spacing:.06em;text-transform:uppercase;color:var(--muted)}
-.story p{margin-bottom:14px;color:var(--ink2)}
+.story p{margin-bottom:14px;color:var(--ink2);max-width:46em}
 .why{background:var(--accent-soft);border-left:3px solid var(--accent);border-radius:0 10px 10px 0;
-  padding:14px 18px;margin:18px 0 14px;font-size:.95rem;line-height:1.6}
+  padding:14px 18px;margin:18px 0 14px;font-size:.95rem;line-height:1.6;max-width:48em}
 .why b.tag{display:block;font-size:.72rem;font-weight:700;letter-spacing:.13em;text-transform:uppercase;color:var(--accent);margin-bottom:6px}
 .srcline{font-size:.82rem;color:var(--muted);line-height:1.55}
 .srcline a{color:var(--muted);text-decoration:underline;text-decoration-color:var(--line);text-underline-offset:3px}
@@ -244,8 +244,8 @@ details.allsources li{margin-bottom:6px}
 footer{margin-top:56px;padding:32px 0 48px;border-top:1px solid var(--line);color:var(--muted);font-size:.82rem;line-height:1.7}
 /* index */
 .hero{padding:72px 0 40px}
-.hero h1{font-family:'Fraunces',serif;font-weight:600;font-size:clamp(2.2rem,6vw,3.4rem);line-height:1.1;letter-spacing:-.015em}
-.hero p.tag{margin-top:18px;font-size:1.05rem;color:var(--ink2);max-width:36em;line-height:1.7}
+.hero h1{font-family:'Fraunces',serif;font-weight:600;font-size:clamp(2.4rem,7vw,4.4rem);line-height:1.08;letter-spacing:-.015em}
+.hero p.tag{margin-top:20px;font-size:1.15rem;color:var(--ink2);max-width:40em;line-height:1.7}
 .latest{background:var(--navy);color:#eef1f7;border-radius:18px;padding:34px 36px;margin:8px 0 12px}
 .latest .kicker{color:#9fd4c6}
 .latest h2{font-family:'Fraunces',serif;font-weight:600;font-size:1.5rem;line-height:1.3;color:#fff;margin-bottom:12px}
@@ -330,7 +330,7 @@ def render_briefing(b, prev_b, next_b):
   <h2>At a glance</h2>
   <p class="overview">{inline(s.get('overview',''))}</p>
   <h3>Key signals</h3><ul class="signals">{signals}</ul>
-  <h3>For the leadership agenda</h3><ul class="actions">{actions}</ul>
+  <h3>Considerations for the Executive</h3><ul class="actions">{actions}</ul>
 </div></section>""")
 
     # stories
@@ -425,8 +425,7 @@ def render_index(briefings):
     parts.append(f"""
 <div class="wrap hero">
   <h1>AI in education,<br>explained weekly.</h1>
-  <p class="tag">{TAGLINE} Each issue distils the week's most important developments in research,
-  policy and practice into an executive summary, five stories in depth, and the debates worth understanding.</p>
+  <p class="tag">{TAGLINE}</p>
 </div>
 <div class="wrap"><div class="latest">
   <div class="kicker">Latest issue · {latest['display']}</div>
