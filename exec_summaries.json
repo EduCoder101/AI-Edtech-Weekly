@@ -1,4 +1,20 @@
 {
+  "2026-07-26": {
+    "headline": "A quiet week in Canberra, but AI companions consolidate as the next safeguarding frontier and parents converge with teachers on guardrails",
+    "overview": "With no new federal moves ahead of August's National Cabinet, the running was made by researchers and platforms. Australian academics analysed China's new AI companion law, in force since 15 July, in the same week the eSafety Commissioner ran educator training on companion chatbots and deepfakes. Instructure's 2026 survey shows parents, teachers and students now share the same top three AI concerns, and OpenAI let parents lock teen ChatGPT accounts to its Socratic Study Mode by default.",
+    "signals": [
+      "China's AI companion law took effect on 15 July, forcing major companion services to restrict emotionally responsive chat; University of Tasmania and RMIT-linked researchers warned in The Conversation (23 July) of an AI-induced 'loneliness spiral' among young users.",
+      "The eSafety Commissioner ran a professional learning webinar for educators on 23 July covering AI companions, deepfakes, AI influencers and AI-facilitated cyberbullying.",
+      "Instructure's State of AI in Education 2026 survey (21 July) found 45% of K-12 educators have had no formal AI training, and only 8% call their training comprehensive.",
+      "The same survey found parents, educators and students share the same top concerns (overreliance, loss of critical thinking, integrity) and all accept AI for support tasks but not for grading decisions.",
+      "OpenAI's teen safety rollout lets parents make Study Mode the default for linked teen accounts, drawing a moratorium call from advocacy group Schools Beyond Screens."
+    ],
+    "actions": [
+      "Treat AI companion use as a wellbeing and pastoral care matter now: brief wellbeing staff and consider the eSafety educator webinar series before an incident forces the issue.",
+      "Use the Instructure findings in parent communication; the community consensus on guardrails rather than bans makes this a good moment to socialise the school's AI position.",
+      "Note the parent-controlled Study Mode default when advising families: home AI use may already be more structured than school guidance assumes."
+    ]
+  },
   "2026-07-19": {
     "headline": "Canberra moves to legislate AI standards, education ministers target deepfakes, and the classroom platform race accelerates",
     "overview": "The Prime Minister announced an Office of AI and legislated national standards that explicitly cover education and training, with a draft framework going to National Cabinet in August. On the same day, education ministers met in Parramatta, where Jason Clare called for national standards against AI-generated intimate images of students. Meanwhile, Turnitin data shows more than half of Australian university submissions now contain AI content, and Anthropic's Claude for Teachers joins an increasingly crowded race for teachers' habitual use.",
