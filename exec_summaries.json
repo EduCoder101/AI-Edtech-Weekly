@@ -1,4 +1,20 @@
 {
+  "2026-08-02": {
+    "headline": "eSafety turns the lens on schools' own photo streams as deepfake abuse escalates, and the first classroom RCT complicates the teacher time-saving story",
+    "overview": "The week belonged to the eSafety Commissioner, whose 28 July advisory on sharing school imagery reframed the routine publishing of student photos as a safeguarding exposure, after more than 100 reports in the first quarter of anonymous accounts weaponising imagery scraped from school websites and social media. Human Rights Watch amplified the warning two days later. Internationally, the first randomised controlled trial of a teacher-facing AI assistant found teachers saved time while student experience and, under weaker teachers, achievement declined, and the EU's AI transparency rules took legal effect on 2 August. National Cabinet's meeting on Australia's AI standards is now imminent.",
+    "signals": [
+      "eSafety's 28 July advisory follows 100+ reports between January and March 2026 of anonymous accounts targeting schools with AI face swaps, fabricated stories and sexualised deepfakes built almost entirely from school-published imagery; it recommends a risk-based approach to collecting, approving, posting and storing images.",
+      "Human Rights Watch (30 July) tied the advisory to its 2024 finding that Australian children's photos appear in AI training datasets and called for stronger children's data-privacy protections.",
+      "A Wharton-led RCT of 193 teachers and 2,800+ students, circulated widely this week, found a ChatGPT-based teaching assistant saved teacher time but left students rating classes as less enjoyable, with achievement falling where previously weaker teachers used AI output unadapted.",
+      "Turnitin data analysed in The Conversation shows 53.6% of Australian tertiary submissions from October 2025 to April 2026 contained AI-assisted writing, with the authors cautioning that detection scores indicate likelihood, not misconduct.",
+      "The EU AI Act's Article 50 transparency obligations took effect on 2 August: chatbots must disclose they are AI and deepfakes must be labelled, while high-risk education obligations were deferred to December 2027."
+    ],
+    "actions": [
+      "Commission an audit of the school's public photo footprint (website, social media, newsletters) against the eSafety advisory before the next marketing cycle, including consent language and an incident plan for deepfake abuse of students or staff.",
+      "Use the Wharton RCT to argue that every teacher-facing AI tool must ship with professional learning on curating and adapting output, and that pilots should track student experience data rather than teacher satisfaction alone.",
+      "Prepare a short principal briefing on the national AI standards ahead of National Cabinet's August meeting, so the school can respond on its own terms when the outcome lands."
+    ]
+  },
   "2026-07-26": {
     "headline": "A quiet week in Canberra, but AI companions consolidate as the next safeguarding frontier and parents converge with teachers on guardrails",
     "overview": "With no new federal moves ahead of August's National Cabinet, the running was made by researchers and platforms. Australian academics analysed China's new AI companion law, in force since 15 July, in the same week the eSafety Commissioner ran educator training on companion chatbots and deepfakes. Instructure's 2026 survey shows parents, teachers and students now share the same top three AI concerns, and OpenAI let parents lock teen ChatGPT accounts to its Socratic Study Mode by default.",

@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html lang="en-AU">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>AI in EdTech Weekly · 2 August 2026</title>
+<meta name="description" content="eSafety turns the lens on schools' own photo streams as deepfake abuse escalates, and the first classroom RCT complicates the teacher time-saving story">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,600;9..144,700&family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+<style>
+:root{
+  --paper:#f7f5f0; --card:#ffffff; --ink:#181f30; --ink2:#3c4557;
+  --muted:#6f7787; --line:#e4dfd4; --navy:#1b2a4a; --navy2:#223458;
+  --accent:#0e7c66; --accent-soft:#e6f1ed; --amber:#a96f24; --amber-soft:#f7eeddd9;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{background:var(--paper);color:var(--ink);
+  font-family:'Inter',-apple-system,'Segoe UI',sans-serif;
+  font-size:17px;line-height:1.65;-webkit-font-smoothing:antialiased}
+a{color:var(--accent);text-decoration:none}
+a:hover{text-decoration:underline}
+.wrap{max-width:980px;margin:0 auto;padding:0 24px}
+/* top bar */
+.topbar{position:sticky;top:0;z-index:50;background:rgba(247,245,240,.92);
+  backdrop-filter:blur(8px);border-bottom:1px solid var(--line)}
+.topbar .wrap{display:flex;align-items:center;justify-content:space-between;height:58px}
+.brand{font-family:'Fraunces',serif;font-weight:700;font-size:1.05rem;color:var(--ink);letter-spacing:.01em}
+.brand:hover{text-decoration:none}
+.brand span{color:var(--accent)}
+.topnav{display:flex;gap:22px;font-size:.85rem;font-weight:600}
+.topnav a{color:var(--ink2)}
+/* issue head */
+.issuehead{padding:56px 0 36px}
+.kicker{font-size:.74rem;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:var(--accent);margin-bottom:14px}
+h1.issue{font-family:'Fraunces',serif;font-weight:600;font-size:clamp(1.6rem,3.6vw,2.1rem);line-height:1.25;letter-spacing:-.01em}
+.issuemeta{margin-top:16px;color:var(--muted);font-size:.9rem}
+/* glance band */
+.glance{background:var(--navy);color:#eef1f7;padding:44px 0 40px}
+.glance h2{font-family:'Fraunces',serif;font-weight:600;font-size:1.35rem;color:#fff;margin-bottom:14px}
+.glance .overview{font-size:1.02rem;line-height:1.7;color:#d9dfec;max-width:44em}
+.glance h3{font-size:.74rem;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:#8fa8d8;margin:28px 0 12px}
+.signals{list-style:none}
+.signals li{position:relative;padding:10px 0 10px 26px;border-top:1px solid var(--navy2);font-size:.95rem;line-height:1.6;color:#e7ebf4}
+.signals li:before{content:"";position:absolute;left:2px;top:19px;width:8px;height:8px;border-radius:50%;background:var(--accent)}
+.actions{list-style:none;display:grid;gap:10px}
+.actions li{background:var(--navy2);border-left:3px solid var(--accent);border-radius:0 8px 8px 0;
+  padding:12px 16px;font-size:.92rem;line-height:1.55;color:#e7ebf4}
+.glance a{color:#9fd4c6}
+/* sections */
+section.block{padding:52px 0 8px}
+.sectionhead{display:flex;align-items:baseline;gap:14px;margin-bottom:8px}
+.sectionhead h2{font-family:'Fraunces',serif;font-weight:600;font-size:1.5rem}
+.sectionhead .sub{color:var(--muted);font-size:.88rem}
+/* stories */
+.story{padding:34px 0;border-bottom:1px solid var(--line)}
+.story:last-child{border-bottom:none}
+.storytop{display:flex;gap:16px;align-items:flex-start}
+.snum{font-family:'Fraunces',serif;font-weight:600;font-size:1.5rem;color:var(--accent);line-height:1.2;min-width:1.2em}
+.story h3{font-family:'Fraunces',serif;font-weight:600;font-size:1.25rem;line-height:1.3}
+.smeta{margin:8px 0 14px;font-size:.78rem;font-weight:600;letter-spacing:.06em;text-transform:uppercase;color:var(--muted)}
+.story p{margin-bottom:14px;color:var(--ink2)}
+.storygrid{display:grid;grid-template-columns:minmax(0,1fr) 300px;gap:36px;align-items:start;margin-top:4px}
+.storygrid.nowhy{grid-template-columns:1fr}
+.why{background:var(--accent-soft);border-left:3px solid var(--accent);border-radius:0 10px 10px 0;
+  padding:16px 18px;font-size:.92rem;line-height:1.6;position:sticky;top:78px}
+@media(max-width:820px){.storygrid{grid-template-columns:1fr}.why{position:static;margin-top:4px}}
+.why b.tag{display:block;font-size:.72rem;font-weight:700;letter-spacing:.13em;text-transform:uppercase;color:var(--accent);margin-bottom:6px}
+.srcline{font-size:.82rem;color:var(--muted);line-height:1.55}
+.srcline a{color:var(--muted);text-decoration:underline;text-decoration-color:var(--line);text-underline-offset:3px}
+.srcline a:hover{color:var(--accent)}
+/* signal cards */
+.cards{display:grid;gap:16px;margin-top:20px}
+.card{background:var(--card);border:1px solid var(--line);border-radius:14px;padding:22px 24px;box-shadow:0 1px 2px rgba(24,31,48,.04)}
+.card h3{font-family:'Fraunces',serif;font-weight:600;font-size:1.06rem;line-height:1.4;margin-bottom:10px}
+.card p{font-size:.93rem;line-height:1.6;color:var(--ink2)}
+.card .srcs{margin-top:12px;font-size:.8rem;color:var(--muted);line-height:1.6}
+.card .srcs a{color:var(--muted);text-decoration:underline;text-decoration-color:var(--line);text-underline-offset:3px}
+.card .srcs a:hover{color:var(--accent)}
+.card.agree{border-top:3px solid var(--accent)}
+.card.disagree{border-top:3px solid var(--amber)}
+.pos{display:grid;gap:10px;margin:10px 0}
+.pos>div{border-radius:10px;padding:12px 15px;font-size:.9rem;line-height:1.6}
+.pos .a{background:var(--accent-soft)}
+.pos .b{background:var(--amber-soft)}
+.pos b.tag{display:block;font-size:.7rem;font-weight:700;letter-spacing:.12em;text-transform:uppercase;margin-bottom:4px}
+.pos .a b.tag{color:var(--accent)}
+.pos .b b.tag{color:var(--amber)}
+.tension{font-size:.9rem;color:var(--ink2);line-height:1.6;padding-top:8px;border-top:1px dashed var(--line)}
+.tension b.tag{font-size:.7rem;font-weight:700;letter-spacing:.12em;text-transform:uppercase;color:var(--muted);display:block;margin-bottom:4px}
+/* watching */
+.watch{background:var(--card);border:1px solid var(--line);border-radius:14px;padding:22px 24px;margin-top:16px}
+.watch h3{font-family:'Fraunces',serif;font-weight:600;font-size:1.06rem;margin-bottom:10px}
+.watch p{font-size:.93rem;line-height:1.65;color:var(--ink2);margin-bottom:10px}
+/* sources details */
+details.allsources{margin:44px 0 0;border-top:1px solid var(--line);padding-top:20px}
+details.allsources summary{cursor:pointer;font-weight:600;font-size:.95rem;color:var(--ink2)}
+details.allsources ol{margin:16px 0 0 20px;font-size:.85rem;color:var(--muted);line-height:1.7}
+details.allsources li{margin-bottom:6px}
+/* pager + footer */
+.pager{display:flex;justify-content:space-between;gap:16px;margin:48px 0 0;padding-top:24px;border-top:1px solid var(--line);font-size:.9rem;font-weight:600}
+footer{margin-top:56px;padding:32px 0 48px;border-top:1px solid var(--line);color:var(--muted);font-size:.82rem;line-height:1.7}
+/* index */
+.hero{padding:72px 24px 40px}
+.hero h1{font-family:'Fraunces',serif;font-weight:600;font-size:clamp(1.5rem,6.2vw,3.95rem);line-height:1.08;letter-spacing:-.015em;white-space:nowrap}
+.hero p.tag{margin-top:20px;font-size:clamp(.85rem,1.85vw,1.15rem);color:var(--ink2);line-height:1.7;white-space:nowrap}
+.latest{background:var(--navy);color:#eef1f7;border-radius:18px;padding:34px 36px;margin:8px 0 12px}
+.latest .kicker{color:#9fd4c6}
+.latest h2{font-family:'Fraunces',serif;font-weight:600;font-size:1.5rem;line-height:1.3;color:#fff;margin-bottom:12px}
+.latest p{color:#d9dfec;font-size:.98rem;line-height:1.7;margin-bottom:20px}
+.btn{display:inline-block;background:var(--accent);color:#fff;font-weight:600;font-size:.9rem;
+  padding:11px 22px;border-radius:999px}
+.btn:hover{text-decoration:none;filter:brightness(1.08)}
+.archive{padding:44px 0}
+.archive h2{font-family:'Fraunces',serif;font-weight:600;font-size:1.5rem;margin-bottom:6px}
+.issuelist{list-style:none;margin-top:14px}
+.issuelist li{border-bottom:1px solid var(--line)}
+.issuelist a{display:flex;gap:24px;align-items:baseline;padding:18px 4px;color:var(--ink)}
+.issuelist a:hover{background:#f1ede4;text-decoration:none}
+.issuelist .d{min-width:130px;font-size:.85rem;font-weight:700;color:var(--accent);letter-spacing:.02em}
+.issuelist .h{font-size:.97rem;line-height:1.5;color:var(--ink2)}
+.aboutwrap{padding:20px 0 30px}
+.about{max-width:44em}
+.about h2{font-family:'Fraunces',serif;font-weight:600;font-size:1.5rem;margin-bottom:12px}
+.about p{color:var(--ink2);margin-bottom:12px;font-size:.97rem}
+@media(max-width:640px){
+  .issuelist a{flex-direction:column;gap:4px}
+  .latest{padding:26px 22px}
+}
+@media print{
+  .topbar,.pager{display:none}
+  body{background:#fff}
+  .glance{background:#fff;color:#000;border:1px solid #ccc}
+}
+</style>
+</head>
+<body>
+<header class="topbar"><div class="wrap">
+  <a class="brand" href="../index.html">AI in EdTech <span>Weekly</span></a>
+  <nav class="topnav"><a href="#">Latest briefing</a><a href="../index.html#archive">Archive</a><a href="../index.html#about">About</a></nav>
+</div></header>
+
+<div class="wrap issuehead">
+  <div class="kicker">Weekly briefing · 27 July – 2 August 2026</div>
+  <h1 class="issue">eSafety turns the lens on schools' own photo streams as deepfake abuse escalates, and the first classroom RCT complicates the teacher time-saving story</h1>
+  <div class="issuemeta">Issue of 2 August 2026</div>
+</div>
+<section class="glance"><div class="wrap">
+  <h2>At a glance</h2>
+  <p class="overview">The week belonged to the eSafety Commissioner, whose 28 July advisory on sharing school imagery reframed the routine publishing of student photos as a safeguarding exposure, after more than 100 reports in the first quarter of anonymous accounts weaponising imagery scraped from school websites and social media. Human Rights Watch amplified the warning two days later. Internationally, the first randomised controlled trial of a teacher-facing AI assistant found teachers saved time while student experience and, under weaker teachers, achievement declined, and the EU's AI transparency rules took legal effect on 2 August. National Cabinet's meeting on Australia's AI standards is now imminent.</p>
+  <h3>Key signals</h3><ul class="signals"><li>eSafety's 28 July advisory follows 100+ reports between January and March 2026 of anonymous accounts targeting schools with AI face swaps, fabricated stories and sexualised deepfakes built almost entirely from school-published imagery; it recommends a risk-based approach to collecting, approving, posting and storing images.</li><li>Human Rights Watch (30 July) tied the advisory to its 2024 finding that Australian children's photos appear in AI training datasets and called for stronger children's data-privacy protections.</li><li>A Wharton-led RCT of 193 teachers and 2,800+ students, circulated widely this week, found a ChatGPT-based teaching assistant saved teacher time but left students rating classes as less enjoyable, with achievement falling where previously weaker teachers used AI output unadapted.</li><li>Turnitin data analysed in The Conversation shows 53.6% of Australian tertiary submissions from October 2025 to April 2026 contained AI-assisted writing, with the authors cautioning that detection scores indicate likelihood, not misconduct.</li><li>The EU AI Act's Article 50 transparency obligations took effect on 2 August: chatbots must disclose they are AI and deepfakes must be labelled, while high-risk education obligations were deferred to December 2027.</li></ul>
+  <h3>Considerations for the Executive</h3><ul class="actions"><li>Commission an audit of the school's public photo footprint (website, social media, newsletters) against the eSafety advisory before the next marketing cycle, including consent language and an incident plan for deepfake abuse of students or staff.</li><li>Use the Wharton RCT to argue that every teacher-facing AI tool must ship with professional learning on curating and adapting output, and that pilots should track student experience data rather than teacher satisfaction alone.</li><li>Prepare a short principal briefing on the national AI standards ahead of National Cabinet's August meeting, so the school can respond on its own terms when the outcome lands.</li></ul>
+</div></section>
+<section class="block"><div class="wrap">
+  <div class="sectionhead"><h2>The stories in depth</h2><span class="sub">Full analysis with linked sources</span></div>
+  
+<article class="story">
+  <div class="storytop"><div class="snum">1</div>
+  <div><h3>eSafety tells schools their own photo streams are now the attack surface</h3><div class="smeta">eSafety Commissioner / Human Rights Watch | 28-30 July 2026</div></div></div>
+  <div class="storygrid">
+    <div class="storybody"><p>The eSafety Commissioner issued a new Online Safety Advisory on 28 July, "Sharing school imagery in the age of AI", after receiving more than 100 reports between January and March 2026 about anonymous accounts targeting schools, students and staff. The imagery behind the abuse was harvested almost entirely from school websites and official social media accounts, then turned into AI face swaps, fabricated stories about principals and teachers, memes, and sexualised deepfakes shared on TikTok and Instagram; eSafety also reports a significant number of recent cases of AI-generated child sexual exploitation material in school settings. The advisory recommends a risk-based approach to how schools collect, approve, post and store images, clearer consent processes, tighter privacy settings, and a complaints and incident plan. Two days later, Human Rights Watch publicly backed the advisory, connecting it to its 2024 finding that photos of Australian children had been scraped into AI training datasets, and called for stronger data-privacy protections for children. Sector coverage in EducationHQ and Education Matters carried the practical checklists to staff-room level.</p><p class="srcline">Sources: <a href="https://www.esafety.gov.au/newsroom/media-releases/school-photo-posts-vulnerable-to-emerging-ai-threat" target="_blank" rel="noopener">School photo posts vulnerable to emerging AI threat</a> – eSafety Commissioner, 28 July 2026; <a href="https://www.esafety.gov.au/newsroom/blogs/sharing-school-imagery-in-the-age-of-ai-risks-deepfakes-and-how-to-protect-students-and-staff" target="_blank" rel="noopener">Sharing school imagery in the age of AI</a> – eSafety Commissioner, 28 July 2026; <a href="https://www.hrw.org/news/2026/07/30/australia-school-photos-scraped-for-ai-fueled-image-misuse" target="_blank" rel="noopener">Australia: School Photos Scraped for AI-Fueled Image Misuse</a> – Human Rights Watch, 30 July 2026; <a href="https://educationhq.com/news/schools-under-attack-spike-in-ai-generated-face-swaps-memes-and-fabricated-stories-213018/" target="_blank" rel="noopener">Schools under attack: spike in AI-generated face swaps, memes and fabricated stories</a> – EducationHQ, late July 2026.</p></div>
+    <aside class="why"><b class="tag">Why it matters</b>Independent schools publish more identifiable student imagery than almost anyone: marketing, socials, newsletters, event galleries. This advisory reframes that practice as a safeguarding exposure, not a communications choice, and it lands with primary schools squarely in scope. The practical move is an audit of the school's public photo footprint and consent language before the next marketing cycle, plus an agreed incident plan for deepfake abuse of students or staff. Expect parents to ask about this; the advisory gives the school defensible language either way.</aside>
+  </div>
+</article>
+<article class="story">
+  <div class="storytop"><div class="snum">2</div>
+  <div><h3>The first classroom RCT of a teacher-facing AI assistant: teachers saved time, students paid for it</h3><div class="smeta">The Hechinger Report / Wharton working paper | syndicated 28-30 July 2026</div></div></div>
+  <div class="storygrid">
+    <div class="storybody"><p>Coverage spread widely this week of one of the first randomised controlled trials of AI in real classrooms. In the working paper "Generative AI Can Harm Teaching" (Alp Sungu of Wharton with University of Pennsylvania colleagues including Angela Duckworth), 193 teachers of more than 2,800 middle and high school students in a Turkish private school chain were given a ChatGPT-based teaching assistant aligned to the national curriculum for ten weeks. Teachers saved preparation time, but students rated their classes as less enjoyable, less interesting and less important, and among previously weaker teachers, student achievement on externally administered exams fell, as did student confidence. The paper, released online in June and not yet peer-reviewed, reached mainstream audiences this week through Jill Barshay's Proof Points column.</p><p class="srcline">Sources: <a href="https://hechingerreport.org/proof-points-ai-in-teaching/" target="_blank" rel="noopener">Teachers save time with AI. Their students may pay the price</a> – The Hechinger Report (Proof Points), syndicated 28-30 July 2026; <a href="https://ktvz.com/stacker-news/2026/07/28/teachers-save-time-with-ai-their-students-may-pay-the-price/" target="_blank" rel="noopener">syndicated edition</a> – KTVZ/Stacker, 28 July 2026.</p></div>
+    <aside class="why"><b class="tag">Why it matters</b>This is the sharpest evidence yet against the comfortable assumption that teacher-facing AI is the safe end of the pool. The mechanism matters for professional learning design: harm concentrated where teachers took AI output into class without adapting it. Time saved is not benefit banked; the case this makes is for pairing every teacher-facing tool with training in curating and localising AI-generated material, and for watching student experience data, not just teacher satisfaction, when evaluating AI pilots.</aside>
+  </div>
+</article>
+<article class="story">
+  <div class="storytop"><div class="snum">3</div>
+  <div><h3>Two curriculum heavyweights: schools need a way to measure AI progress, not more enthusiasm</h3><div class="smeta">Education Matters | c. 30 July 2026</div></div></div>
+  <div class="storygrid">
+    <div class="storybody"><p>Paula Christophersen and Anna Kinnane, co-authors of the Australian Curriculum: Digital Technologies, argue in Education Matters that neither enthusiasm nor caution is a strategy. AI is already shaping how students research, write and think whether or not a school has a policy, and the gap they see in Australian schools is not willingness but measurement: schools cannot say where they actually stand. They propose treating AI as a whole-of-school disruption and adopting a structured maturity or self-assessment approach that identifies gaps across teaching, assessment, governance and capability, then turns ambition into a sequenced plan.</p><p class="srcline">Sources: <a href="https://educationmattersmag.com.au/schools-dont-need-more-ai-enthusiasm-they-need-a-way-to-measure-progress" target="_blank" rel="noopener">Schools don't need more AI enthusiasm. They need a way to measure progress</a> – Education Matters (Christophersen and Kinnane), c. 30 July 2026.</p></div>
+    <aside class="why"><b class="tag">Why it matters</b>This is the most directly useful Australian think-piece of the week for a school leadership audience. It supplies the vocabulary for the conversation most schools are avoiding: an honest audit of current state before the next tool purchase. For a school already running AI professional learning, a maturity self-assessment is a cheap next step that also produces exactly the evidence a principal or board asks for, and it positions the school well for whatever reporting expectations flow from the coming national AI standards.</aside>
+  </div>
+</article>
+<article class="story">
+  <div class="storytop"><div class="snum">4</div>
+  <div><h3>Turnitin data: more than half of Australian university submissions contain AI writing, and what that means downstream</h3><div class="smeta">The Conversation | c. 28 July 2026</div></div></div>
+  <div class="storygrid">
+    <div class="storybody"><p>A widely republished Conversation analysis examined Turnitin data showing 53.6% of Australian tertiary submissions between October 2025 and April 2026 contained AI-assisted writing, with about 10% more than 80% AI-written. The comparable heavy-use figure for Australian secondary students is far lower, around 5-6% of submissions. The authors' central caution: detection scores indicate the likelihood of AI-assisted writing, not misconduct, and universities should respond with education-specific AI tools and assessment redesign rather than a detection arms race. Australia, they note, leads the world in per-capita use of Claude, with coursework a major share.</p><p class="srcline">Sources: <a href="https://theconversation.com/more-than-50-of-australian-university-assignments-used-ai-how-should-unis-respond-287179" target="_blank" rel="noopener">More than 50% of Australian university assignments used AI. How should unis respond?</a> – The Conversation, c. 28 July 2026.</p></div>
+    <aside class="why"><b class="tag">Why it matters</b>Today's Year 5 students will sit every high-stakes assessment of their lives in this environment. The detection-is-not-a-verdict caution applies with more force in schools, where the evidence base for detector reliability on younger students' writing is even thinner; a school tempted to run detector tools on student work should read this first. The secondary-school figures also give a rare calibrated baseline for how much fully outsourced AI writing is actually occurring below Year 12.</aside>
+  </div>
+</article>
+<article class="story">
+  <div class="storytop"><div class="snum">5</div>
+  <div><h3>The EU's AI transparency rules take effect: chatbots must say they are AI, deepfakes must be labelled</h3><div class="smeta">European Commission / EU AI Act | 2 August 2026</div></div></div>
+  <div class="storygrid">
+    <div class="storybody"><p>The EU AI Act's Article 50 transparency obligations came into force across the EU on 2 August. Chatbots must disclose that they are AI, synthetic content must carry machine-readable marking, and deepfakes and AI-generated text on matters of public interest must be labelled, with fines up to EUR 15 million or 3% of global turnover. Separately, the June "Digital Omnibus" deferred the Act's high-risk obligations for education AI, which cover systems used for admissions, assessment and progress monitoring, from August 2026 to December 2027.</p><p class="srcline">Sources: <a href="https://digital-strategy.ec.europa.eu/en/library/guidelines-transparency-obligations-providers-and-deployers-ai-systems" target="_blank" rel="noopener">Guidelines on transparency obligations for providers and deployers of AI systems</a> – European Commission, July 2026; <a href="https://www.technology.org/2026/07/17/eu-ai-act-what-actually-applies-on-2-august-2026/" target="_blank" rel="noopener">EU AI Act: what actually applies on 2 August 2026</a> – Technology.org, 17 July 2026.</p></div>
+    <aside class="why"><b class="tag">Why it matters</b>The world's most-watched AI regime has just made AI disclosure and deepfake labelling a legal norm, the same fortnight Australia's own standards head to National Cabinet. Two signals for schools: disclosure-by-default is where policy is heading, which is worth mirroring now in academic integrity rules (students declare AI use; the school labels AI-generated content in its own communications); and the education high-risk category, though deferred, remains the emerging template for how "AI in assessment" will eventually be governed, including for vendors selling into Australia.</aside>
+  </div>
+</article>
+</div></section>
+<section class="block"><div class="wrap">
+  <div class="sectionhead"><h2>Where the evidence agrees</h2><span class="sub">Independent sources pointing the same way</span></div>
+  <div class="cards"><div class="card agree"><h3>Schools' published imagery of children is now treated as a live safety risk, not a comms asset</h3>
+<p>A regulator, an international human-rights body, the sector press and academics converged on the same message inside four days; schools that review image practices now do it on their own terms rather than after an incident</p><div class="srcs">Sources: <a href="https://www.esafety.gov.au/newsroom/blogs/sharing-school-imagery-in-the-age-of-ai-risks-deepfakes-and-how-to-protect-students-and-staff" target="_blank" rel="noopener">eSafety advisory</a> (28 July), <a href="https://www.hrw.org/news/2026/07/30/australia-school-photos-scraped-for-ai-fueled-image-misuse" target="_blank" rel="noopener">Human Rights Watch</a> (30 July), <a href="https://educationhq.com/news/schools-under-attack-spike-in-ai-generated-face-swaps-memes-and-fabricated-stories-213018/" target="_blank" rel="noopener">EducationHQ</a> and <a href="https://educationmattersmag.com.au/esafety-releases-new-advisory-for-sharing-school-imagery/" target="_blank" rel="noopener">Education Matters</a> coverage (late July), <a href="https://tickernews.co/how-ai-deepfakes-threaten-student-safety/" target="_blank" rel="noopener">Dr Karen Sutherland on Ticker News</a> (late July)</div></div><div class="card agree"><h3>The binding constraint on classroom AI is teacher capability and structure, not tools</h3>
+<p>Evidence, Australian curriculum voices and mainstream US practice all now treat structured capability-building as the precondition for classroom AI, strengthening the case for professional learning budgets over licence spending</p><div class="srcs">Sources: <a href="https://hechingerreport.org/proof-points-ai-in-teaching/" target="_blank" rel="noopener">Wharton RCT via Hechinger</a> (harm where AI output went uncurated), <a href="https://educationmattersmag.com.au/schools-dont-need-more-ai-enthusiasm-they-need-a-way-to-measure-progress" target="_blank" rel="noopener">Christophersen and Kinnane</a> (measure whole-school maturity), <a href="https://www.wect.com/2026/07/28/ai-is-here-stay-columbus-county-schools-launches-classroom-ai-platform/" target="_blank" rel="noopener">Columbus County Schools rollout</a> (28 July: walled-garden platform launched with teacher training attached)</div></div><div class="card agree"><h3>Disclosure and labelling of AI content is becoming the default rule</h3>
+<p>Regulatory momentum is behind knowing what is AI-generated and who consented to the underlying data; school AI policies built on declared use and consent are aligned with where the law is going</p><div class="srcs">Sources: <a href="https://www.technology.org/2026/07/17/eu-ai-act-what-actually-applies-on-2-august-2026/" target="_blank" rel="noopener">EU AI Act Article 50 in force</a> (2 August), <a href="https://www.esafety.gov.au/newsroom/media-releases/school-photo-posts-vulnerable-to-emerging-ai-threat" target="_blank" rel="noopener">eSafety advisory on unlabelled deepfake abuse</a> (28 July), <a href="https://www.hrw.org/news/2026/07/30/australia-school-photos-scraped-for-ai-fueled-image-misuse" target="_blank" rel="noopener">HRW's call for stronger children's data protections</a> (30 July)</div></div></div>
+</div></section>
+<section class="block"><div class="wrap">
+  <div class="sectionhead"><h2>Where experts disagree</h2><span class="sub">Live debates worth understanding before deciding</span></div>
+  <div class="cards"><div class="card disagree"><h3>Does teacher-facing AI help or harm teaching?</h3>
+<div class="pos"><div class="a"><b class="tag">One view</b>The now-standard rollout playbook: <a href="https://www.wect.com/2026/07/28/ai-is-here-stay-columbus-county-schools-launches-classroom-ai-platform/" target="_blank" rel="noopener">Columbus County's district-wide MagicSchool launch</a> assumes teacher time savings translate to classroom benefit</div>
+<div class="b"><b class="tag">The other view</b><a href="https://hechingerreport.org/proof-points-ai-in-teaching/" target="_blank" rel="noopener">The Wharton RCT</a>: students found AI-assisted classes less engaging, and achievement fell where previously weaker teachers leaned on uncurated AI output</div></div>
+<div class="tension"><b class="tag">The tension</b>The first causal evidence has arrived mid-rollout, and it says the benefit depends on curation skills most systems have not yet trained</div></div><div class="card disagree"><h3>What AI detection data can be used for</h3>
+<div class="pos"><div class="a"><b class="tag">One view</b><a href="https://theconversation.com/more-than-50-of-australian-university-assignments-used-ai-how-should-unis-respond-287179" target="_blank" rel="noopener">Turnitin figures</a> are cited as evidence of the scale of AI use demanding an institutional response</div>
+<div class="b"><b class="tag">The other view</b>The same Conversation authors: detection scores signal likelihood, not misconduct, and should not ground integrity decisions</div></div>
+<div class="tension"><b class="tag">The tension</b>Institutions want the numbers for strategy while rejecting them as evidence against individual students, a line schools will find hard to hold in practice</div></div><div class="card disagree"><h3>How much technology belongs in the classroom</h3>
+<div class="pos"><div class="a"><b class="tag">One view</b>China's Ministry of Education notice (<a href="https://cset.georgetown.edu/publication/china-primary-secondary-ai-education-notice" target="_blank" rel="noopener">CSET translation</a>, c. 28 July): AI coursework across all of K-12 by 2030, integrated into every stage of schooling</div>
+<div class="b"><b class="tag">The other view</b>US districts are <a href="https://fortune.com/2026/07/31/utah-school-laptop-ban-classroom-screens/" target="_blank" rel="noopener">rolling back 1:1 laptop programmes</a> amid evidence screens harmed learning (<a href="https://theconversation.com/schools-are-rethinking-whether-every-student-needs-a-laptop-287549" target="_blank" rel="noopener">The Conversation US</a>, c. 30 July)</div></div>
+<div class="tension"><b class="tag">The tension</b>The world's two largest school systems are moving in opposite directions on classroom technology in the same week, and Australian schools sit between the AI-capability push and the screen-time backlash</div></div></div>
+</div></section>
+<section class="block"><div class="wrap">
+  <div class="sectionhead"><h2>Worth watching</h2><span class="sub">Developments to keep an eye on</span></div>
+  <div class="watch"><h3>National Cabinet's August meeting on national AI standards, now imminent</h3><p>Carried over for a third week: the draft framework of legislated Australian AI standards, explicitly covering education and training, goes to National Cabinet this month, with legislation intended for early 2027. No date or new detail emerged this week. The eSafety advisory and HRW's privacy call both feed the case for children-specific provisions, so the education content of the standards may be firmer than the 15 July announcement suggested. Expect the outcome to land with little warning.</p><p class="srcline">Sources: <a href="https://www.pm.gov.au/media/ai-australias-interests" target="_blank" rel="noopener">AI in Australia's Interests</a> – Prime Minister of Australia, 15 July 2026.</p></div><div class="watch"><h3>Salamanca's "Sally": the first humanoid AI teaching assistant paused over data privacy</h3><p>A New York district's plan to put Sally, a lifelike humanoid AI teaching assistant, into classrooms this autumn was put on hold after a New York Focus report (28 July) triggered debate and the district moved to negotiate enhanced student data privacy agreements with the state. Flagged because embodied classroom AI is coming to the vendor market regardless, and because the pause shows data-privacy agreements, not pedagogy, are where these proposals will be won or lost. An Australian Conversation piece this week argued the idea is less strange than the headlines suggest.</p><p class="srcline">Sources: <a href="https://nysfocus.com/2026/07/28/salamanca-ai-teaching-assistant-interview" target="_blank" rel="noopener">Meet Sally, the AI Teaching Assistant a NY School Put on Hold</a> – New York Focus, 28 July 2026; <a href="https://theconversation.com/a-lifelike-robot-called-sally-was-going-to-teach-in-a-us-school-its-not-as-weird-as-it-sounds-288493" target="_blank" rel="noopener">A lifelike robot called 'Sally' was going to teach in a US school. It's not as weird as it sounds</a> – The Conversation, late July 2026.</p></div>
+</div></section>
+<div class="wrap"><details class="allsources"><summary>Full source list for this issue (19 sources)</summary>
+<ol><li><a href="https://www.esafety.gov.au/newsroom/media-releases/school-photo-posts-vulnerable-to-emerging-ai-threat" target="_blank" rel="noopener">School photo posts vulnerable to emerging AI threat</a> – eSafety Commissioner, 28 July 2026</li><li><a href="https://www.esafety.gov.au/newsroom/blogs/sharing-school-imagery-in-the-age-of-ai-risks-deepfakes-and-how-to-protect-students-and-staff" target="_blank" rel="noopener">Sharing school imagery in the age of AI: risks, deepfakes, and how to protect students and staff</a> – eSafety Commissioner, 28 July 2026</li><li><a href="https://www.hrw.org/news/2026/07/30/australia-school-photos-scraped-for-ai-fueled-image-misuse" target="_blank" rel="noopener">Australia: School Photos Scraped for AI-Fueled Image Misuse</a> – Human Rights Watch, 30 July 2026</li><li><a href="https://educationhq.com/news/schools-under-attack-spike-in-ai-generated-face-swaps-memes-and-fabricated-stories-213018/" target="_blank" rel="noopener">Schools under attack: spike in AI-generated face swaps, memes and fabricated stories</a> – EducationHQ, late July 2026</li><li><a href="https://educationmattersmag.com.au/esafety-releases-new-advisory-for-sharing-school-imagery/" target="_blank" rel="noopener">eSafety releases new advisory for sharing school imagery</a> – Education Matters, late July 2026</li><li><a href="https://tickernews.co/how-ai-deepfakes-threaten-student-safety/" target="_blank" rel="noopener">How AI deepfakes threaten student safety (Dr Karen Sutherland, University of the Sunshine Coast)</a> – Ticker News, late July 2026</li><li><a href="https://hechingerreport.org/proof-points-ai-in-teaching/" target="_blank" rel="noopener">Teachers save time with AI. Their students may pay the price</a> – The Hechinger Report (Proof Points, Jill Barshay), syndicated 28-30 July 2026</li><li><a href="https://ktvz.com/stacker-news/2026/07/28/teachers-save-time-with-ai-their-students-may-pay-the-price/" target="_blank" rel="noopener">Teachers save time with AI. Their students may pay the price (syndicated)</a> – KTVZ/Stacker, 28 July 2026</li><li><a href="https://educationmattersmag.com.au/schools-dont-need-more-ai-enthusiasm-they-need-a-way-to-measure-progress" target="_blank" rel="noopener">Schools don't need more AI enthusiasm. They need a way to measure progress</a> – Education Matters (Paula Christophersen and Anna Kinnane), c. 30 July 2026</li><li><a href="https://theconversation.com/more-than-50-of-australian-university-assignments-used-ai-how-should-unis-respond-287179" target="_blank" rel="noopener">More than 50% of Australian university assignments used AI. How should unis respond?</a> – The Conversation, c. 28 July 2026</li><li><a href="https://digital-strategy.ec.europa.eu/en/library/guidelines-transparency-obligations-providers-and-deployers-ai-systems" target="_blank" rel="noopener">Guidelines on transparency obligations for providers and deployers of AI systems</a> – European Commission, July 2026</li><li><a href="https://www.technology.org/2026/07/17/eu-ai-act-what-actually-applies-on-2-august-2026/" target="_blank" rel="noopener">EU AI Act: what actually applies on 2 August 2026</a> – Technology.org, 17 July 2026</li><li><a href="https://www.wect.com/2026/07/28/ai-is-here-stay-columbus-county-schools-launches-classroom-ai-platform/" target="_blank" rel="noopener">"AI is here to stay": Columbus County Schools launches classroom AI platform</a> – WECT News, 28 July 2026</li><li><a href="https://cset.georgetown.edu/publication/china-primary-secondary-ai-education-notice" target="_blank" rel="noopener">China's Ministry of Education notice on AI education in primary and secondary schools (translation)</a> – Center for Security and Emerging Technology, c. 28 July 2026</li><li><a href="https://fortune.com/2026/07/31/utah-school-laptop-ban-classroom-screens/" target="_blank" rel="noopener">The post-pandemic classroom is quietly ditching the laptop-for-every-kid model</a> – Fortune, 31 July 2026</li><li><a href="https://theconversation.com/schools-are-rethinking-whether-every-student-needs-a-laptop-287549" target="_blank" rel="noopener">Schools are rethinking whether every student needs a laptop</a> – The Conversation (US), c. 30 July 2026</li><li><a href="https://nysfocus.com/2026/07/28/salamanca-ai-teaching-assistant-interview" target="_blank" rel="noopener">Meet Sally, the AI Teaching Assistant a NY School Put on Hold</a> – New York Focus, 28 July 2026</li><li><a href="https://theconversation.com/a-lifelike-robot-called-sally-was-going-to-teach-in-a-us-school-its-not-as-weird-as-it-sounds-288493" target="_blank" rel="noopener">A lifelike robot called 'Sally' was going to teach in a US school. It's not as weird as it sounds</a> – The Conversation, late July 2026</li><li><a href="https://www.pm.gov.au/media/ai-australias-interests" target="_blank" rel="noopener">AI in Australia's Interests</a> – Prime Minister of Australia, 15 July 2026</li></ol></details></div><div class="wrap"><div class="pager"><a href="2026-07-26.html">← 26 July 2026</a><a href="../index.html">All briefings →</a></div></div>
+<footer><div class="wrap">
+  <p><strong>AI in EdTech Weekly</strong> is compiled from primary sources each week; every claim links to its original source.
+  Briefings are produced with AI-assisted research and human editorial review, and summarise third-party reporting and research
+  for information purposes.</p>
+</div></footer>
+</body>
+</html>
