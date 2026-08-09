@@ -1,4 +1,20 @@
 {
+  "2026-08-09": {
+    "headline": "Frontier chatbots fail the Australian curriculum test just as agentic AI reaches managed school accounts, and TALIS locates the capability gap squarely in primary",
+    "overview": "An Australian-first benchmark showed the leading AI models barely recall Australian and New Zealand curricula, with no mainstream model passing more than 41 per cent of curriculum-knowledge questions, in the same week OpenAI shipped education plugins that run agentic workflows over school-supplied materials. Coverage of ACER's TALIS 2024 Australian Report confirmed Australia ranks fourth of 55 systems for teacher AI use while half of primary teachers use none, overwhelmingly for lack of skills. In the US, Alpha Schools' expansion to 50 campuses and a Houston public-school pilot pushed AI-first schooling ahead of an evidence base that does not yet support it. National Cabinet's decision on the national AI standards had still not landed by week's end.",
+    "signals": [
+      "CurricuLLM's benchmark of seven frontier models (including GPT-5.2, Gemini 3 Pro and Claude Sonnet 4.5) found none exceeded a 41 per cent pass rate on Australian and NZ K-10 curriculum knowledge, with two scoring zero on identifying specific curriculum outcome entries.",
+      "ACER's TALIS 2024 Australian Report shows about two in three lower secondary but only one in two primary teachers used AI in the past year, and 84 per cent of primary non-users say they lack the knowledge or skills to teach with it.",
+      "The same survey found 87 per cent of lower secondary teachers are concerned AI lets students misrepresent others' work as their own, and two in five non-users believe schools should not use AI in teaching at all.",
+      "OpenAI released K-12 Educator, College Educator and College Student plugins for ChatGPT Work and Codex on 3-4 August, packaging agentic lesson-planning workflows that run on the course materials and context a school supplies.",
+      "Alpha Schools announced expansion from about a dozen to roughly 50 US campuses, and Houston ISD will pilot its Timeback platform in two public elementary schools, while a Conversation research review found no evidence AI tutors outperform human teachers."
+    ],
+    "actions": [
+      "Fold the curriculum-recall benchmark into staff professional learning now: teachers should supply syllabus content to AI tools rather than trust model recall, and any AI-generated planning citing outcome codes needs checking against the source document.",
+      "Use the TALIS primary-years data to shape next term's PL priorities: the gap is skills, not resistance, so foundational capability-building for K-6 staff will land better than tool rollouts, and the integrity concern shared by 87 per cent of teachers is an open door for assessment-design work.",
+      "Review what any school-managed AI workspace can now do agentically, and settle the data governance question of what school materials may be uploaded to vendor platforms, before staff discover these workflows on their own."
+    ]
+  },
   "2026-08-02": {
     "headline": "eSafety turns the lens on schools' own photo streams as deepfake abuse escalates, and the first classroom RCT complicates the teacher time-saving story",
     "overview": "The week belonged to the eSafety Commissioner, whose 28 July advisory on sharing school imagery reframed the routine publishing of student photos as a safeguarding exposure, after more than 100 reports in the first quarter of anonymous accounts weaponising imagery scraped from school websites and social media. Human Rights Watch amplified the warning two days later. Internationally, the first randomised controlled trial of a teacher-facing AI assistant found teachers saved time while student experience and, under weaker teachers, achievement declined, and the EU's AI transparency rules took legal effect on 2 August. National Cabinet's meeting on Australia's AI standards is now imminent.",
