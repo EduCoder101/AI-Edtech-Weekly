@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html lang="en-AU">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>AI in EdTech Weekly · 6 September 2026</title>
+<meta name="description" content="NESA caps unsupervised HSC work at 15 per cent as New York pauses AI for students through Year 8, and the vendor race standardises on free access with system-wide privacy deals">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,600;9..144,700&family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+<style>
+:root{
+  --paper:#f7f5f0; --card:#ffffff; --ink:#181f30; --ink2:#3c4557;
+  --muted:#6f7787; --line:#e4dfd4; --navy:#1b2a4a; --navy2:#223458;
+  --accent:#0e7c66; --accent-soft:#e6f1ed; --amber:#a96f24; --amber-soft:#f7eeddd9;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{background:var(--paper);color:var(--ink);
+  font-family:'Inter',-apple-system,'Segoe UI',sans-serif;
+  font-size:17px;line-height:1.65;-webkit-font-smoothing:antialiased}
+a{color:var(--accent);text-decoration:none}
+a:hover{text-decoration:underline}
+.wrap{max-width:980px;margin:0 auto;padding:0 24px}
+/* top bar */
+.topbar{position:sticky;top:0;z-index:50;background:rgba(247,245,240,.92);
+  backdrop-filter:blur(8px);border-bottom:1px solid var(--line)}
+.topbar .wrap{display:flex;align-items:center;justify-content:space-between;height:58px}
+.brand{font-family:'Fraunces',serif;font-weight:700;font-size:1.05rem;color:var(--ink);letter-spacing:.01em}
+.brand:hover{text-decoration:none}
+.brand span{color:var(--accent)}
+.topnav{display:flex;gap:22px;font-size:.85rem;font-weight:600}
+.topnav a{color:var(--ink2)}
+/* issue head */
+.issuehead{padding:56px 0 36px}
+.kicker{font-size:.74rem;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:var(--accent);margin-bottom:14px}
+h1.issue{font-family:'Fraunces',serif;font-weight:600;font-size:clamp(1.6rem,3.6vw,2.1rem);line-height:1.25;letter-spacing:-.01em}
+.issuemeta{margin-top:16px;color:var(--muted);font-size:.9rem}
+/* glance band */
+.glance{background:var(--navy);color:#eef1f7;padding:44px 0 40px}
+.glance h2{font-family:'Fraunces',serif;font-weight:600;font-size:1.35rem;color:#fff;margin-bottom:14px}
+.glance .overview{font-size:1.02rem;line-height:1.7;color:#d9dfec;max-width:44em}
+.glance h3{font-size:.74rem;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:#8fa8d8;margin:28px 0 12px}
+.signals{list-style:none}
+.signals li{position:relative;padding:10px 0 10px 26px;border-top:1px solid var(--navy2);font-size:.95rem;line-height:1.6;color:#e7ebf4}
+.signals li:before{content:"";position:absolute;left:2px;top:19px;width:8px;height:8px;border-radius:50%;background:var(--accent)}
+.actions{list-style:none;display:grid;gap:10px}
+.actions li{background:var(--navy2);border-left:3px solid var(--accent);border-radius:0 8px 8px 0;
+  padding:12px 16px;font-size:.92rem;line-height:1.55;color:#e7ebf4}
+.glance a{color:#9fd4c6}
+/* sections */
+section.block{padding:52px 0 8px}
+.sectionhead{display:flex;align-items:baseline;gap:14px;margin-bottom:8px}
+.sectionhead h2{font-family:'Fraunces',serif;font-weight:600;font-size:1.5rem}
+.sectionhead .sub{color:var(--muted);font-size:.88rem}
+/* stories */
+.story{padding:34px 0;border-bottom:1px solid var(--line)}
+.story:last-child{border-bottom:none}
+.storytop{display:flex;gap:16px;align-items:flex-start}
+.snum{font-family:'Fraunces',serif;font-weight:600;font-size:1.5rem;color:var(--accent);line-height:1.2;min-width:1.2em}
+.story h3{font-family:'Fraunces',serif;font-weight:600;font-size:1.25rem;line-height:1.3}
+.smeta{margin:8px 0 14px;font-size:.78rem;font-weight:600;letter-spacing:.06em;text-transform:uppercase;color:var(--muted)}
+.story p{margin-bottom:14px;color:var(--ink2)}
+.storygrid{display:grid;grid-template-columns:minmax(0,1fr) 300px;gap:36px;align-items:start;margin-top:4px}
+.storygrid.nowhy{grid-template-columns:1fr}
+.why{background:var(--accent-soft);border-left:3px solid var(--accent);border-radius:0 10px 10px 0;
+  padding:16px 18px;font-size:.92rem;line-height:1.6;position:sticky;top:78px}
+@media(max-width:820px){.storygrid{grid-template-columns:1fr}.why{position:static;margin-top:4px}}
+.why b.tag{display:block;font-size:.72rem;font-weight:700;letter-spacing:.13em;text-transform:uppercase;color:var(--accent);margin-bottom:6px}
+.srcline{font-size:.82rem;color:var(--muted);line-height:1.55}
+.srcline a{color:var(--muted);text-decoration:underline;text-decoration-color:var(--line);text-underline-offset:3px}
+.srcline a:hover{color:var(--accent)}
+/* signal cards */
+.cards{display:grid;gap:16px;margin-top:20px}
+.card{background:var(--card);border:1px solid var(--line);border-radius:14px;padding:22px 24px;box-shadow:0 1px 2px rgba(24,31,48,.04)}
+.card h3{font-family:'Fraunces',serif;font-weight:600;font-size:1.06rem;line-height:1.4;margin-bottom:10px}
+.card p{font-size:.93rem;line-height:1.6;color:var(--ink2)}
+.card .srcs{margin-top:12px;font-size:.8rem;color:var(--muted);line-height:1.6}
+.card .srcs a{color:var(--muted);text-decoration:underline;text-decoration-color:var(--line);text-underline-offset:3px}
+.card .srcs a:hover{color:var(--accent)}
+.card.agree{border-top:3px solid var(--accent)}
+.card.disagree{border-top:3px solid var(--amber)}
+.pos{display:grid;gap:10px;margin:10px 0}
+.pos>div{border-radius:10px;padding:12px 15px;font-size:.9rem;line-height:1.6}
+.pos .a{background:var(--accent-soft)}
+.pos .b{background:var(--amber-soft)}
+.pos b.tag{display:block;font-size:.7rem;font-weight:700;letter-spacing:.12em;text-transform:uppercase;margin-bottom:4px}
+.pos .a b.tag{color:var(--accent)}
+.pos .b b.tag{color:var(--amber)}
+.tension{font-size:.9rem;color:var(--ink2);line-height:1.6;padding-top:8px;border-top:1px dashed var(--line)}
+.tension b.tag{font-size:.7rem;font-weight:700;letter-spacing:.12em;text-transform:uppercase;color:var(--muted);display:block;margin-bottom:4px}
+/* watching */
+.watch{background:var(--card);border:1px solid var(--line);border-radius:14px;padding:22px 24px;margin-top:16px}
+.watch h3{font-family:'Fraunces',serif;font-weight:600;font-size:1.06rem;margin-bottom:10px}
+.watch p{font-size:.93rem;line-height:1.65;color:var(--ink2);margin-bottom:10px}
+/* sources details */
+details.allsources{margin:44px 0 0;border-top:1px solid var(--line);padding-top:20px}
+details.allsources summary{cursor:pointer;font-weight:600;font-size:.95rem;color:var(--ink2)}
+details.allsources ol{margin:16px 0 0 20px;font-size:.85rem;color:var(--muted);line-height:1.7}
+details.allsources li{margin-bottom:6px}
+/* pager + footer */
+.pager{display:flex;justify-content:space-between;gap:16px;margin:48px 0 0;padding-top:24px;border-top:1px solid var(--line);font-size:.9rem;font-weight:600}
+footer{margin-top:56px;padding:32px 0 48px;border-top:1px solid var(--line);color:var(--muted);font-size:.82rem;line-height:1.7}
+/* index */
+.hero{padding:72px 24px 40px}
+.hero h1{font-family:'Fraunces',serif;font-weight:600;font-size:clamp(1.5rem,6.2vw,3.95rem);line-height:1.08;letter-spacing:-.015em;white-space:nowrap}
+.hero p.tag{margin-top:20px;font-size:clamp(.85rem,1.85vw,1.15rem);color:var(--ink2);line-height:1.7;white-space:nowrap}
+.latest{background:var(--navy);color:#eef1f7;border-radius:18px;padding:34px 36px;margin:8px 0 12px}
+.latest .kicker{color:#9fd4c6}
+.latest h2{font-family:'Fraunces',serif;font-weight:600;font-size:1.5rem;line-height:1.3;color:#fff;margin-bottom:12px}
+.latest p{color:#d9dfec;font-size:.98rem;line-height:1.7;margin-bottom:20px}
+.btn{display:inline-block;background:var(--accent);color:#fff;font-weight:600;font-size:.9rem;
+  padding:11px 22px;border-radius:999px}
+.btn:hover{text-decoration:none;filter:brightness(1.08)}
+.archive{padding:44px 0}
+.archive h2{font-family:'Fraunces',serif;font-weight:600;font-size:1.5rem;margin-bottom:6px}
+.issuelist{list-style:none;margin-top:14px}
+.issuelist li{border-bottom:1px solid var(--line)}
+.issuelist a{display:flex;gap:24px;align-items:baseline;padding:18px 4px;color:var(--ink)}
+.issuelist a:hover{background:#f1ede4;text-decoration:none}
+.issuelist .d{min-width:130px;font-size:.85rem;font-weight:700;color:var(--accent);letter-spacing:.02em}
+.issuelist .h{font-size:.97rem;line-height:1.5;color:var(--ink2)}
+.aboutwrap{padding:20px 0 30px}
+.about{max-width:44em}
+.about h2{font-family:'Fraunces',serif;font-weight:600;font-size:1.5rem;margin-bottom:12px}
+.about p{color:var(--ink2);margin-bottom:12px;font-size:.97rem}
+@media(max-width:640px){
+  .issuelist a{flex-direction:column;gap:4px}
+  .latest{padding:26px 22px}
+}
+@media print{
+  .topbar,.pager{display:none}
+  body{background:#fff}
+  .glance{background:#fff;color:#000;border:1px solid #ccc}
+}
+</style>
+</head>
+<body>
+<header class="topbar"><div class="wrap">
+  <a class="brand" href="../index.html">AI in EdTech <span>Weekly</span></a>
+  <nav class="topnav"><a href="#">Latest briefing</a><a href="../index.html#archive">Archive</a><a href="../index.html#about">About</a></nav>
+</div></header>
+
+<div class="wrap issuehead">
+  <div class="kicker">Weekly briefing · 31 August – 6 September 2026</div>
+  <h1 class="issue">NESA caps unsupervised HSC work at 15 per cent as New York pauses AI for students through Year 8, and the vendor race standardises on free access with system-wide privacy deals</h1>
+  <div class="issuemeta">Issue of 6 September 2026</div>
+</div>
+<section class="glance"><div class="wrap">
+  <h2>At a glance</h2>
+  <p class="overview">The moratorium question NSW posed a month ago was answered this week: from Term 4, schools are limited to one take-home assessment task per HSC course worth no more than 15 per cent of school-based assessment, with major-works courses exempt, and the rules reach every school delivering the HSC. In the same week, New York City imposed the broadest school AI restriction in the United States, a one-year pause on student-facing generative AI through Grade 8 for nearly 600,000 students, with companion chatbots banned in every grade. Anthropic completed the vendor convergence by opening free, centrally managed Claude for Teachers to whole US school systems under a single K-12 data agreement, and UNESCO convenes 30 education ministers next week to adopt a statement on education as a common good in the age of AI. The pattern is unmistakable: student-facing use is being restricted by regulation at the same moment teacher-facing adoption is being accelerated by vendors.</p>
+  <h3>Key signals</h3><ul class="signals"><li>NSW announced that from Term 4 2026 schools may set only one take-home assessment task per HSC course, worth at most 15 per cent of the school-based assessment mark (7.5 per cent of the HSC), extending to Year 11 from 2027, with creative arts, technology and English Extension 2 major works exempt.</li><li>New York City announced on 2 September a one-year moratorium on student-facing generative AI from pre-kindergarten through Grade 8, covering nearly 600,000 students, alongside an all-grades companion chatbot ban, screen time limits and twice-yearly AI critical-thinking modules for high schoolers.</li><li>Anthropic made Claude for Teachers free for US K-12 schools and districts as a centrally managed Enterprise offering on 28 August, with a system-wide K-12 Data Processing Agreement and a Detroit Public Schools pilot evaluating effects on educator wellbeing and practice.</li><li>UNESCO's Digital Learning Week (8 to 11 September, Paris) will see around 30 education ministers adopt a joint statement on sustaining education as a common good in the age of AI.</li><li>South Australia's Royal Commission terms of reference, promised within four to six weeks of the 10 August announcement, are now due imminently, with commissioners commencing 1 October.</li></ul>
+  <h3>Considerations for the Executive</h3><ul class="actions"><li>Audit Year 11 and 12 assessment schedules against the new NESA limit before Term 4 begins on 12 October: confirm each HSC course has at most one take-home task within the 15 per cent cap, brief heads of major-works subjects on their exemptions, and watch for AISNSW guidance translating the rules for independent schools.</li><li>Use the NYC decision to pressure-test the school's own primary-years AI position: its student-facing versus teacher-facing distinction, outright companion chatbot ban, and paired critical-thinking instruction form a coherent reference model, and the criticism it drew previews the parent objections any local restriction would need answers for.</li><li>Fold Anthropic's free Enterprise offer into the standing vendor question rather than evaluating it alone: with all three majors now offering free teacher access under system-level privacy agreements, the item worth raising with ISA or AISNSW is a sector-negotiated Australian equivalent, and the exit cost when free periods end.</li></ul>
+</div></section>
+<section class="block"><div class="wrap">
+  <div class="sectionhead"><h2>The stories in depth</h2><span class="sub">Full analysis with linked sources</span></div>
+  
+<article class="story">
+  <div class="storytop"><div class="snum">1</div>
+  <div><h3>NESA's answer lands: one take-home task, capped at 15 per cent, from Term 4</h3><div class="smeta">NSW Government / NESA | early September 2026</div></div></div>
+  <div class="storygrid">
+    <div class="storybody"><p>The decision flagged as last week's most consequential pending item has now been made. Acting on NESA's advice, the NSW Government announced new rules limiting schools to a maximum of one take-home assessment task per HSC course, worth no more than 15 per cent of the school-based assessment mark, which is 7.5 per cent of the total HSC mark. The rules take effect from Term 4 2026, when the Class of 2027 begins Year 12, and extend to Year 11 students from the start of 2027. Courses built around major works, including creative arts, technology subjects and English Extension 2, are exempt, and the NESA board will consider further subject-specific advice for 2028 and beyond. This is a cap rather than the full moratorium originally floated: take-home tasks survive, but their weight in the HSC collapses.</p><p class="srcline">Sources: <a href="https://www.nsw.gov.au/ministerial-releases/new-rules-ai-education" target="_blank" rel="noopener">New rules for schools on AI in take-home HSC assessments</a> – NSW Government, early September 2026; <a href="https://www.nsw.gov.au/education-and-training/nesa/news/all/new-take-home-assessment-rules" target="_blank" rel="noopener">New limit on take-home assessment tasks from Term 4 2026</a> – NESA, September 2026; <a href="https://educationmattersmag.com.au/new-rules-for-take-home-hsc-assessments" target="_blank" rel="noopener">New rules for take-home HSC assessments</a> – Education Matters, September 2026; <a href="https://ia.acs.org.au/article/2026/nsw-restricts-take-home-assessments-over-ai-fears.html" target="_blank" rel="noopener">NSW restricts take-home assessments over AI fears</a> – Information Age (ACS), September 2026.</p></div>
+    <aside class="why"><b class="tag">Why it matters</b>NESA's assessment requirements flow through to every school delivering HSC courses, independent schools included, so this is not a public-system story: assessment schedules, task weightings and programme documentation for current Year 11 students need checking against the new limit before Term 4 begins on 12 October. The shape of the decision also matters beyond Stage 6. NSW has now formally priced unsupervised student work at 7.5 per cent of a credential, which is the clearest signal yet of where authorities believe authentic demonstration of learning happens. Expect AISNSW guidance shortly, and expect the same logic to drift downwards into Stage 4 and 5 assessment policy discussions. Worth briefing the principal this week, with the exemptions list in hand for heads of creative and technology subjects.</aside>
+  </div>
+</article>
+<article class="story">
+  <div class="storytop"><div class="snum">2</div>
+  <div><h3>New York City imposes the broadest school AI moratorium in the United States</h3><div class="smeta">NYC Mayor's Office / NYC Public Schools | 2 September 2026</div></div></div>
+  <div class="storygrid">
+    <div class="storybody"><p>The largest school district in the United States announced a one-year moratorium on student-facing generative AI for children from pre-kindergarten (2-K) through Grade 8, covering nearly 600,000 students, about two-thirds of the district's enrolment. Companion chatbots are prohibited across all grades, age-based screen time restrictions apply, and high schools get twice-yearly AI critical-thinking modules plus tightly limited AI pilots in a small number of classrooms while the district conducts a review. Mayor Zohran Mamdani's office called it the country's most expansive set of limits on AI in schools. Reaction split immediately: a parent coalition that had petitioned for a two-year pause called it a step in the right direction but too short for a proper review, a psychologist told CNBC the policy could be a "home run" for child development, while former deputy mayor Richard Buery argued a blanket ban through middle school denies teachers useful tools, and other critics warned public school students will fall behind private school peers on AI literacy.</p><p class="srcline">Sources: <a href="https://www.nyc.gov/mayors-office/news/2026/09/mayor-mamdani-and-chancellor-samuels-put-students-first-with-nat" target="_blank" rel="noopener">Mayor Mamdani and Chancellor Samuels Put Students First with Nation's Broadest Generative AI Moratorium in Schools</a> – NYC Mayor's Office, 2 September 2026; <a href="https://www.chalkbeat.org/newyork/2026/09/02/nyc-schools-to-set-ai-policy-ban-screen-time-limits/" target="_blank" rel="noopener">NYC schools to ban AI in 2-K through 8th grade and limit screen time</a> – Chalkbeat New York, 2 September 2026; <a href="https://www.cnn.com/2026/09/02/tech/new-york-city-classroom-ai-ban" target="_blank" rel="noopener">Nation's largest school district bans AI in the classroom through 8th grade</a> – CNN, 2 September 2026; <a href="https://www.cnbc.com/2026/09/05/nyc-schools-ai-policy-what-experts-say-about-limiting-student-access.html" target="_blank" rel="noopener">As parents consider kids' AI use, NYC schools' new policy could be a 'home run', psychologist says</a> – CNBC, 5 September 2026.</p></div>
+    <aside class="why"><b class="tag">Why it matters</b>This is the first major English-speaking jurisdiction to draw a hard line at the primary and middle years, and the line sits exactly where an Australian K-12 school's own hardest question sits: what, if anything, students below Year 9 should do with generative AI directly. The design is more instructive than the headline: it distinguishes student-facing AI (paused) from teacher-facing AI (continuing), bans companion chatbots outright on wellbeing grounds, and pairs the pause with explicit AI critical-thinking instruction rather than silence. For a school reviewing its own primary-years position, NYC's framework is now the reference case for the restrictive end, and the criticism of it is a preview of the parent objections any similar local decision would meet. Note the direction of travel matches Australia: NSW capping unsupervised assessment, Victoria capping primary screen time from 2027, and now NYC pausing primary AI use.</aside>
+  </div>
+</article>
+<article class="story">
+  <div class="storytop"><div class="snum">3</div>
+  <div><h3>Anthropic opens free, centrally managed Claude for Teachers to entire school systems</h3><div class="smeta">Anthropic | 28 August 2026</div></div></div>
+  <div class="storygrid">
+    <div class="storybody"><p>Announced just after last week's briefing closed: Anthropic has made Claude for Teachers available to US K-12 schools and districts as a free Enterprise offering, with organisations that sign up by 30 June 2027 receiving a full year of free access. The structural piece mirrors OpenAI's move the week before: a single set of K-12 terms and a system-wide Data Processing Agreement, FERPA-aligned, with teacher data excluded from model training, so a district signs once rather than each school negotiating alone. The launch adds two teaching skills co-developed with Learning Commons (lesson preparation and standards-aligned checks for understanding) and a pilot evaluation in Detroit Public Schools this autumn studying effects on educator wellbeing and practice.</p><p class="srcline">Sources: <a href="https://claude.com/blog/claude-for-teachers-now-available-for-schools-and-districts" target="_blank" rel="noopener">Claude for Teachers, now available for U.S. K-12 schools and districts</a> – Anthropic, 28 August 2026; <a href="https://www.unite.ai/anthropic-brings-claude-for-teachers-to-schools-and-districts/" target="_blank" rel="noopener">Anthropic Brings Claude for Teachers to Schools and Districts</a> – Unite.AI, August 2026; <a href="https://www.edtechinnovationhub.com/news/anthropic-opens-free-claude-for-teachers-enterprise-access-to-us-schools-and-districts" target="_blank" rel="noopener">Anthropic offers free Claude for Teachers to U.S. districts</a> – EdTech Innovation Hub, August 2026.</p></div>
+    <aside class="why"><b class="tag">Why it matters</b>All three AI majors have now converged on the same play within a fortnight: free teacher access, system-level privacy agreements, and training or evaluation partnerships to build legitimacy. The practical reading for an Australian school is unchanged from last week but now firmer: sector-negotiated terms are becoming the norm in the US, and Australian sector bodies (ISA, AISNSW, NCEC) have three vendors' templates to point to when pushing for equivalent Australia-wide agreements. The Detroit evaluation is worth tracking separately, as one of the first vendor-funded studies measuring teacher workload and wellbeing effects rather than student outcomes, which is precisely the evidence gap in most AI professional learning decisions.</aside>
+  </div>
+</article>
+<article class="story">
+  <div class="storytop"><div class="snum">4</div>
+  <div><h3>UNESCO convenes 30 education ministers to adopt a statement on education in the age of AI</h3><div class="smeta">UNESCO | announced this week, event 8-11 September 2026</div></div></div>
+  <div class="storygrid">
+    <div class="storybody"><p>UNESCO's Digital Learning Week runs in Paris from 8 to 11 September under the theme "Education in the age of AI: Facts, Frictions and Frontiers", gathering around 30 ministers of education, 1,200 in-person participants and 3,000 online. The centrepiece is the planned adoption of a joint ministerial statement on sustaining education as a common good in the age of AI, alongside sessions on synthetic knowledge, public interest AI, digital sovereignty, and deliberately analogue and community-led approaches to learning.</p><p><strong>A note on Australian coverage this week:</strong> beyond the NESA decision, no second purely Australian development met the significance threshold this week. The SA Royal Commission's terms of reference remain pending (see Worth Watching), and sector publications carried commentary rather than new developments.</p><p class="srcline">Sources: <a href="https://www.unesco.org/en/articles/education-age-ai-ministerial-statement-be-adopted-unescos-digital-learning-week" target="_blank" rel="noopener">Education in the age of AI: Ministerial statement to be adopted at UNESCO's Digital Learning Week</a> – UNESCO, September 2026; <a href="https://www.unesco.org/en/weeks/digital-learning" target="_blank" rel="noopener">Digital Learning Week 2026</a> – UNESCO.</p></div>
+    <aside class="why"><b class="tag">Why it matters</b>Ministerial statements of this kind tend to become the reference language in national frameworks within a year or two, the way UNESCO's 2023 generative AI guidance seeded age limits and human-oversight wording in policies worldwide, including Australia's national framework. The "education as a common good" framing signals where the international consensus is heading: away from vendor-led adoption and towards public-interest guardrails, which sits comfortably alongside what NSW and NYC did this week. Worth scanning the statement when it lands next week for language likely to reappear in Australian policy.</aside>
+  </div>
+</article>
+</div></section>
+<section class="block"><div class="wrap">
+  <div class="sectionhead"><h2>Where the evidence agrees</h2><span class="sub">Independent sources pointing the same way</span></div>
+  <div class="cards"><div class="card agree"><h3>Authorities are drawing hard limits around unsupervised and early-years AI use, not relying on guidance</h3>
+<p>Binding rules are replacing voluntary frameworks at every level of the system in the same fortnight; a school's AI position should now assume regulation, not discretion, as the operating environment</p><div class="srcs">Sources: <a href="https://www.nsw.gov.au/ministerial-releases/new-rules-ai-education" target="_blank" rel="noopener">NSW's one-task, 15 per cent cap on take-home HSC assessment</a> (early September), <a href="https://www.nyc.gov/mayors-office/news/2026/09/mayor-mamdani-and-chancellor-samuels-put-students-first-with-nat" target="_blank" rel="noopener">NYC's K-8 generative AI moratorium and all-grades companion chatbot ban</a> (2 September), <a href="https://www.unesco.org/en/articles/education-age-ai-ministerial-statement-be-adopted-unescos-digital-learning-week" target="_blank" rel="noopener">UNESCO's common-good ministerial statement</a> (adoption 8-11 September)</div></div><div class="card agree"><h3>The vendor land-grab has standardised on free access plus system-level privacy agreements</h3>
+<p>With three near-identical vendor offers on the table, the negotiating leverage has shifted to school systems; the ask for Australian sector bodies writes itself</p><div class="srcs">Sources: <a href="https://claude.com/blog/claude-for-teachers-now-available-for-schools-and-districts" target="_blank" rel="noopener">Anthropic's free Enterprise Claude for Teachers with K-12 DPA</a> (28 August), OpenAI's 16-state National Data Privacy Agreement (26 August, covered last week), <a href="https://blog.google/products-and-platforms/products/education/new-ai-educator-trainings-september-2026/" target="_blank" rel="noopener">Google's September AI Educator Series training push</a></div></div><div class="card agree"><h3>Restriction is being paired with explicit AI literacy instruction, not silence</h3>
+<p>The emerging settled position is "restrict use, teach understanding"; a school that bans without teaching, or teaches without boundaries, is now outside the mainstream in both directions</p><div class="srcs">Sources: <a href="https://www.chalkbeat.org/newyork/2026/09/02/nyc-schools-to-set-ai-policy-ban-screen-time-limits/" target="_blank" rel="noopener">NYC's twice-yearly critical-thinking modules alongside its ban</a> (2 September), <a href="https://www.nsw.gov.au/education-and-training/nesa/news/all/new-take-home-assessment-rules" target="_blank" rel="noopener">NESA flagging further subject-specific advice while capping tasks</a>, <a href="https://www.unesco.org/en/weeks/digital-learning" target="_blank" rel="noopener">UNESCO's frictions-and-frontiers framing</a></div></div></div>
+</div></section>
+<section class="block"><div class="wrap">
+  <div class="sectionhead"><h2>Where experts disagree</h2><span class="sub">Live debates worth understanding before deciding</span></div>
+  <div class="cards"><div class="card disagree"><h3>Should students below Year 9 use generative AI at all?</h3>
+<div class="pos"><div class="a"><b class="tag">One view</b><a href="https://www.cnbc.com/2026/09/05/nyc-schools-ai-policy-what-experts-say-about-limiting-student-access.html" target="_blank" rel="noopener">NYC Mayor's Office and supporting psychologists</a>: pausing student-facing AI through Grade 8 protects development, and the policy could be a "home run"</div>
+<div class="b"><b class="tag">The other view</b><a href="https://www.chalkbeat.org/newyork/2026/09/02/nyc-schools-to-set-ai-policy-ban-screen-time-limits/" target="_blank" rel="noopener">Former deputy mayor Richard Buery and other critics</a>: a blanket ban denies useful learning tools and risks a literacy gap with private school students</div></div>
+<div class="tension"><b class="tag">The tension</b>The disagreement is about where AI capability comes from: early supervised exposure, or maturity first and tools later; every K-12 school's primary-years position picks a side</div></div><div class="card disagree"><h3>How long a pause is credible?</h3>
+<div class="pos"><div class="a"><b class="tag">One view</b><a href="https://www.nyc.gov/mayors-office/news/2026/09/mayor-mamdani-and-chancellor-samuels-put-students-first-with-nat" target="_blank" rel="noopener">NYC</a>: one year is enough to review evidence and vendors, with high school pilots continuing meanwhile</div>
+<div class="b"><b class="tag">The other view</b><a href="https://www.chalkbeat.org/newyork/2026/09/02/nyc-schools-to-set-ai-policy-ban-screen-time-limits/" target="_blank" rel="noopener">Parent and advocate coalition</a>: one year cannot support a thorough review, and pilots undermine the pause; the moratorium should run two years</div></div>
+<div class="tension"><b class="tag">The tension</b>A pause that is too short becomes a delay, one that is too long becomes a policy; the review's design matters more than its length, and neither side yet knows what evidence would settle it</div></div><div class="card disagree"><h3>Policy pauses versus vendor momentum</h3>
+<div class="pos"><div class="a"><b class="tag">One view</b><a href="https://www.nyc.gov/mayors-office/news/2026/09/mayor-mamdani-and-chancellor-samuels-put-students-first-with-nat" target="_blank" rel="noopener">NYC pauses student-facing AI pending review</a>, and <a href="https://www.nsw.gov.au/ministerial-releases/new-rules-ai-education" target="_blank" rel="noopener">NSW cuts the weight of unsupervised work</a></div>
+<div class="b"><b class="tag">The other view</b><a href="https://claude.com/blog/claude-for-teachers-now-available-for-schools-and-districts" target="_blank" rel="noopener">Anthropic</a> and <a href="https://blog.google/products-and-platforms/products/education/new-ai-educator-trainings-september-2026/" target="_blank" rel="noopener">Google</a> accelerate free access and training to embed AI in teacher practice now</div></div>
+<div class="tension"><b class="tag">The tension</b>Teacher-facing adoption is accelerating in the same week student-facing use is being restricted; schools must manage two opposite trajectories inside one staffroom</div></div></div>
+</div></section>
+<section class="block"><div class="wrap">
+  <div class="sectionhead"><h2>Worth watching</h2><span class="sub">Developments to keep an eye on</span></div>
+  <div class="watch"><h3>The UNESCO ministerial statement, due within days</h3><p>The joint statement on sustaining education as a common good in the age of AI is scheduled for adoption during Digital Learning Week (8-11 September). Its language on age-appropriate use, teacher agency and public-interest AI is likely to filter into the next revision of Australia's national framework and state policies. Worth reading in full when published, and a candidate lead item for next week's briefing.</p><p class="srcline">Sources: <a href="https://www.unesco.org/en/articles/education-age-ai-ministerial-statement-be-adopted-unescos-digital-learning-week" target="_blank" rel="noopener">Education in the age of AI: Ministerial statement to be adopted at UNESCO's Digital Learning Week</a> – UNESCO, September 2026.</p></div><div class="watch"><h3>SA Royal Commission terms of reference now overdue against the flagged window</h3><p>The terms of reference for South Australia's Royal Commission into AI were promised within four to six weeks of the 10 August announcement, pointing to mid-September, with commissioners commencing 1 October and a final report due 1 July 2027. Education remains confirmed in scope, and legal analysis published since the announcement expects a defined submission process once the terms land. The submission window remains the moment for a practising school's evidence to reach the record, directly or through ISA.</p><p class="srcline">Sources: <a href="https://ai.sa.gov.au/royal-commission-into-artificial-intelligence" target="_blank" rel="noopener">Royal Commission into Artificial Intelligence</a> – Office for AI, SA Government; <a href="https://piperalderman.com.au/insight/south-australian-royal-commission-into-artificial-intelligence-what-businesses-need-to-know-now/" target="_blank" rel="noopener">South Australian Royal Commission into Artificial Intelligence: what businesses need to know now</a> – Piper Alderman, August 2026.</p></div>
+</div></section>
+<div class="wrap"><details class="allsources"><summary>Full source list for this issue (19 sources)</summary>
+<ol><li><a href="https://www.nsw.gov.au/ministerial-releases/new-rules-ai-education" target="_blank" rel="noopener">New rules for schools on AI in take-home HSC assessments</a> – NSW Government, early September 2026</li><li><a href="https://www.nsw.gov.au/education-and-training/nesa/news/all/new-take-home-assessment-rules" target="_blank" rel="noopener">New limit on take-home assessment tasks from Term 4 2026</a> – NESA, September 2026</li><li><a href="https://education.nsw.gov.au/news/latest-news/new-rules-for-schools-on-ai-in-take-home-hsc-assessments" target="_blank" rel="noopener">New rules for schools on AI in take-home HSC assessments</a> – NSW Department of Education, September 2026</li><li><a href="https://educationmattersmag.com.au/new-rules-for-take-home-hsc-assessments" target="_blank" rel="noopener">New rules for take-home HSC assessments</a> – Education Matters, September 2026</li><li><a href="https://ia.acs.org.au/article/2026/nsw-restricts-take-home-assessments-over-ai-fears.html" target="_blank" rel="noopener">NSW restricts take-home assessments over AI fears</a> – Information Age (ACS), September 2026</li><li><a href="https://www.theeducatoronline.com/k12/news/nsw-moves-to-protect-ai-academic-integrity-in-hsc-assessments/289112" target="_blank" rel="noopener">NSW moves to protect AI academic integrity in HSC assessments</a> – The Educator K-12, September 2026</li><li><a href="https://www.nyc.gov/mayors-office/news/2026/09/mayor-mamdani-and-chancellor-samuels-put-students-first-with-nat" target="_blank" rel="noopener">Mayor Mamdani and Chancellor Samuels Put Students First with Nation's Broadest Generative AI Moratorium in Schools</a> – NYC Mayor's Office, 2 September 2026</li><li><a href="https://www.chalkbeat.org/newyork/2026/09/02/nyc-schools-to-set-ai-policy-ban-screen-time-limits/" target="_blank" rel="noopener">NYC schools to ban AI in 2-K through 8th grade and limit screen time</a> – Chalkbeat New York, 2 September 2026</li><li><a href="https://www.cnn.com/2026/09/02/tech/new-york-city-classroom-ai-ban" target="_blank" rel="noopener">Nation's largest school district bans AI in the classroom through 8th grade</a> – CNN, 2 September 2026</li><li><a href="https://www.cnbc.com/2026/09/05/nyc-schools-ai-policy-what-experts-say-about-limiting-student-access.html" target="_blank" rel="noopener">As parents consider kids' AI use, NYC schools' new policy could be a 'home run', psychologist says</a> – CNBC, 5 September 2026</li><li><a href="https://www.k12dive.com/news/new-york-city-pauses-ai-use-for-elementary-middle-school-students/829496/" target="_blank" rel="noopener">New York City pauses AI use for elementary, middle school students</a> – K-12 Dive, September 2026</li><li><a href="https://claude.com/blog/claude-for-teachers-now-available-for-schools-and-districts" target="_blank" rel="noopener">Claude for Teachers, now available for U.S. K-12 schools and districts</a> – Anthropic, 28 August 2026</li><li><a href="https://www.unite.ai/anthropic-brings-claude-for-teachers-to-schools-and-districts/" target="_blank" rel="noopener">Anthropic Brings Claude for Teachers to Schools and Districts</a> – Unite.AI, August 2026</li><li><a href="https://www.edtechinnovationhub.com/news/anthropic-opens-free-claude-for-teachers-enterprise-access-to-us-schools-and-districts" target="_blank" rel="noopener">Anthropic offers free Claude for Teachers to U.S. districts</a> – EdTech Innovation Hub, August 2026</li><li><a href="https://blog.google/products-and-platforms/products/education/new-ai-educator-trainings-september-2026/" target="_blank" rel="noopener">Start the year AI-ready with the Google AI Educator Series</a> – Google, September 2026</li><li><a href="https://www.unesco.org/en/articles/education-age-ai-ministerial-statement-be-adopted-unescos-digital-learning-week" target="_blank" rel="noopener">Education in the age of AI: Ministerial statement to be adopted at UNESCO's Digital Learning Week</a> – UNESCO, September 2026</li><li><a href="https://www.unesco.org/en/weeks/digital-learning" target="_blank" rel="noopener">Digital Learning Week 2026</a> – UNESCO, September 2026</li><li><a href="https://ai.sa.gov.au/royal-commission-into-artificial-intelligence" target="_blank" rel="noopener">Royal Commission into Artificial Intelligence</a> – Office for AI, SA Government</li><li><a href="https://piperalderman.com.au/insight/south-australian-royal-commission-into-artificial-intelligence-what-businesses-need-to-know-now/" target="_blank" rel="noopener">South Australian Royal Commission into Artificial Intelligence: what businesses need to know now</a> – Piper Alderman, August 2026</li></ol></details></div><div class="wrap"><div class="pager"><a href="2026-08-30.html">← 30 August 2026</a><a href="../index.html">All briefings →</a></div></div>
+<footer><div class="wrap">
+  <p><strong>AI in EdTech Weekly</strong> is compiled from primary sources each week; every claim links to its original source.
+  Briefings are produced with AI-assisted research and human editorial review, and summarise third-party reporting and research
+  for information purposes.</p>
+</div></footer>
+</body>
+</html>
