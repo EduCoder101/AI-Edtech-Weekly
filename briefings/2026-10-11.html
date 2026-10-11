@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html lang="en-AU">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>AI in EdTech Weekly · 11 October 2026</title>
+<meta name="description" content="Australian research reframes AI companions as a child-protection issue, a classroom-ready AI-scepticism tool arrives for primary years, and the retreat from AI detection turns institutional">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,600;9..144,700&family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+<style>
+:root{
+  --paper:#f7f5f0; --card:#ffffff; --ink:#181f30; --ink2:#3c4557;
+  --muted:#6f7787; --line:#e4dfd4; --navy:#1b2a4a; --navy2:#223458;
+  --accent:#0e7c66; --accent-soft:#e6f1ed; --amber:#a96f24; --amber-soft:#f7eeddd9;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{background:var(--paper);color:var(--ink);
+  font-family:'Inter',-apple-system,'Segoe UI',sans-serif;
+  font-size:17px;line-height:1.65;-webkit-font-smoothing:antialiased}
+a{color:var(--accent);text-decoration:none}
+a:hover{text-decoration:underline}
+.wrap{max-width:980px;margin:0 auto;padding:0 24px}
+/* top bar */
+.topbar{position:sticky;top:0;z-index:50;background:rgba(247,245,240,.92);
+  backdrop-filter:blur(8px);border-bottom:1px solid var(--line)}
+.topbar .wrap{display:flex;align-items:center;justify-content:space-between;height:58px}
+.brand{font-family:'Fraunces',serif;font-weight:700;font-size:1.05rem;color:var(--ink);letter-spacing:.01em}
+.brand:hover{text-decoration:none}
+.brand span{color:var(--accent)}
+.topnav{display:flex;gap:22px;font-size:.85rem;font-weight:600}
+.topnav a{color:var(--ink2)}
+/* issue head */
+.issuehead{padding:56px 0 36px}
+.kicker{font-size:.74rem;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:var(--accent);margin-bottom:14px}
+h1.issue{font-family:'Fraunces',serif;font-weight:600;font-size:clamp(1.6rem,3.6vw,2.1rem);line-height:1.25;letter-spacing:-.01em}
+.issuemeta{margin-top:16px;color:var(--muted);font-size:.9rem}
+/* glance band */
+.glance{background:var(--navy);color:#eef1f7;padding:44px 0 40px}
+.glance h2{font-family:'Fraunces',serif;font-weight:600;font-size:1.35rem;color:#fff;margin-bottom:14px}
+.glance .overview{font-size:1.02rem;line-height:1.7;color:#d9dfec;max-width:44em}
+.glance h3{font-size:.74rem;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:#8fa8d8;margin:28px 0 12px}
+.signals{list-style:none}
+.signals li{position:relative;padding:10px 0 10px 26px;border-top:1px solid var(--navy2);font-size:.95rem;line-height:1.6;color:#e7ebf4}
+.signals li:before{content:"";position:absolute;left:2px;top:19px;width:8px;height:8px;border-radius:50%;background:var(--accent)}
+.actions{list-style:none;display:grid;gap:10px}
+.actions li{background:var(--navy2);border-left:3px solid var(--accent);border-radius:0 8px 8px 0;
+  padding:12px 16px;font-size:.92rem;line-height:1.55;color:#e7ebf4}
+.glance a{color:#9fd4c6}
+/* sections */
+section.block{padding:52px 0 8px}
+.sectionhead{display:flex;align-items:baseline;gap:14px;margin-bottom:8px}
+.sectionhead h2{font-family:'Fraunces',serif;font-weight:600;font-size:1.5rem}
+.sectionhead .sub{color:var(--muted);font-size:.88rem}
+/* stories */
+.story{padding:34px 0;border-bottom:1px solid var(--line)}
+.story:last-child{border-bottom:none}
+.storytop{display:flex;gap:16px;align-items:flex-start}
+.snum{font-family:'Fraunces',serif;font-weight:600;font-size:1.5rem;color:var(--accent);line-height:1.2;min-width:1.2em}
+.story h3{font-family:'Fraunces',serif;font-weight:600;font-size:1.25rem;line-height:1.3}
+.smeta{margin:8px 0 14px;font-size:.78rem;font-weight:600;letter-spacing:.06em;text-transform:uppercase;color:var(--muted)}
+.story p{margin-bottom:14px;color:var(--ink2)}
+.storygrid{display:grid;grid-template-columns:minmax(0,1fr) 300px;gap:36px;align-items:start;margin-top:4px}
+.storygrid.nowhy{grid-template-columns:1fr}
+.why{background:var(--accent-soft);border-left:3px solid var(--accent);border-radius:0 10px 10px 0;
+  padding:16px 18px;font-size:.92rem;line-height:1.6;position:sticky;top:78px}
+@media(max-width:820px){.storygrid{grid-template-columns:1fr}.why{position:static;margin-top:4px}}
+.why b.tag{display:block;font-size:.72rem;font-weight:700;letter-spacing:.13em;text-transform:uppercase;color:var(--accent);margin-bottom:6px}
+.srcline{font-size:.82rem;color:var(--muted);line-height:1.55}
+.srcline a{color:var(--muted);text-decoration:underline;text-decoration-color:var(--line);text-underline-offset:3px}
+.srcline a:hover{color:var(--accent)}
+/* signal cards */
+.cards{display:grid;gap:16px;margin-top:20px}
+.card{background:var(--card);border:1px solid var(--line);border-radius:14px;padding:22px 24px;box-shadow:0 1px 2px rgba(24,31,48,.04)}
+.card h3{font-family:'Fraunces',serif;font-weight:600;font-size:1.06rem;line-height:1.4;margin-bottom:10px}
+.card p{font-size:.93rem;line-height:1.6;color:var(--ink2)}
+.card .srcs{margin-top:12px;font-size:.8rem;color:var(--muted);line-height:1.6}
+.card .srcs a{color:var(--muted);text-decoration:underline;text-decoration-color:var(--line);text-underline-offset:3px}
+.card .srcs a:hover{color:var(--accent)}
+.card.agree{border-top:3px solid var(--accent)}
+.card.disagree{border-top:3px solid var(--amber)}
+.pos{display:grid;gap:10px;margin:10px 0}
+.pos>div{border-radius:10px;padding:12px 15px;font-size:.9rem;line-height:1.6}
+.pos .a{background:var(--accent-soft)}
+.pos .b{background:var(--amber-soft)}
+.pos b.tag{display:block;font-size:.7rem;font-weight:700;letter-spacing:.12em;text-transform:uppercase;margin-bottom:4px}
+.pos .a b.tag{color:var(--accent)}
+.pos .b b.tag{color:var(--amber)}
+.tension{font-size:.9rem;color:var(--ink2);line-height:1.6;padding-top:8px;border-top:1px dashed var(--line)}
+.tension b.tag{font-size:.7rem;font-weight:700;letter-spacing:.12em;text-transform:uppercase;color:var(--muted);display:block;margin-bottom:4px}
+/* watching */
+.watch{background:var(--card);border:1px solid var(--line);border-radius:14px;padding:22px 24px;margin-top:16px}
+.watch h3{font-family:'Fraunces',serif;font-weight:600;font-size:1.06rem;margin-bottom:10px}
+.watch p{font-size:.93rem;line-height:1.65;color:var(--ink2);margin-bottom:10px}
+/* sources details */
+details.allsources{margin:44px 0 0;border-top:1px solid var(--line);padding-top:20px}
+details.allsources summary{cursor:pointer;font-weight:600;font-size:.95rem;color:var(--ink2)}
+details.allsources ol{margin:16px 0 0 20px;font-size:.85rem;color:var(--muted);line-height:1.7}
+details.allsources li{margin-bottom:6px}
+/* pager + footer */
+.pager{display:flex;justify-content:space-between;gap:16px;margin:48px 0 0;padding-top:24px;border-top:1px solid var(--line);font-size:.9rem;font-weight:600}
+footer{margin-top:56px;padding:32px 0 48px;border-top:1px solid var(--line);color:var(--muted);font-size:.82rem;line-height:1.7}
+/* index */
+.hero{padding:72px 24px 40px}
+.hero h1{font-family:'Fraunces',serif;font-weight:600;font-size:clamp(1.5rem,6.2vw,3.95rem);line-height:1.08;letter-spacing:-.015em;white-space:nowrap}
+.hero p.tag{margin-top:20px;font-size:clamp(.85rem,1.85vw,1.15rem);color:var(--ink2);line-height:1.7;white-space:nowrap}
+.latest{background:var(--navy);color:#eef1f7;border-radius:18px;padding:34px 36px;margin:8px 0 12px}
+.latest .kicker{color:#9fd4c6}
+.latest h2{font-family:'Fraunces',serif;font-weight:600;font-size:1.5rem;line-height:1.3;color:#fff;margin-bottom:12px}
+.latest p{color:#d9dfec;font-size:.98rem;line-height:1.7;margin-bottom:20px}
+.btn{display:inline-block;background:var(--accent);color:#fff;font-weight:600;font-size:.9rem;
+  padding:11px 22px;border-radius:999px}
+.btn:hover{text-decoration:none;filter:brightness(1.08)}
+.archive{padding:44px 0}
+.archive h2{font-family:'Fraunces',serif;font-weight:600;font-size:1.5rem;margin-bottom:6px}
+.issuelist{list-style:none;margin-top:14px}
+.issuelist li{border-bottom:1px solid var(--line)}
+.issuelist a{display:flex;gap:24px;align-items:baseline;padding:18px 4px;color:var(--ink)}
+.issuelist a:hover{background:#f1ede4;text-decoration:none}
+.issuelist .d{min-width:130px;font-size:.85rem;font-weight:700;color:var(--accent);letter-spacing:.02em}
+.issuelist .h{font-size:.97rem;line-height:1.5;color:var(--ink2)}
+.aboutwrap{padding:20px 0 30px}
+.about{max-width:44em}
+.about h2{font-family:'Fraunces',serif;font-weight:600;font-size:1.5rem;margin-bottom:12px}
+.about p{color:var(--ink2);margin-bottom:12px;font-size:.97rem}
+@media(max-width:640px){
+  .issuelist a{flex-direction:column;gap:4px}
+  .latest{padding:26px 22px}
+}
+@media print{
+  .topbar,.pager{display:none}
+  body{background:#fff}
+  .glance{background:#fff;color:#000;border:1px solid #ccc}
+}
+</style>
+</head>
+<body>
+<header class="topbar"><div class="wrap">
+  <a class="brand" href="../index.html">AI in EdTech <span>Weekly</span></a>
+  <nav class="topnav"><a href="#">Latest briefing</a><a href="../index.html#archive">Archive</a><a href="../index.html#about">About</a></nav>
+</div></header>
+
+<div class="wrap issuehead">
+  <div class="kicker">Weekly briefing · 5–11 October 2026</div>
+  <h1 class="issue">Australian research reframes AI companions as a child-protection issue, a classroom-ready AI-scepticism tool arrives for primary years, and the retreat from AI detection turns institutional</h1>
+  <div class="issuemeta">Issue of 11 October 2026</div>
+</div>
+<section class="glance"><div class="wrap">
+  <h2>At a glance</h2>
+  <p class="overview">A national Adelaide University study revealed this week that 35 per cent of children who experience online sexual victimisation tell no one or confide only in an AI chatbot, while UNSW researchers showed that chatbot guardrails can be reliably broken by the same customisation techniques vendors use to build school-facing products, together moving AI governance squarely onto child-safety ground. On the constructive side, QUT and Digital Child researchers released Spot the Sycophant, a free voice-based chatbot that lets primary students hear for themselves how an always-agreeing AI distorts advice. Internationally, Newcastle, Westminster and Southampton universities are walking away from Turnitin over false positives, cost and a licence seeking rights over student work for AI purposes, confirming the direction NESA has already set for NSW schools.</p>
+  <h3>Key signals</h3><ul class="signals"><li>An Adelaide University Australian Cybercrime Observatory national study found around one in four under-18s has experienced online sexual victimisation or knows someone who has, roughly 15 per cent of cases involved AI, and 35 per cent of victimised children told no one or turned to an AI chatbot, rising to two in five among boys.</li><li>UNSW researchers jailbroke large language models including GPT-4 using all three manipulation methods they tested, including fine-tuning approaches that mirror how commercial AI products are customised, making post-customisation red-team testing a procurement question for schools.</li><li>Researchers from QUT, ADM+S and the Digital Child centre released Spot the Sycophant on 9 October, a free, supervised, voice-based tool that teaches primary students to question AI agreement, grounded in a pilot study where children reasoned capably about trust and bias.</li><li>Newcastle University, the University of Westminster and the University of Southampton are all ending Turnitin contracts, citing false-positive risk, limited value against generative AI and proposed licence terms covering the use of student data for AI purposes.</li><li>A Macquarie University study found only 53 per cent of NSW teachers believe classroom devices help learning and just 10 per cent of secondary leaders think students can self-regulate screen use, as NSW prepares hard screen-time caps from 2027, including 45 minutes a day in Years 5 and 6.</li></ul>
+  <h3>Considerations for the Executive</h3><ul class="actions"><li>Bring the wellbeing and child-safe-standards leads into AI governance formally this term: the Adelaide findings mean disclosure-to-chatbot is now a documented Australian pattern, so pastoral protocols, staff briefings and primary-years AI lessons should all carry the message that a chatbot is not a counsellor and a trusted adult is the first call.</li><li>Add two questions to every AI procurement and renewal conversation: has the product been red-team tested after the vendor's own customisation, and does any licence clause grant rights over student work or data for AI purposes, the clause that triggered Newcastle's Turnitin exit.</li><li>Trial Spot the Sycophant in a supervised primary classroom as a low-cost proof point for the AI-literacy programme, and use the same week to retire any remaining reliance on AI-detection scores in integrity conversations, since the institutions and the regulator have both moved to assessment design.</li></ul>
+</div></section>
+<section class="block"><div class="wrap">
+  <div class="sectionhead"><h2>The stories in depth</h2><span class="sub">Full analysis with linked sources</span></div>
+  
+<article class="story">
+  <div class="storytop"><div class="snum">1</div>
+  <div><h3>National study: one in three victimised children tell no one, or tell a chatbot</h3><div class="smeta">EducationHQ / AAP | 9 October 2026</div></div></div>
+  <div class="storygrid">
+    <div class="storybody"><p>A national study of Australian adolescents, AI and non-AI online child sexual victimisation, led by Tim Cubitt and colleagues at the Australian Cybercrime Observatory at Adelaide University and discussed publicly this week by AFP Commissioner Krissy Barrett, found that around one in four children under 18 has experienced online sexual victimisation or knows someone who has, with roughly 15 per cent of those cases involving AI. The most confronting finding is about disclosure: 35 per cent of victimised children either told no one or turned to an AI chatbot for support, and among victimised boys the figure was two in five. More than 15 per cent of young people said they seek personal or counselling advice from AI at least weekly. The AFP is now working with industry on chatbot responses that direct young people to trusted adults, and is adding AI-assisted flagging to its reporting tool.</p><p class="srcline">Sources: <a href="https://educationhq.com/news/heartbreaking-sexually-exploited-young-people-turning-to-ai-for-a-shoulder-to-cry-on-215779/" target="_blank" rel="noopener">'Heartbreaking': sexually exploited young people turning to AI for a shoulder to cry on</a> – EducationHQ / AAP, 9 October 2026.</p></div>
+    <aside class="why"><b class="tag">Why it matters</b>This is the clearest Australian evidence yet that AI companions are a child-protection issue before they are an academic-integrity one. If a third of victimised students disclose to a bot or to nobody, pastoral systems built on the assumption that a distressed child will eventually tell an adult are missing a growing share of cases. The practical implications sit with wellbeing staff as much as with the AI lead: explicit teaching, from primary years up, that a chatbot is not a counsellor and that a trusted adult is the right first call, and awareness among staff that victimisation clusters in friendship groups. This belongs on the agenda of the next child-safe standards review, not just the AI working group.</aside>
+  </div>
+</article>
+<article class="story">
+  <div class="storytop"><div class="snum">2</div>
+  <div><h3>UNSW study shows chatbot guardrails fail under manipulation, with every method tested</h3><div class="smeta">The Educator K-12 | 7 October 2026</div></div></div>
+  <div class="storygrid">
+    <div class="storybody"><p>UNSW researchers led by Dr Aditya Joshi, with Anudeex Shetty and Professor Salil Kanhere, showed that large language models including GPT-4 can be reliably jailbroken by inducing "drunk" behaviour, through prompting alone or by fine-tuning in ways that mirror how commercial AI products are actually customised and deployed. Across all three methods tested, the altered models answered harmful questions they are designed to refuse and became significantly more likely to disclose confidential information. Professor Kanhere's summary: "We cannot assume that protections that work under normal conditions will remain effective."</p><p class="srcline">Sources: <a href="https://www.theeducatoronline.com/k12/news/ai-safety-in-schools-unsw-study-exposes-chatbot-guardrail-flaws/289245" target="_blank" rel="noopener">AI safety in schools: UNSW study exposes chatbot guardrail flaws</a> – The Educator K-12, 7 October 2026.</p></div>
+    <aside class="why"><b class="tag">Why it matters</b>Most school-facing AI tools are a vendor's customisation layer on top of a foundation model, and this study shows that the customisation step itself can quietly weaken the safety behaviour schools think they are buying. It converts vendor due diligence from a privacy exercise into a safety one: has the product been red-team tested after customisation, how does it handle deliberate manipulation by students, and who is accountable when guardrails fail? The article points to NSW's NSWEduChat, with its layered jailbreak filtering, as an example of what deliberate safety design looks like; that is a useful benchmark to hold commercial vendors against in procurement conversations.</aside>
+  </div>
+</article>
+<article class="story">
+  <div class="storytop"><div class="snum">3</div>
+  <div><h3>"Spot the Sycophant": Australian researchers release a primary-years tool for teaching children to question AI</h3><div class="smeta">EducationHQ | 9 October 2026</div></div></div>
+  <div class="storygrid">
+    <div class="storybody"><p>Researchers from the ARC Centre of Excellence for Automated Decision-Making and Society, the ARC Centre of Excellence for the Digital Child and the QUT GenAI Lab have released an interactive voice-based chatbot, Spot the Sycophant, hosted on the GenAI Arcade site. Children switch the bot between an "always agree" mode and a more careful mode, then compare the advice each gives, making AI sycophancy, the tendency to flatter and agree at the expense of accuracy, something they can hear for themselves. It builds on a pilot study in which primary-aged children acted as "expert informants" on AI risks and showed they could reason about authenticity, trust and bias; the research is being presented at the Association of Internet Researchers conference this month.</p><p class="srcline">Sources: <a href="https://educationhq.com/news/helping-kids-question-ai-interactive-voice-based-chatbot-explores-trust-accuracy-and-advice-215786/" target="_blank" rel="noopener">Helping kids question AI: interactive voice-based chatbot explores trust, accuracy and advice</a> – EducationHQ, 9 October 2026.</p></div>
+    <aside class="why"><b class="tag">Why it matters</b>Critical AI literacy for young children is usually a policy aspiration with no classroom materials behind it. This is a rare, free, Australian-built and research-grounded exception, designed for supervised use and pitched squarely at the primary years. For a Year 5 classroom it is close to a ready-made lesson: experience both modes, discuss why a machine might agree with you, and anchor the rule that agreement is not evidence. It also demonstrates a transferable design pattern, letting students experience an AI failure mode safely rather than being lectured about it, which the team plans to extend to misinformation, deepfakes and privacy.</aside>
+  </div>
+</article>
+<article class="story">
+  <div class="storytop"><div class="snum">4</div>
+  <div><h3>"Cart before the horse?": the Australian evidence debate on classroom AI sharpens</h3><div class="smeta">The Educator K-12 | 7 October 2026</div></div></div>
+  <div class="storygrid">
+    <div class="storybody"><p>A substantial feature pulled together the state of the Australian argument over whether schools adopted AI ahead of the evidence. On the caution side: the University of Sydney and Barker Institute review finding little local evidence and engagement gains that do not clearly convert into learning, CQU work linking heavy AI essay use to weaker neural activity and recall, PISA 2025 data showing students who drafted writing with AI did worse, and federal minister Jason Clare's "digital detox" language alongside NSW's NESA review. On the other side, figures including UCL's Professor Rose Luckin oppose any blanket pause, arguing for tools designed to give hints rather than answers and for teaching students to use AI well, while school-sector voices argue the horse has bolted and governance plus judgement is the only workable response.</p><p class="srcline">Sources: <a href="https://www.theeducatoronline.com/k12/news/exclusive-have-schools-gone-cart-before-the-horse-with-ai/289182" target="_blank" rel="noopener">Exclusive: Have schools gone 'cart before the horse' with AI?</a> – The Educator K-12, 7 October 2026.</p></div>
+    <aside class="why"><b class="tag">Why it matters</b>This is the single best current map of the terrain the reader operates in, and its practical convergence point is useful: almost every voice quoted, on both sides, lands on the same two moves, protect tasks where students must think unaided, and teach critical use of AI everywhere else. That convergence, rather than the pause-versus-adopt headline, is what is worth taking to the principal. The feature also confirms how fast the policy layer is moving underneath schools: pen-and-paper NAPLAN is under ministerial discussion and NESA's review is live, so school-level positions written this term should anticipate supervised-assessment requirements rather than react to them.</aside>
+  </div>
+</article>
+<article class="story">
+  <div class="storytop"><div class="snum">5</div>
+  <div><h3>UK universities begin walking away from Turnitin as the AI-detection retreat accelerates</h3><div class="smeta">Times Higher Education | 9 October 2026</div></div></div>
+  <div class="storygrid">
+    <div class="storybody"><p>Newcastle University will phase out Turnitin after 2026-27, Westminster will let its contract lapse in July 2027, and Southampton announced its exit earlier this year, with Aberdeen reviewing and Cambridge publicly refusing any licence changes that touch data privacy or intellectual property. The stated reasons stack up: Turnitin's proposed licence changes raised concerns about student data being used for AI purposes, Westminster called the AI detector "probabilistic rather than conclusive" with a recognised false-positive risk, and sector voices note the originality checker is largely ineffective against generative AI anyway. Turnitin postponed its licence changes to September 2027 after sector pushback.</p><p class="srcline">Sources: <a href="https://www.timeshighereducation.com/node/745401" target="_blank" rel="noopener">More universities end Turnitin contracts as concerns mount</a> – Times Higher Education, 9 October 2026; <a href="https://educationhq.com/news/unis-and-schools-are-moving-away-from-ai-detection-software-they-should-stop-using-it-altogether-215462/" target="_blank" rel="noopener">Unis and schools are moving away from AI detection software. They should stop using it altogether</a> – Mark Bassett (Charles Sturt University) via EducationHQ, 29 September 2026.</p></div>
+    <aside class="why"><b class="tag">Why it matters</b>The institutions with the largest integrity caseloads in the English-speaking world are concluding that detection software is not worth its cost, its error rate or its data terms, and that assessment design is where integrity actually lives. That is the same position NESA has already signalled to NSW schools, so this is confirmation, not news, of the direction: any school still leaning on a detector score as evidence in a misconduct conversation is now out of step with both its regulator and the research. The data angle deserves separate attention, as the trigger for Newcastle was a vendor seeking rights over student work for AI purposes, exactly the clause to check for in every school edtech renewal.</aside>
+  </div>
+</article>
+</div></section>
+<section class="block"><div class="wrap">
+  <div class="sectionhead"><h2>Where the evidence agrees</h2><span class="sub">Independent sources pointing the same way</span></div>
+  <div class="cards"><div class="card agree"><h3>AI companions are a child-safety issue before they are an integrity issue</h3>
+<p>AI governance in schools cannot sit with the IT or curriculum teams alone; wellbeing and child-safe-standards leads need a permanent seat, because the sharpest risks this week are pastoral, not academic</p><div class="srcs">Sources: <a href="https://educationhq.com/news/heartbreaking-sexually-exploited-young-people-turning-to-ai-for-a-shoulder-to-cry-on-215779/" target="_blank" rel="noopener">Adelaide University national study: 35 per cent of victimised children told no one or an AI chatbot</a> (9 October); <a href="https://www.theeducatoronline.com/k12/news/students-say-online-platforms-are-falling-short-on-safety/289251" target="_blank" rel="noopener">Alannah &amp; Madeline Foundation consultations with 800+ students backing a Digital Duty of Care, with parents naming AI reliance as a worry</a> (9 October); <a href="https://www.theeducatoronline.com/k12/news/ai-safety-in-schools-unsw-study-exposes-chatbot-guardrail-flaws/289245" target="_blank" rel="noopener">UNSW evidence that guardrails fail under manipulation</a> (7 October)</div></div><div class="card agree"><h3>The retreat from AI detection is now institutional, not rhetorical</h3>
+<p>Money is now following the evidence out of detection and into assessment design, which vindicates NESA's position and means any residual reliance on detector scores at school level should end this term</p><div class="srcs">Sources: <a href="https://www.timeshighereducation.com/node/745401" target="_blank" rel="noopener">Newcastle, Westminster and Southampton ending Turnitin contracts</a> (9 October); <a href="https://educationhq.com/news/unis-and-schools-are-moving-away-from-ai-detection-software-they-should-stop-using-it-altogether-215462/" target="_blank" rel="noopener">Bassett: schools and universities should drop detectors entirely and verify learning under supervision</a> (29 September); <a href="https://etcjournal.com/2026/10/07/briefing-10-7-26-us-universities-give-up-on-ai-detectors/" target="_blank" rel="noopener">ETC Journal briefing on US universities giving up on AI detectors</a> (7 October)</div></div><div class="card agree"><h3>Critical AI literacy for children is moving from aspiration to usable classroom material</h3>
+<p>The excuse that there is nothing age-appropriate to teach with is expiring; a primary school can now run a research-grounded AI-scepticism lesson this term at no cost</p><div class="srcs">Sources: <a href="https://educationhq.com/news/helping-kids-question-ai-interactive-voice-based-chatbot-explores-trust-accuracy-and-advice-215786/" target="_blank" rel="noopener">QUT/ADM+S Spot the Sycophant voice chatbot for primary students</a> (9 October); <a href="https://etcjournal.com/2026/10/05/the-case-for-teaching-young-children-about-ai/" target="_blank" rel="noopener">ETC Journal essay on the case for teaching young children about AI</a> (5 October); <a href="https://www.theeducatoronline.com/k12/news/exclusive-have-schools-gone-cart-before-the-horse-with-ai/289182" target="_blank" rel="noopener">near-universal expert recommendation for taught critical AI use in The Educator's evidence feature</a> (7 October)</div></div></div>
+</div></section>
+<section class="block"><div class="wrap">
+  <div class="sectionhead"><h2>Where experts disagree</h2><span class="sub">Live debates worth understanding before deciding</span></div>
+  <div class="cards"><div class="card disagree"><h3>Pause classroom AI or steer it?</h3>
+<div class="pos"><div class="a"><b class="tag">One view</b><a href="https://www.theeducatoronline.com/k12/news/exclusive-have-schools-gone-cart-before-the-horse-with-ai/289182" target="_blank" rel="noopener">Monash academics in The Educator's feature</a>: adoption was premature, commercial tools optimise engagement not learning, and safeguards should come before further rollout, a view echoed in ministerial "digital detox" language</div>
+<div class="b"><b class="tag">The other view</b><a href="https://www.theeducatoronline.com/k12/news/exclusive-have-schools-gone-cart-before-the-horse-with-ai/289182" target="_blank" rel="noopener">Luckin, Watson and Yeates in the same feature</a>, and <a href="https://etcjournal.com/2026/10/09/history-says-that-the-banning-of-ai-in-education-will-pass/" target="_blank" rel="noopener">ETC Journal's argument that AI bans in education will pass as earlier technology bans did</a> (9 October): the technology is already embedded, so governance, tool design and taught judgement beat restriction</div></div>
+<div class="tension"><b class="tag">The tension</b>Whether the gap in local evidence argues for slowing classroom use until research catches up, or for building the judgement and governance to use it well, since students are using it regardless</div></div><div class="card disagree"><h3>Do screens help learning enough to justify their place?</h3>
+<div class="pos"><div class="a"><b class="tag">One view</b><a href="https://www.theeducatoronline.com/k12/news/nsw-teachers-question-learning-benefits-of-screens-in-the-classroom/289252" target="_blank" rel="noopener">Macquarie University study of NSW classrooms</a> (9 October): 53 per cent of teachers say devices help learning, and lead author Matt Bower cautions against abandoning digital tools that genuinely support it</div>
+<div class="b"><b class="tag">The other view</b>The same study's distraction data, half of teachers report frequent screen distraction and only 10 per cent of secondary leaders think students can self-regulate, is the evidence base behind <a href="https://www.theeducatoronline.com/k12/news/nsw-teachers-question-learning-benefits-of-screens-in-the-classroom/289252" target="_blank" rel="noopener">NSW's hard screen-time caps from 2027</a>, 45 minutes a day in Years 5-6</div></div>
+<div class="tension"><b class="tag">The tension</b>Whether the answer to distraction is capping screen minutes or redesigning what happens on them, a question that lands directly on AI tools, which are screen-delivered and about to be time-rationed</div></div></div>
+</div></section>
+<section class="block"><div class="wrap">
+  <div class="sectionhead"><h2>Worth watching</h2><span class="sub">Developments to keep an eye on</span></div>
+  <div class="watch"><h3>New York City has given itself a year to write K-12 AI guidelines, under a moratorium</h3><p>Education Week's Market Brief reports that New York City, having imposed a moratorium on generative AI for younger students, is now running a year-long process to decide what K-12 AI guidelines should look like. NYC is the largest school district in the US, and this is the first large-scale, deliberate test of the "pause first, design the rules, then re-introduce" model that some Australian voices are urging. How it handles teacher voice, age thresholds and vendor rules will be quotable evidence for whichever side of the local debate it favours.</p><p class="srcline">Sources: <a href="https://marketbrief.edweek.org/regulation-policy/what-should-ai-guidelines-for-k-12-look-like-new-york-city-has-a-year-to-figure-it-out/2026/10" target="_blank" rel="noopener">What Should AI Guidelines for K-12 Look Like? New York City Has a Year to Figure It Out</a> – EdWeek Market Brief, October 2026.</p></div><div class="watch"><h3>The Digital Duty of Care Bill would shift the safety burden from schools to platforms</h3><p>The Alannah &amp; Madeline Foundation's consultation findings this week, drawn from more than 800 students, feed directly into the federal Online Safety Amendment (Digital Duty of Care) Bill 2026, which would oblige online services, AI tools included, to prevent foreseeable harm before it reaches children. Schools currently absorb the downstream cost of platform harms; a duty of care with real penalties would be the first structural correction to that, and its definitions of foreseeable harm will matter for AI companions in particular. Worth tracking the bill's progress and the sector submissions.</p><p class="srcline">Sources: <a href="https://www.theeducatoronline.com/k12/news/students-say-online-platforms-are-falling-short-on-safety/289251" target="_blank" rel="noopener">Students say online platforms are falling short on safety</a> – The Educator K-12, 9 October 2026.</p></div>
+</div></section>
+<div class="wrap"><details class="allsources"><summary>Full source list for this issue (12 sources)</summary>
+<ol><li><a href="https://educationhq.com/news/heartbreaking-sexually-exploited-young-people-turning-to-ai-for-a-shoulder-to-cry-on-215779/" target="_blank" rel="noopener">'Heartbreaking': sexually exploited young people turning to AI for a shoulder to cry on</a> – EducationHQ / AAP, 9 October 2026</li><li><a href="https://www.theeducatoronline.com/k12/news/ai-safety-in-schools-unsw-study-exposes-chatbot-guardrail-flaws/289245" target="_blank" rel="noopener">AI safety in schools: UNSW study exposes chatbot guardrail flaws</a> – The Educator K-12, 7 October 2026</li><li><a href="https://educationhq.com/news/helping-kids-question-ai-interactive-voice-based-chatbot-explores-trust-accuracy-and-advice-215786/" target="_blank" rel="noopener">Helping kids question AI: interactive voice-based chatbot explores trust, accuracy and advice</a> – EducationHQ, 9 October 2026</li><li><a href="https://www.theeducatoronline.com/k12/news/exclusive-have-schools-gone-cart-before-the-horse-with-ai/289182" target="_blank" rel="noopener">Exclusive: Have schools gone 'cart before the horse' with AI?</a> – The Educator K-12, 7 October 2026</li><li><a href="https://www.timeshighereducation.com/node/745401" target="_blank" rel="noopener">More universities end Turnitin contracts as concerns mount</a> – Times Higher Education, 9 October 2026</li><li><a href="https://educationhq.com/news/unis-and-schools-are-moving-away-from-ai-detection-software-they-should-stop-using-it-altogether-215462/" target="_blank" rel="noopener">Unis and schools are moving away from AI detection software. They should stop using it altogether</a> – Mark Bassett (Charles Sturt University) via EducationHQ, 29 September 2026</li><li><a href="https://www.theeducatoronline.com/k12/news/students-say-online-platforms-are-falling-short-on-safety/289251" target="_blank" rel="noopener">Students say online platforms are falling short on safety</a> – The Educator K-12, 9 October 2026</li><li><a href="https://www.theeducatoronline.com/k12/news/nsw-teachers-question-learning-benefits-of-screens-in-the-classroom/289252" target="_blank" rel="noopener">NSW teachers question learning benefits of screens in the classroom</a> – The Educator K-12, 9 October 2026</li><li><a href="https://etcjournal.com/2026/10/07/briefing-10-7-26-us-universities-give-up-on-ai-detectors/" target="_blank" rel="noopener">Briefing 10/7/26: US universities give up on AI detectors</a> – ETC Journal, 7 October 2026</li><li><a href="https://etcjournal.com/2026/10/05/the-case-for-teaching-young-children-about-ai/" target="_blank" rel="noopener">The case for teaching young children about AI</a> – ETC Journal, 5 October 2026</li><li><a href="https://etcjournal.com/2026/10/09/history-says-that-the-banning-of-ai-in-education-will-pass/" target="_blank" rel="noopener">History says that the banning of AI in education will pass</a> – ETC Journal, 9 October 2026</li><li><a href="https://marketbrief.edweek.org/regulation-policy/what-should-ai-guidelines-for-k-12-look-like-new-york-city-has-a-year-to-figure-it-out/2026/10" target="_blank" rel="noopener">What Should AI Guidelines for K-12 Look Like? New York City Has a Year to Figure It Out</a> – EdWeek Market Brief, October 2026</li></ol></details></div><div class="wrap"><div class="pager"><a href="2026-10-04.html">← 4 October 2026</a><a href="../index.html">All briefings →</a></div></div>
+<footer><div class="wrap">
+  <p><strong>AI in EdTech Weekly</strong> is compiled from primary sources each week; every claim links to its original source.
+  Briefings are produced with AI-assisted research and human editorial review, and summarise third-party reporting and research
+  for information purposes.</p>
+</div></footer>
+</body>
+</html>
